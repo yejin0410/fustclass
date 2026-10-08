@@ -118,6 +118,16 @@ main {
     opacity: 1;
 }
 
+/* 브라우저 자동완성 시에도 입력창 배경을 검은색으로 유지 */
+.input_box input:-webkit-autofill,
+.input_box input:-webkit-autofill:hover,
+.input_box input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--text);
+    -webkit-box-shadow: 0 0 0 1000px var(--bg) inset;
+    box-shadow: 0 0 0 1000px var(--bg) inset;
+    transition: background-color 9999s ease-out 0s;
+}
+
 .input_box input:focus {
     outline: 2px solid var(--button);
     outline-offset: -2px;
