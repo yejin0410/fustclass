@@ -19,100 +19,98 @@ body {
     color: var(--text);
 }
 
+/*
+ * Figma 기준 390 x 844 화면을 기준으로 제작.
+ * 화면 폭이 작아지면 전체 화면이 같은 비율로 축소되어
+ * 요소 사이의 간격이 서로 어긋나지 않도록 구성한다.
+ */
 #wrap {
     position: relative;
-    width: 100%;
-    max-width: 390px;
-    min-width: 360px;
-    min-height: 100dvh;
+    width: min(100%, 390px);
+    aspect-ratio: 390 / 844;
     margin: 0 auto;
     overflow: hidden;
     background-color: var(--bg);
 }
 
 header {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 48px;
-    padding-top: 10px;
-}
-
-h1 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 1;
+    position: static;
 }
 
 .close_btn {
     position: absolute;
-    top: 54px;
-    left: 11px;
-    width: 60px;
-    height: 60px;
+    top: 6.3981%;
+    left: 2.8205%;
+    width: 15.3846%;
+    height: auto;
+    aspect-ratio: 1;
 }
 
 .close_btn img {
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height: auto;
 }
 
 main {
-    padding: 0 20px 90px;
+    padding: 0;
 }
 
 .brand_logo {
     position: absolute;
-    top: 149px;
-    left: 21px;
-    width: 60px;
-    height: 60px;
+    top: 17.654%;
+    left: 5.3846%;
+    width: 15.3846%;
+    height: auto;
+    aspect-ratio: 1;
 }
 
 .brand_logo img {
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height: auto;
 }
 
 .title {
     position: absolute;
-    top: 248px;
-    left: 21px;
-    font-size: 3.6rem;
+    top: 29.3839%;
+    left: 5.3846%;
+    font-size: min(9.2308vw, 3.6rem);
     font-weight: 400;
     line-height: 1;
+    color: var(--text);
 }
 
 .login_group {
     position: absolute;
-    top: 362px;
-    left: 20px;
-    width: 350px;
+    top: 37.7962%;
+    left: 5.1282%;
+    width: 89.7436%;
 }
 
 .login_description {
-    margin-bottom: 40px;
-    font-size: 1.5rem;
+    margin-bottom: min(6.9231vw, 2.7rem);
+    font-size: min(3.8462vw, 1.5rem);
     font-weight: 500;
     line-height: 2;
+    color: var(--text);
 }
 
 .input_box {
-    width: 350px;
-    padding-bottom: 2px;
+    width: 100%;
+    padding-bottom: min(0.5128vw, 0.2rem);
 }
 
 .input_box input {
+    display: block;
     width: 100%;
-    height: 50px;
-    padding: 14px 12px;
+    height: min(12.8205vw, 5rem);
+    padding: min(3.5897vw, 1.4rem) min(3.0769vw, 1.2rem);
     border: 1px solid var(--border);
     border-radius: 2px;
     background-color: var(--bg);
     color: var(--text);
     font-family: inherit;
-    font-size: 1.6rem;
+    font-size: min(4.1026vw, 1.6rem);
+    line-height: 1;
 }
 
 .input_box input::placeholder {
@@ -127,58 +125,66 @@ main {
 
 .find_email {
     position: absolute;
-    top: 472px;
-    left: 20px;
-    font-size: 1.6rem;
+    top: 55.9242%;
+    left: 5.1282%;
+    font-size: min(4.1026vw, 1.6rem);
+    line-height: 1;
     color: var(--button);
 }
 
 .login_bottom {
     position: absolute;
-    top: 531px;
-    left: 20px;
+    top: 62.9147%;
+    left: 5.1282%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 328px;
+    width: 84.1026%;
 }
 
 .create_account {
-    font-size: 1.6rem;
+    font-size: min(4.1026vw, 1.6rem);
+    line-height: 1;
     color: var(--button);
 }
 
 .next_btn {
-    width: 74px;
-    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18.9744%;
+    height: min(12.0513vw, 4.7rem);
     border-radius: 50px;
     background-color: var(--button);
     color: #000;
     font-family: inherit;
-    font-size: 1.2rem;
+    font-size: min(3.0769vw, 1.2rem);
     font-weight: 500;
+    line-height: 1;
 }
 
 .back_btn {
     position: absolute;
-    left: 18px;
-    bottom: 33px;
-    width: 60px;
-    height: 60px;
+    left: 4.6154%;
+    bottom: 3.91%;
+    width: 15.3846%;
+    aspect-ratio: 1;
 }
 
 .back_btn button {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(227, 227, 227, 0.3);
+    border-radius: 50%;
 }
 
 .back_btn .arrow {
     position: absolute;
-    top: 21px;
-    left: 22px;
-    width: 15px;
-    height: 15px;
+    top: 36%;
+    left: 39%;
+    width: 25%;
+    height: 25%;
     border-left: 2px solid var(--text);
     border-bottom: 2px solid var(--text);
     transform: rotate(45deg);
@@ -186,39 +192,16 @@ main {
 
 .page_icon {
     position: absolute;
-    top: 59px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
+    top: 6.9905%;
+    right: 5.1282%;
+    width: 12.8205%;
+    height: auto;
 }
 
 .share_btn {
     position: absolute;
-    right: 21px;
-    bottom: 43px;
-    width: 116px;
-    height: 40px;
-}
-
-@media (max-width: 389px) {
-    #wrap {
-        min-width: 360px;
-    }
-
-    .login_group {
-        left: 18px;
-        width: calc(100% - 38px);
-    }
-
-    .input_box {
-        width: 100%;
-    }
-
-    .find_email {
-        left: 20px;
-    }
-
-    .login_bottom {
-        width: calc(100% - 40px);
-    }
+    right: 5.3846%;
+    bottom: 5.0948%;
+    width: 29.7436%;
+    height: auto;
 }
