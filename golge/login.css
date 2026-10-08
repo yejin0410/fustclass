@@ -21,10 +21,6 @@ body {
     color: var(--text);
 }
 
-/*
- * password_reset_2 화면과 같은 방식으로
- * 화면 폭에 맞춰 #wrap이 늘어나도록 구성한다.
- */
 #wrap {
     position: relative;
     width: 100%;
@@ -121,7 +117,6 @@ main {
     opacity: 1;
 }
 
-/* 브라우저 자동완성 시에도 입력창 배경을 검은색으로 유지 */
 .input_box input:-webkit-autofill,
 .input_box input:-webkit-autofill:hover,
 .input_box input:-webkit-autofill:focus {
@@ -136,9 +131,14 @@ main {
     outline-offset: -2px;
 }
 
+/*
+ * 입력창 바로 아래에 배치한다.
+ * 화면 높이에 따라 top 값을 따로 계산하지 않아
+ * 모바일에서 입력창과 겹치지 않는다.
+ */
 .find_email {
     position: absolute;
-    top: 55.9242%;
+    top: calc(37.7962% + 13.5rem);
     left: 5.1282%;
     font-size: min(4.1026vw, 1.6rem);
     line-height: 1;
