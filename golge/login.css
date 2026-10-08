@@ -142,9 +142,8 @@ main {
 }
 
 .find_email {
-    position: absolute;
-    top: 55.9242%;
-    left: 5.1282%;
+    display: block;
+    margin-top: 1.2rem;
     font-size: min(4.1026vw, 1.6rem);
     line-height: 1;
     color: var(--button);
