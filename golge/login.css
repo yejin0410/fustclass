@@ -13,6 +13,9 @@ html {
 }
 
 body {
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
     background-color: #fff;
     font-family: var(--font);
     font-size: 1.6rem;
@@ -27,7 +30,8 @@ body {
 #wrap {
     position: relative;
     width: min(100%, 390px);
-    aspect-ratio: 390 / 844;
+    height: 100dvh;
+    min-height: 0;
     margin: 0 auto;
     overflow: hidden;
     background-color: var(--bg);
