@@ -105,17 +105,3 @@ body {
     background-color: #7BCC12 !important;
     opacity: 1 !important;
 }
-
-
-/* 메인 비주얼의 Swiper 화살표 요소를 전부 제거 */
-#wrap .hero-sec [class*="swiper-button"] {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-}
-#wrap .hero-sec [class*="swiper-button"]::before,
-#wrap .hero-sec [class*="swiper-button"]::after {
-    content: none !important;
-    display: none !important;
-}
