@@ -1,10 +1,7 @@
 body {
-    background-color: 
-    yellow;
-    font-family: 
-    "pretendard variable",
-    sans-serif;
+    font-family: "pretendard variable", sans-serif;
 }
+
 .mo {
     display: none;
 }
@@ -36,5 +33,51 @@ body {
     }
     .hero-sec .swiper {
         height: 100dvh;
+    }
+}
+
+/* 메인 비주얼 Swiper 컨트롤: Figma 시안 반영 */
+.hero-sec .visual {
+    position: relative;
+}
+
+.hero-sec .visual .swiper-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: auto;
+    transform: translateX(-50%);
+}
+
+.hero-sec .visual .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    margin: 0 !important;
+    border-radius: 50%;
+    background: #ffffff;
+    opacity: 1;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-sec .visual .swiper-pagination-bullet-active {
+    background: #7BCC12;
+    transform: scale(1.05);
+}
+
+/* 시안에는 화살표와 스크롤바를 표시하지 않음 */
+.hero-sec .visual .swiper-button-prev,
+.hero-sec .visual .swiper-button-next,
+.hero-sec .visual .swiper-scrollbar {
+    display: none !important;
+}
+
+@media (max-width: 1024px) {
+    .hero-sec .visual .swiper-pagination {
+        bottom: 16px;
     }
 }
