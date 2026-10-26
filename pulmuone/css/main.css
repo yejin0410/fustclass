@@ -96,8 +96,12 @@ body {
 }
 
 
-/* Pagination 색상 강제 적용: 브랜드 그린 #7BCC12 */
-#wrap .hero-sec .visual .swiper-pagination-bullet,
+/* 페이지네이션: 비활성 점은 흰색, 현재 슬라이드는 브랜드 그린 */
+#wrap .hero-sec .visual .swiper-pagination-bullet {
+    background-color: #ffffff !important;
+    opacity: 0.8 !important;
+}
 #wrap .hero-sec .visual .swiper-pagination-bullet-active {
     background-color: #7BCC12 !important;
+    opacity: 1 !important;
 }
