@@ -683,3 +683,29 @@ body,
     #wrap .right-food-section h2,
     #wrap .right-food-section__subtitle { margin-left: 20px; }
 }
+
+
+/* 헤더 전체 높이를 120px로 고정 */
+#wrap .site-header {
+    height: 120px;
+    box-sizing: border-box;
+}
+#wrap .site-header .utility-nav {
+    height: 34px;
+    min-height: 34px;
+    box-sizing: border-box;
+}
+#wrap .site-header .header-main {
+    height: 86px;
+    min-height: 86px;
+    box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+    #wrap .site-header {
+        height: auto;
+    }
+    #wrap .site-header .header-main {
+        height: auto;
+        min-height: 64px;
+    }
+}
