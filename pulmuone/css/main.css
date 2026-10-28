@@ -463,3 +463,14 @@ body,
 #wrap .site-header .main-nav {
     gap: 9px !important;
 }
+
+
+/* 헤더 좌우 여백을 30px로 조정 */
+#wrap .site-header .header-inner {
+    width: min(calc(100% - 60px), 1720px);
+}
+@media (max-width: 600px) {
+    #wrap .site-header .header-inner {
+        width: calc(100% - 30px);
+    }
+}
