@@ -891,3 +891,15 @@ body,
 #wrap .about-pulmuone__description {
     margin-top: 28px !important;
 }
+
+
+/* ABOUT 제목과 본문, 영문 설명 사이 간격 추가 축소 */
+#wrap .about-pulmuone__eyebrow {
+    margin-bottom: 12px !important;
+}
+#wrap .about-pulmuone__description {
+    margin-top: 8px !important;
+}
+#wrap .about-pulmuone__content {
+    row-gap: 0 !important;
+}
