@@ -1114,34 +1114,3 @@ body,
 }
 
 
-/* Figma 9:33 - 뉴스룸 다음 브랜드 이미지 섹션 */
-#wrap .pulmuone-image-section {
-    width: 100%;
-    padding: 0;
-    background: #fff;
-}
-#wrap .pulmuone-image-section__frame {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1920 / 343;
-    box-sizing: border-box;
-    border: 8px solid #fff;
-    border-radius: 4px;
-    overflow: hidden;
-    background: #fff;
-}
-#wrap .pulmuone-image-section__frame img {
-    display: block;
-    width: 104.81%;
-    height: 122.53%;
-    max-width: none;
-    object-fit: cover;
-    object-position: center top;
-    transform: translateX(-2.38%);
-}
-@media (max-width: 600px) {
-    #wrap .pulmuone-image-section__frame {
-        aspect-ratio: 1920 / 480;
-        border-width: 4px;
-    }
-}
