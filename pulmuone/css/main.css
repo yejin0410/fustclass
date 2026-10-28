@@ -828,3 +828,25 @@ body,
     background-size: 100% 100% !important;
     will-change: background-image;
 }
+
+
+/* ABOUT 제목의 스크롤 색상 채우기: 기본 회색, 진행률만큼 왼쪽부터 검정 */
+#wrap .about-pulmuone__content h2.scroll-fill-text {
+    color: #c8c8c8 !important;
+}
+#wrap .about-pulmuone__content h2.scroll-fill-text span {
+    display: inline;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    background-image: linear-gradient(
+        to right,
+        #292526 0%,
+        #292526 var(--text-fill-progress, 0%),
+        #c8c8c8 var(--text-fill-progress, 0%),
+        #c8c8c8 100%
+    ) !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+}
