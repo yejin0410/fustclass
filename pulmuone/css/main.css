@@ -494,3 +494,18 @@ body,
 #wrap .site-header .main-nav {
     gap: 10px !important;
 }
+
+
+/* ABOUT 영역 오른쪽 이미지를 지구·재활용 일러스트로 교체 */
+#wrap .about-pulmuone__visual--earth {
+    background: transparent !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    aspect-ratio: 333 / 434;
+}
+#wrap .about-pulmuone__visual--earth .about-pulmuone__earth-art {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
