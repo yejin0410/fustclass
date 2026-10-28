@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
     <!-- Pretendard Variable 폰트 -->
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
-    <link rel="stylesheet" href="css/main.css?v=20261028-30">
+    <link rel="stylesheet" href="css/main.css?v=20261028-31">
     <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
@@ -143,26 +143,25 @@
         // 스크롤 위치에 따라 소개 문구가 회색에서 검은색으로 채워집니다.
         (() => {
             const title = document.querySelector('.scroll-fill-text');
-            if (!title) return;
-
-            const section = title.closest('.about-pulmuone');
-            if (!section) return;
+            const section = title?.closest('.about-pulmuone');
+            const inner = section?.querySelector('.about-pulmuone__inner');
+            if (!title || !section || !inner) return;
 
             const updateFill = () => {
-                const sectionRect = section.getBoundingClientRect();
+                const rect = section.getBoundingClientRect();
                 const viewportHeight = window.innerHeight;
-                // 소개 영역이 화면을 통과하는 긴 구간 동안 글씨를 채워 다음 섹션 진입을 늦춥니다.
-                const start = viewportHeight * 0.85;
-                const end = sectionRect.height - viewportHeight * 0.15;
-                const distance = Math.max(1, end - start);
-                const progress = Math.max(0, Math.min(1, (start - sectionRect.top) / distance));
+                // 섹션이 화면에 들어오기 시작할 때부터 sticky 영역이 끝날 때까지 진행합니다.
+                const start = viewportHeight * 0.8;
+                const travel = Math.max(1, section.offsetHeight - inner.offsetHeight + start);
+                const progress = Math.max(0, Math.min(1, (start - rect.top) / travel));
                 title.style.setProperty('--text-fill-progress', `${progress * 100}%`);
                 section.classList.toggle('is-text-filled', progress >= 1);
             };
 
-            updateFill();
             window.addEventListener('scroll', updateFill, { passive: true });
             window.addEventListener('resize', updateFill);
+            window.addEventListener('load', updateFill);
+            updateFill();
         })();
     </script>
 
