@@ -354,3 +354,106 @@ body,
         margin-top: 12px;
     }
 }
+
+
+/* Figma 33:77 - ABOUT PULMUONE section */
+#wrap .about-pulmuone {
+    width: 100%;
+    padding: 110px 20px;
+    background: #fff;
+    color: #2d292a;
+    box-sizing: border-box;
+}
+#wrap .about-pulmuone__inner {
+    width: min(100%, 1720px);
+    min-height: 634px;
+    margin: 0 auto;
+    position: relative;
+}
+#wrap .about-pulmuone__eyebrow {
+    margin: 0 0 80px 40px;
+    color: #2f6e23;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+#wrap .about-pulmuone__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 333px;
+    align-items: center;
+    gap: 60px;
+    padding: 0 40px;
+}
+#wrap .about-pulmuone__content h2 {
+    margin: 0;
+    font-size: clamp(36px, 4.2vw, 80px);
+    line-height: 1.35;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+    word-break: keep-all;
+}
+#wrap .about-pulmuone__description {
+    width: min(900px, 70%);
+    margin: 64px 0 0 40px;
+    color: #a0a4a8;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+#wrap .about-pulmuone__visual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 333 / 434;
+    overflow: hidden;
+    border-radius: 48% 48% 24px 24px;
+    background: linear-gradient(150deg, #e6f0d9 0%, #c4d9a5 42%, #83a65b 100%);
+}
+#wrap .about-pulmuone__leaf {
+    position: absolute;
+    display: block;
+    border-radius: 90% 0 90% 0;
+    background: linear-gradient(145deg, #76a943, #2f6e23);
+    box-shadow: 0 12px 30px rgba(47, 110, 35, .14);
+}
+#wrap .about-pulmuone__leaf--one {
+    width: 70%;
+    height: 36%;
+    left: 7%;
+    top: 30%;
+    transform: rotate(-28deg);
+}
+#wrap .about-pulmuone__leaf--two {
+    width: 66%;
+    height: 34%;
+    right: -7%;
+    top: 48%;
+    transform: rotate(35deg);
+    background: linear-gradient(145deg, #9ac85b, #4d862e);
+}
+#wrap .about-pulmuone__leaf--three {
+    width: 52%;
+    height: 28%;
+    left: 26%;
+    top: 10%;
+    transform: rotate(18deg);
+    background: linear-gradient(145deg, #a9d36c, #5b9436);
+}
+#wrap .about-pulmuone__sun {
+    position: absolute;
+    width: 40%;
+    aspect-ratio: 1;
+    right: -6%;
+    top: -5%;
+    border-radius: 50%;
+    background: rgba(255,255,255,.55);
+    filter: blur(2px);
+}
+@media (max-width: 900px) {
+    #wrap .about-pulmuone { padding: 72px 20px; }
+    #wrap .about-pulmuone__inner { min-height: 0; }
+    #wrap .about-pulmuone__eyebrow { margin: 0 0 42px; }
+    #wrap .about-pulmuone__content { grid-template-columns: 1fr; padding: 0; gap: 36px; }
+    #wrap .about-pulmuone__content h2 { font-size: clamp(32px, 7vw, 56px); }
+    #wrap .about-pulmuone__visual { width: min(333px, 78%); justify-self: end; }
+    #wrap .about-pulmuone__description { width: 100%; margin: 36px 0 0; font-size: 16px; }
+}
