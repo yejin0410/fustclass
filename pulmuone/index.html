@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
     <!-- Pretendard Variable 폰트 -->
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
-    <link rel="stylesheet" href="css/main.css?v=20261028-14">
+    <link rel="stylesheet" href="css/main.css?v=20261028-15">
     <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
@@ -59,11 +59,30 @@
                     <p class="about-pulmuone__eyebrow">ABOUT PULMUONE</p>
                     <div class="about-pulmuone__content">
                         <h2 id="about-title">풀무원은 바른먹거리를 통해<br>사람과 지구의 건강한 내일을<br>만들어갑니다.</h2>
-                        <div class="about-pulmuone__visual" aria-hidden="true">
-                            <span class="about-pulmuone__leaf about-pulmuone__leaf--one"></span>
-                            <span class="about-pulmuone__leaf about-pulmuone__leaf--two"></span>
-                            <span class="about-pulmuone__leaf about-pulmuone__leaf--three"></span>
-                            <span class="about-pulmuone__sun"></span>
+                        <div class="about-pulmuone__visual about-pulmuone__visual--earth" aria-hidden="true">
+                            <svg class="about-pulmuone__earth-art" viewBox="0 0 333 434" role="img" xmlns="http://www.w3.org/2000/svg">
+                                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M57 22 C43 4 35 1 29 5 C20 14 27 35 45 43 L64 51 L58 32" stroke="#079A20" stroke-width="7"/>
+                                    <path d="M252 93 A37 37 0 0 1 302 113" stroke="#FFE600" stroke-width="8"/>
+                                    <path d="M292 98 L304 114 L315 98" stroke="#FFE600" stroke-width="8"/>
+                                    <path d="M304 132 A37 37 0 0 1 254 112" stroke="#FFE600" stroke-width="8"/>
+                                    <path d="M264 127 L252 111 L241 127" stroke="#FFE600" stroke-width="8"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="pulmuone-earth-clip"><circle cx="166" cy="286" r="117"/></clipPath>
+                                    <radialGradient id="pulmuone-earth-blue" cx="35%" cy="25%" r="80%"><stop offset="0" stop-color="#50D9FF"/><stop offset="1" stop-color="#078DE5"/></radialGradient>
+                                </defs>
+                                <circle cx="166" cy="286" r="117" fill="url(#pulmuone-earth-blue)"/>
+                                <g clip-path="url(#pulmuone-earth-clip)" fill="#7DE34D">
+                                    <path d="M115 190 L137 177 L152 186 L163 205 L151 220 L132 221 L126 239 L105 247 L91 268 L99 286 L119 293 L133 282 L147 295 L144 314 L160 327 L156 349 L142 367 L122 362 L112 339 L95 329 L85 306 L68 295 L60 273 L72 250 L73 227 L91 211 Z"/>
+                                    <path d="M176 181 L193 173 L210 182 L223 179 L235 195 L225 210 L208 211 L200 225 L183 219 L172 205 Z"/>
+                                    <path d="M181 236 L201 232 L216 244 L229 265 L220 281 L209 299 L198 322 L184 341 L174 323 L180 304 L168 284 L171 265 L159 252 Z"/>
+                                    <path d="M240 221 L259 222 L278 237 L288 256 L277 269 L265 257 L254 248 Z"/>
+                                    <path d="M233 300 L253 295 L270 306 L284 326 L270 343 L251 336 L241 320 Z"/>
+                                    <path d="M76 325 L91 334 L97 350 L83 359 L67 348 Z"/>
+                                </g>
+                                <path d="M99 230 C123 196 152 190 176 204" fill="none" stroke="#8EF65A" stroke-width="4" opacity=".65"/>
+                            </svg>
                         </div>
                     </div>
                     <p class="about-pulmuone__description">Pulmuone creates a healthy future for people and planet through wholesome food and sustainable practices.</p>
