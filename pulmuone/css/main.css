@@ -925,14 +925,3 @@ body,
         padding-top: 2vh !important;
     }
 }
-
-
-/* ABOUT 문구 사이 간격은 margin 대신 padding으로 작게 설정 */
-#wrap .about-pulmuone__eyebrow {
-    margin-bottom: 0 !important;
-    padding-bottom: 12px !important;
-}
-#wrap .about-pulmuone__description {
-    margin-top: 0 !important;
-    padding-top: 8px !important;
-}
