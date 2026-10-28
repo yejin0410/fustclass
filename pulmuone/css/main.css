@@ -488,3 +488,9 @@ body,
         width: calc(100% - 32px);
     }
 }
+
+
+/* 헤더 메뉴 글씨 사이 간격을 약 10px로 조정 */
+#wrap .site-header .main-nav {
+    gap: 10px !important;
+}
