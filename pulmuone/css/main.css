@@ -457,3 +457,9 @@ body,
     #wrap .about-pulmuone__visual { width: min(333px, 78%); justify-self: end; }
     #wrap .about-pulmuone__description { width: 100%; margin: 36px 0 0; font-size: 16px; }
 }
+
+
+/* 헤더의 세 메뉴 항목 사이 간격 */
+#wrap .site-header .main-nav {
+    gap: 9px !important;
+}
