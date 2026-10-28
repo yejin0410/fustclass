@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
     <!-- Pretendard Variable 폰트 -->
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
-    <link rel="stylesheet" href="css/main.css?v=20261028-18">
+    <link rel="stylesheet" href="css/main.css?v=20261028-19">
     <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
@@ -122,8 +122,8 @@
             const updateFill = () => {
                 const rect = title.getBoundingClientRect();
                 const viewportHeight = window.innerHeight;
-                const start = viewportHeight * 0.82;
-                const end = viewportHeight * 0.28;
+                const start = viewportHeight * 0.95;
+                const end = viewportHeight * 0.05;
                 const progress = Math.max(0, Math.min(1, (start - rect.top) / (start - end)));
                 title.style.setProperty('--text-fill-progress', `${progress * 100}%`);
             };
