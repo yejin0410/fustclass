@@ -541,3 +541,38 @@ body,
         -webkit-text-fill-color: #292526;
     }
 }
+
+
+/* 텍스트가 완전히 채워질 때까지 소개 영역을 고정해 다음 섹션 진입을 늦춤 */
+#wrap .about-pulmuone {
+    min-height: 200vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+}
+#wrap .about-pulmuone__inner {
+    position: sticky;
+    top: 10vh;
+    min-height: min(634px, 80vh);
+    padding-top: 10vh;
+    padding-bottom: 8vh;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    #wrap .about-pulmuone {
+        min-height: 190vh;
+    }
+    #wrap .about-pulmuone__inner {
+        top: 4vh;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media (max-height: 650px) and (min-width: 901px) {
+    #wrap .about-pulmuone__inner {
+        top: 4vh;
+        padding-top: 4vh;
+        transform: scale(.9);
+        transform-origin: top center;
+    }
+}
