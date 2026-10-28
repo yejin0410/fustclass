@@ -516,3 +516,28 @@ body,
     padding: 10px !important;
     box-sizing: border-box;
 }
+
+
+/* 스크롤에 맞춰 소개 문구의 색이 회색에서 검은색으로 채워지는 효과 */
+#wrap .about-pulmuone__content h2.scroll-fill-text {
+    color: #c8c8c8;
+}
+#wrap .about-pulmuone__content h2.scroll-fill-text span {
+    color: transparent;
+    background-image: linear-gradient(
+        90deg,
+        #292526 0%,
+        #292526 calc(var(--text-fill-progress, 0) * 100%),
+        #c8c8c8 calc(var(--text-fill-progress, 0) * 100%),
+        #c8c8c8 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+@media (prefers-reduced-motion: reduce) {
+    #wrap .about-pulmuone__content h2.scroll-fill-text span {
+        background-image: none;
+        color: #292526;
+        -webkit-text-fill-color: #292526;
+    }
+}
