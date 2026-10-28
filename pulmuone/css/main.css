@@ -813,3 +813,18 @@ body,
         padding-bottom: 4vh !important;
     }
 }
+
+
+/* 애니메이션 글씨가 확실히 보이도록 텍스트 클리핑 스타일 보정 */
+#wrap .about-pulmuone__content h2.scroll-fill-text {
+    color: #c8c8c8 !important;
+}
+#wrap .about-pulmuone__content h2.scroll-fill-text span {
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    will-change: background-image;
+}
