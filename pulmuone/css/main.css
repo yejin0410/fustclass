@@ -1,5 +1,18 @@
+:root {
+    /* 브랜드 컬러 - Figma Variables */
+    --color-brand-green: #7bcc12;
+    --color-brand-sub-green: #92c847;
+    --color-brand-dark-green: #2f6e23;
+    --color-brand-dark-gray: #2d292a;
+    --color-brand-gray: #a0a4a8;
+    --color-brand-white: #ffffff;
+
+    /* 기본 폰트 */
+    --font-family-base: "Pretendard Variable", Pretendard, sans-serif;
+}
+
 body {
-    font-family: "pretendard variable", sans-serif;
+    font-family: var(--font-family-base);
 }
 
 .mo {
@@ -59,13 +72,13 @@ body {
     height: 6px;
     margin: 0 !important;
     border-radius: 50%;
-    background: #ffffff;
+    background: var(--color-brand-white);
     opacity: 1;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .hero-sec .visual .swiper-pagination-bullet-active {
-    background: #7BCC12;
+    background: var(--color-brand-green);
     transform: scale(1.05);
 }
 
@@ -84,12 +97,12 @@ body {
     content: none !important;
 }
 
-/* 페이지네이션: 비활성 색상은 흰색 유지, 활성 색상은 #7BCC12 */
+/* 페이지네이션: 비활성 색상은 흰색 유지, 활성 색상은 브랜드 그린 */
 #wrap .hero-sec .visual .swiper-pagination-bullet {
-    background: #ffffff !important;
+    background: var(--color-brand-white) !important;
     opacity: 0.8 !important;
 }
 #wrap .hero-sec .visual .swiper-pagination-bullet-active {
-    background: #7BCC12 !important;
+    background: var(--color-brand-green) !important;
     opacity: 1 !important;
 }
