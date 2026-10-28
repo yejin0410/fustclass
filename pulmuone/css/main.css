@@ -768,13 +768,13 @@ body,
 }
 #wrap .right-food-section {
     margin-top: 0 !important;
-    padding-top: 40px !important;
+    padding-top: 20px !important;
 }
 
 
 /* 복구: ABOUT PULMUONE 스크롤 글씨 채우기 애니메이션 */
 #wrap .about-pulmuone {
-    min-height: 120vh !important;
+    min-height: 90vh !important;
     height: auto !important;
     padding: 0 20px !important;
     position: relative !important;
@@ -804,7 +804,7 @@ body,
 }
 @media (max-width: 900px) {
     #wrap .about-pulmuone {
-        min-height: 120vh !important;
+        min-height: 90vh !important;
         padding: 0 20px !important;
     }
     #wrap .about-pulmuone__inner {
