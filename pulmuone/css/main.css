@@ -322,3 +322,35 @@ body,
     height: 100%;
     object-fit: cover;
 }
+
+
+/* 메인 메뉴를 화면 가로 중앙에 배치 */
+#wrap .site-header .header-main {
+    position: relative;
+    justify-content: space-between;
+}
+#wrap .site-header .main-nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    white-space: nowrap;
+}
+#wrap .site-header .brand-logo {
+    flex: 0 0 auto;
+}
+#wrap .site-header .language-switch {
+    margin-left: auto;
+    flex: 0 0 auto;
+}
+@media (max-width: 600px) {
+    #wrap .site-header .header-main {
+        position: relative;
+    }
+    #wrap .site-header .main-nav {
+        position: static;
+        transform: none;
+        margin-top: 12px;
+    }
+}
