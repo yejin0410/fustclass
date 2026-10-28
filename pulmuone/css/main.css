@@ -292,3 +292,33 @@ body {
     width: 100% !important;
     max-width: none !important;
 }
+
+
+/* 최종 수정: 히어로 배너를 가운데 기준으로 브라우저 전체 폭에 고정 */
+html,
+body,
+#wrap {
+    max-width: none;
+}
+#wrap .hero-sec {
+    position: relative;
+    left: 50%;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: 0 !important;
+    transform: translateX(-50%);
+}
+#wrap .hero-sec .visual,
+#wrap .hero-sec .swiper-wrapper,
+#wrap .hero-sec .swiper-slide {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+#wrap .hero-sec .swiper-slide img.pc,
+#wrap .hero-sec .swiper-slide img.mo {
+    display: block;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100%;
+    object-fit: cover;
+}
