@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
     <!-- Pretendard Variable 폰트 -->
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
-    <link rel="stylesheet" href="css/main.css?v=20261028-19">
+    <link rel="stylesheet" href="css/main.css?v=20261028-20">
     <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
@@ -119,13 +119,19 @@
             const title = document.querySelector('.scroll-fill-text');
             if (!title) return;
 
+            const section = title.closest('.about-pulmuone');
+            if (!section) return;
+
             const updateFill = () => {
-                const rect = title.getBoundingClientRect();
+                const sectionRect = section.getBoundingClientRect();
                 const viewportHeight = window.innerHeight;
-                const start = viewportHeight * 0.95;
-                const end = viewportHeight * 0.05;
-                const progress = Math.max(0, Math.min(1, (start - rect.top) / (start - end)));
+                // 소개 영역이 화면을 통과하는 긴 구간 동안 글씨를 채워 다음 섹션 진입을 늦춥니다.
+                const start = viewportHeight * 0.85;
+                const end = sectionRect.height - viewportHeight * 0.15;
+                const distance = Math.max(1, end - start);
+                const progress = Math.max(0, Math.min(1, (start - sectionRect.top) / distance));
                 title.style.setProperty('--text-fill-progress', `${progress * 100}%`);
+                section.classList.toggle('is-text-filled', progress >= 1);
             };
 
             updateFill();
