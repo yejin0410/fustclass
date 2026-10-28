@@ -736,3 +736,16 @@ body,
         box-sizing: border-box !important;
     }
 }
+
+
+/* ABOUT PULMUONE과 RIGHT FOOD 사이 간격을 약 80px로 조정 */
+#wrap .about-pulmuone {
+    min-height: calc(100vh + 80px) !important;
+    padding-bottom: 80px !important;
+}
+@media (max-width: 900px) {
+    #wrap .about-pulmuone {
+        min-height: calc(100vh + 80px) !important;
+        padding-bottom: 80px !important;
+    }
+}
