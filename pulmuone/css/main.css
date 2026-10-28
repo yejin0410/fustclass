@@ -1003,3 +1003,11 @@ body,
         padding-left: 0 !important;
     }
 }
+
+
+/* ABOUT 지구 일러스트 크기 살짝 축소 */
+#wrap .about-pulmuone__visual--earth .about-pulmuone__earth-art {
+    width: 92% !important;
+    height: 92% !important;
+    margin: 0 auto;
+}
