@@ -850,3 +850,35 @@ body,
     background-clip: text !important;
     -webkit-background-clip: text !important;
 }
+
+
+/* ABOUT와 RIGHT FOOD 사이 실제 콘텐츠 간격 조정: 설명 문구 아래 여백 축소 */
+#wrap .about-pulmuone {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 20px !important;
+}
+#wrap .about-pulmuone__inner {
+    position: static !important;
+    top: auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding-top: 10vh !important;
+    padding-bottom: 0 !important;
+    transform: none !important;
+}
+#wrap .about-pulmuone__description {
+    margin-bottom: 0 !important;
+}
+#wrap .right-food-section {
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+}
+@media (max-width: 900px) {
+    #wrap .about-pulmuone__inner {
+        padding-top: 4vh !important;
+    }
+    #wrap .right-food-section {
+        padding-top: 20px !important;
+    }
+}
