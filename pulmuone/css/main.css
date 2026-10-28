@@ -970,15 +970,16 @@ body,
 }
 
 
-/* ABOUT 세 요소 사이 간격: gap이 아닌 padding으로 9px씩 적용 */
+/* ABOUT 텍스트 간격을 RIGHT FOOD 섹션과 동일하게 적용: padding 사용 */
 #wrap .about-pulmuone__text {
     gap: 0 !important;
 }
 #wrap .about-pulmuone__text .about-pulmuone__eyebrow {
-    padding: 0 0 9px !important;
+    padding: 0 0 24px !important;
+    margin: 0 !important;
 }
 #wrap .about-pulmuone__text h2.scroll-fill-text {
-    padding: 0 0 9px !important;
+    padding: 0 0 8px !important;
     margin: 0 !important;
 }
 #wrap .about-pulmuone__text .about-pulmuone__description {
