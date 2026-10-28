@@ -474,3 +474,17 @@ body,
         width: calc(100% - 30px);
     }
 }
+
+
+/* 이전 상태로 복원: 헤더 메뉴 간격과 좌우 여백 */
+#wrap .site-header .main-nav {
+    gap: 57px !important;
+}
+#wrap .site-header .header-inner {
+    width: min(calc(100% - 40px), 1720px);
+}
+@media (max-width: 1024px) {
+    #wrap .site-header .header-inner {
+        width: calc(100% - 32px);
+    }
+}
