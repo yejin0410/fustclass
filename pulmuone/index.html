@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
     <!-- Pretendard Variable 폰트 -->
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
-    <link rel="stylesheet" href="css/main.css?v=20261028-3">
+    <link rel="stylesheet" href="css/main.css?v=20261028-4">
     <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
@@ -21,14 +21,14 @@
                     <a href="#notice">공지사항</a>
                 </div>
                 <div class="header-main">
-                    <a class="brand-logo" href="#top" aria-label="풀무원 홈">풀무원</a>
+                    <a class="brand-logo" href="#top" aria-label="풀무원 홈"><img src="img/logo.gif" alt="Pulmuone 풀무원 로고"></a>
                     <nav class="main-nav" aria-label="주요 메뉴">
                         <a href="#food">바른먹거리</a>
                         <a href="#news">뉴스룸</a>
                         <a href="#company">회사소개</a>
                     </nav>
                     <div class="language-switch" aria-label="언어 선택">
-                        <span class="current">KR</span><span class="slash">/</span><span>EN</span>
+                        <button type="button" class="language-button current" lang="ko" aria-pressed="true">KR</button><span class="slash">/</span><button type="button" class="language-button" lang="en" aria-pressed="false">EN</button>
                     </div>
                 </div>
             </div>
@@ -64,5 +64,18 @@
             },
         });
     </script>
+
+    <script>
+        document.querySelectorAll('.language-button').forEach((button) => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.language-button').forEach((item) => {
+                    const selected = item === button;
+                    item.classList.toggle('current', selected);
+                    item.setAttribute('aria-pressed', String(selected));
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
