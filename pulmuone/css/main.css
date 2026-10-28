@@ -509,3 +509,10 @@ body,
     height: 100%;
     overflow: visible;
 }
+
+
+/* 헤더 메뉴 링크에 10px 패딩 적용 */
+#wrap .site-header .main-nav a {
+    padding: 10px !important;
+    box-sizing: border-box;
+}
