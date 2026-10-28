@@ -106,3 +106,98 @@ body {
     background: var(--color-brand-green) !important;
     opacity: 1 !important;
 }
+
+
+/* 헤더: Figma 33:46 시안 반영 */
+.site-header {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    background: #fff;
+    color: var(--color-brand-dark-gray);
+}
+.header-inner {
+    width: min(100% - 40px, 1720px);
+    margin: 0 auto;
+}
+.utility-nav {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.utility-nav a {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: .8;
+    white-space: nowrap;
+}
+.header-main {
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.brand-logo {
+    flex: 0 0 auto;
+    color: var(--color-brand-dark-green);
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 57px;
+}
+.main-nav a {
+    color: var(--color-brand-dark-gray);
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+    color: var(--color-brand-gray);
+}
+.language-switch .current { color: var(--color-brand-dark-green); }
+
+@media (max-width: 1024px) {
+    .site-header {
+        position: relative;
+        height: auto;
+        background: #fff;
+    }
+    .header-inner { width: calc(100% - 32px); }
+    .utility-nav { min-height: 34px; gap: 14px; }
+    .utility-nav a { font-size: 12px; }
+    .header-main {
+        min-height: 64px;
+        gap: 12px;
+    }
+    .brand-logo { font-size: 25px; }
+    .main-nav { gap: clamp(12px, 3vw, 28px); }
+    .main-nav a { font-size: clamp(12px, 1.8vw, 16px); }
+    .language-switch { font-size: 14px; }
+}
+@media (max-width: 600px) {
+    .utility-nav { gap: 10px; }
+    .utility-nav a { font-size: 11px; }
+    .header-main { flex-wrap: wrap; padding: 12px 0; }
+    .main-nav { order: 3; width: 100%; justify-content: space-between; gap: 10px; }
+    .main-nav a { font-size: 14px; }
+    .language-switch { margin-left: auto; }
+}
