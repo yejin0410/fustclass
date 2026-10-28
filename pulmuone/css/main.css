@@ -201,3 +201,39 @@ body {
     .main-nav a { font-size: 14px; }
     .language-switch { margin-left: auto; }
 }
+
+
+/* 헤더 로고 이미지와 클릭 가능한 언어 선택 */
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    width: 210px;
+    flex: 0 0 210px;
+}
+.brand-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.language-button {
+    padding: 8px 2px;
+    border: 0;
+    background: transparent;
+    color: var(--color-brand-gray);
+    font: inherit;
+    cursor: pointer;
+}
+.language-button.current {
+    color: var(--color-brand-dark-green);
+}
+.language-button:focus-visible {
+    outline: 2px solid var(--color-brand-green);
+    outline-offset: 3px;
+}
+@media (max-width: 1024px) {
+    .brand-logo {
+        width: 150px;
+        flex-basis: 150px;
+    }
+}
