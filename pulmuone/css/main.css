@@ -749,3 +749,24 @@ body,
         padding-bottom: 80px !important;
     }
 }
+
+
+/* 최종 간격 수정: ABOUT 내용 아래 80px 간격으로 RIGHT FOOD 연결 */
+#wrap .about-pulmuone {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 80px 20px !important;
+}
+#wrap .about-pulmuone__inner {
+    position: static !important;
+    top: auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    transform: none !important;
+}
+#wrap .right-food-section {
+    margin-top: 0 !important;
+    padding-top: 80px !important;
+}
