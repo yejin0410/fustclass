@@ -991,3 +991,15 @@ body,
         gap: 0 !important;
     }
 }
+
+
+/* ABOUT 텍스트의 왼쪽 기준선을 RIGHT FOOD 제목 영역과 가깝게 정렬 */
+#wrap .about-pulmuone__text {
+    padding-left: 33px !important;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    #wrap .about-pulmuone__text {
+        padding-left: 0 !important;
+    }
+}
