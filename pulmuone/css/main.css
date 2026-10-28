@@ -903,3 +903,25 @@ body,
 #wrap .about-pulmuone__content {
     row-gap: 0 !important;
 }
+
+
+/* ABOUT 영역의 텍스트 블록 주변 padding 축소 */
+#wrap .about-pulmuone__inner {
+    padding-top: 2vh !important;
+    padding-bottom: 0 !important;
+}
+#wrap .about-pulmuone__eyebrow {
+    padding-bottom: 0 !important;
+}
+#wrap .about-pulmuone__content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+#wrap .about-pulmuone__description {
+    padding-top: 0 !important;
+}
+@media (max-width: 900px) {
+    #wrap .about-pulmuone__inner {
+        padding-top: 2vh !important;
+    }
+}
