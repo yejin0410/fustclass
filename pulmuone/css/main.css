@@ -527,8 +527,8 @@ body,
     background-image: linear-gradient(
         90deg,
         #292526 0%,
-        #292526 calc(var(--text-fill-progress, 0) * 100%),
-        #c8c8c8 calc(var(--text-fill-progress, 0) * 100%),
+        #292526 var(--text-fill-progress, 0%),
+        #c8c8c8 var(--text-fill-progress, 0%),
         #c8c8c8 100%
     );
     background-clip: text;
