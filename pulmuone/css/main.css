@@ -882,3 +882,12 @@ body,
         padding-top: 20px !important;
     }
 }
+
+
+/* ABOUT 내부 문구 사이 간격 축소 */
+#wrap .about-pulmuone__eyebrow {
+    margin-bottom: 32px !important;
+}
+#wrap .about-pulmuone__description {
+    margin-top: 28px !important;
+}
