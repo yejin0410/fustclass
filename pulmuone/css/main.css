@@ -968,3 +968,25 @@ body,
         justify-self: end;
     }
 }
+
+
+/* ABOUT 세 요소 사이 간격: gap이 아닌 padding으로 9px씩 적용 */
+#wrap .about-pulmuone__text {
+    gap: 0 !important;
+}
+#wrap .about-pulmuone__text .about-pulmuone__eyebrow {
+    padding: 0 0 9px !important;
+}
+#wrap .about-pulmuone__text h2.scroll-fill-text {
+    padding: 0 0 9px !important;
+    margin: 0 !important;
+}
+#wrap .about-pulmuone__text .about-pulmuone__description {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+@media (max-width: 900px) {
+    #wrap .about-pulmuone__text {
+        gap: 0 !important;
+    }
+}
