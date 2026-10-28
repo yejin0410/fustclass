@@ -993,18 +993,20 @@ body,
 }
 
 
-/* ABOUT 섹션을 고정해 문구가 완전히 검게 채워질 때까지 다음 섹션으로 넘어가지 않도록 함 */
+/* ABOUT 스크롤 구간: 100% 채움 전까지 텍스트 영역을 화면에 고정 */
 #wrap .about-pulmuone {
-    height: 180vh !important;
-    min-height: 180vh !important;
-    padding: 0 20px !important;
+    display: block !important;
     position: relative !important;
+    height: 200vh !important;
+    min-height: 200vh !important;
+    padding: 0 20px !important;
     overflow: visible !important;
     box-sizing: border-box !important;
 }
 #wrap .about-pulmuone__inner {
     position: sticky !important;
     top: 0 !important;
+    width: 100% !important;
     height: 100vh !important;
     min-height: 100vh !important;
     padding: 8vh 0 !important;
@@ -1017,8 +1019,8 @@ body,
 }
 @media (max-width: 900px) {
     #wrap .about-pulmuone {
-        height: 180vh !important;
-        min-height: 180vh !important;
+        height: 200vh !important;
+        min-height: 200vh !important;
     }
     #wrap .about-pulmuone__inner {
         top: 0 !important;
