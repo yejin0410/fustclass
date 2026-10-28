@@ -709,3 +709,30 @@ body,
         min-height: 64px;
     }
 }
+
+
+/* 강제 적용: 데스크톱 헤더 총 높이 120px */
+@media (min-width: 1025px) {
+    #wrap > header.site-header {
+        height: 120px !important;
+        min-height: 120px !important;
+        max-height: 120px !important;
+        overflow: hidden;
+    }
+    #wrap > header.site-header .utility-nav {
+        height: 34px !important;
+        min-height: 34px !important;
+        max-height: 34px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        box-sizing: border-box !important;
+    }
+    #wrap > header.site-header .header-main {
+        height: 86px !important;
+        min-height: 86px !important;
+        max-height: 86px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        box-sizing: border-box !important;
+    }
+}
