@@ -382,7 +382,7 @@ body,
     grid-template-columns: minmax(0, 1fr) 333px;
     align-items: center;
     gap: 60px;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 #wrap .about-pulmuone__content h2 {
     margin: 0;
