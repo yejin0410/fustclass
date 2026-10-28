@@ -519,10 +519,10 @@ body,
 
 
 /* 스크롤에 맞춰 소개 문구의 색이 회색에서 검은색으로 채워지는 효과 */
-#wrap .about-pulmuone__content h2.scroll-fill-text {
+#wrap .about-pulmuone__text h2.scroll-fill-text {
     color: #c8c8c8;
 }
-#wrap .about-pulmuone__content h2.scroll-fill-text span {
+#wrap .about-pulmuone__text h2.scroll-fill-text span {
     color: transparent;
     background-image: linear-gradient(
         90deg,
@@ -535,7 +535,7 @@ body,
     -webkit-background-clip: text;
 }
 @media (prefers-reduced-motion: reduce) {
-    #wrap .about-pulmuone__content h2.scroll-fill-text span {
+    #wrap .about-pulmuone__text h2.scroll-fill-text span {
         background-image: none;
         color: #292526;
         -webkit-text-fill-color: #292526;
@@ -790,7 +790,7 @@ body,
     transform: none !important;
     box-sizing: border-box !important;
 }
-#wrap .about-pulmuone__content h2.scroll-fill-text span {
+#wrap .about-pulmuone__text h2.scroll-fill-text span {
     background-image: linear-gradient(
         90deg,
         #292526 0%,
@@ -816,10 +816,10 @@ body,
 
 
 /* 애니메이션 글씨가 확실히 보이도록 텍스트 클리핑 스타일 보정 */
-#wrap .about-pulmuone__content h2.scroll-fill-text {
+#wrap .about-pulmuone__text h2.scroll-fill-text {
     color: #c8c8c8 !important;
 }
-#wrap .about-pulmuone__content h2.scroll-fill-text span {
+#wrap .about-pulmuone__text h2.scroll-fill-text span {
     color: transparent !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
@@ -831,10 +831,10 @@ body,
 
 
 /* ABOUT 제목의 스크롤 색상 채우기: 기본 회색, 진행률만큼 왼쪽부터 검정 */
-#wrap .about-pulmuone__content h2.scroll-fill-text {
+#wrap .about-pulmuone__text h2.scroll-fill-text {
     color: #c8c8c8 !important;
 }
-#wrap .about-pulmuone__content h2.scroll-fill-text span {
+#wrap .about-pulmuone__text h2.scroll-fill-text span {
     display: inline;
     color: transparent !important;
     -webkit-text-fill-color: transparent !important;
@@ -923,5 +923,48 @@ body,
 @media (max-width: 900px) {
     #wrap .about-pulmuone__inner {
         padding-top: 2vh !important;
+    }
+}
+
+
+/* ABOUT 텍스트 그룹: Figma의 세로 gap 9px 반영 (글씨 채우기 애니메이션 유지) */
+#wrap .about-pulmuone__content {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 333px !important;
+    align-items: center !important;
+    gap: 60px !important;
+    padding: 0 30px !important;
+}
+#wrap .about-pulmuone__text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 9px !important;
+    min-width: 0;
+}
+#wrap .about-pulmuone__eyebrow {
+    margin: 0 !important;
+}
+#wrap .about-pulmuone__text h2.scroll-fill-text {
+    margin: 0 !important;
+}
+#wrap .about-pulmuone__description {
+    width: 100% !important;
+    margin: 0 !important;
+}
+#wrap .about-pulmuone__visual {
+    align-self: center;
+}
+@media (max-width: 900px) {
+    #wrap .about-pulmuone__content {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        padding: 0 !important;
+    }
+    #wrap .about-pulmuone__text {
+        gap: 9px !important;
+    }
+    #wrap .about-pulmuone__visual {
+        width: min(333px, 78%);
+        justify-self: end;
     }
 }
