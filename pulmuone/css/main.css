@@ -770,3 +770,46 @@ body,
     margin-top: 0 !important;
     padding-top: 80px !important;
 }
+
+
+/* 복구: ABOUT PULMUONE 스크롤 글씨 채우기 애니메이션 */
+#wrap .about-pulmuone {
+    min-height: 200vh !important;
+    height: auto !important;
+    padding: 0 20px !important;
+    position: relative !important;
+    overflow: visible !important;
+}
+#wrap .about-pulmuone__inner {
+    position: sticky !important;
+    top: 10vh !important;
+    min-height: min(634px, 80vh) !important;
+    height: auto !important;
+    padding-top: 10vh !important;
+    padding-bottom: 8vh !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+}
+#wrap .about-pulmuone__content h2.scroll-fill-text span {
+    background-image: linear-gradient(
+        90deg,
+        #292526 0%,
+        #292526 var(--text-fill-progress, 0%),
+        #c8c8c8 var(--text-fill-progress, 0%),
+        #c8c8c8 100%
+    ) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+@media (max-width: 900px) {
+    #wrap .about-pulmuone {
+        min-height: 190vh !important;
+        padding: 0 20px !important;
+    }
+    #wrap .about-pulmuone__inner {
+        top: 4vh !important;
+        padding-top: 4vh !important;
+        padding-bottom: 4vh !important;
+    }
+}
