@@ -850,3 +850,11 @@ body,
     background-clip: text !important;
     -webkit-background-clip: text !important;
 }
+
+/* 헤더 메뉴 중 '바른먹거리'와 '회사소개' 사이 간격 축소 */
+#wrap .site-header .main-nav {
+    gap: 2px !important;
+}
+#wrap .site-header .main-nav a {
+    padding: 10px 5px !important;
+}
