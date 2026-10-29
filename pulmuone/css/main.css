@@ -1626,3 +1626,17 @@ body,
 /* Slower, smoother carousel motion */
 #wrap .campaign-vehicle-style__track { transition:transform 1.25s cubic-bezier(.22,.61,.36,1) !important; }
 #wrap .campaign-vehicle-style__card { transition:flex-basis 1.25s cubic-bezier(.22,.61,.36,1),transform 1.25s cubic-bezier(.22,.61,.36,1),opacity .8s ease; }
+
+
+/* Explicit final override: remove every small CTA/arrow inside campaign cards */
+#wrap .campaign-vehicle-style__copy span,
+#wrap .campaign-vehicle-style__card > a::after { display:none !important; content:none !important; opacity:0 !important; }
+#wrap .campaign-vehicle-style__track {
+  transition-property: transform !important;
+  transition-duration: 2s !important;
+  transition-timing-function: cubic-bezier(.22,.61,.36,1) !important;
+}
+#wrap .campaign-vehicle-style__card {
+  transition-duration: 2s !important;
+  transition-timing-function: cubic-bezier(.22,.61,.36,1) !important;
+}
