@@ -281,7 +281,7 @@
                 const order = [(active + cards.length - 1) % cards.length, active, (active + 1) % cards.length];
                 order.forEach(i => track.appendChild(cards[i]));
                 cards.forEach((card, i) => card.classList.toggle('is-active', i === active));
-                track.style.transition = animate ? 'transform 1.25s cubic-bezier(.22,.61,.36,1)' : 'none';
+                track.style.transition = animate ? 'transform 2s cubic-bezier(.22,.61,.36,1)' : 'none';
                 const selected = cards[active];
                 const offset = selected.offsetLeft + selected.offsetWidth / 2 - viewport.clientWidth / 2;
                 track.style.transform = 'translateX(' + (-offset) + 'px)';
