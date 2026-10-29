@@ -267,47 +267,42 @@
 
 
     <script>
-        // 캠페인 카드는 화살표 버튼 대신 마우스 드래그와 터치 스와이프로 넘깁니다.
+        // 마우스 드래그 또는 터치 스와이프로 캠페인 카드를 넘깁니다.
         (() => {
             const section = document.querySelector('.campaign-vehicle-style');
             if (!section) return;
             const track = section.querySelector('.campaign-vehicle-style__track');
             const viewport = section.querySelector('.campaign-vehicle-style__viewport');
             const cards = Array.from(section.querySelectorAll('.campaign-vehicle-style__card'));
-            let active = 1;
-            let startX = 0;
-            let startOffset = 0;
-            let dragging = false;
-            let moved = false;
+            let active = 0, startX = 0, startOffset = 0, dragging = false, moved = false;
 
             function layout(index, animate = true) {
                 active = (index + cards.length) % cards.length;
+                const order = [(active + cards.length - 1) % cards.length, active, (active + 1) % cards.length];
+                order.forEach(i => track.appendChild(cards[i]));
                 cards.forEach((card, i) => card.classList.toggle('is-active', i === active));
-                track.style.transition = animate ? 'transform .55s cubic-bezier(.22,.61,.36,1)' : 'none';
-                const card = cards[active];
-                const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-                const offset = cardCenter - viewport.clientWidth / 2;
+                track.style.transition = animate ? 'transform .6s cubic-bezier(.22,.61,.36,1)' : 'none';
+                const selected = cards[active];
+                const offset = selected.offsetLeft + selected.offsetWidth / 2 - viewport.clientWidth / 2;
                 track.style.transform = 'translateX(' + (-offset) + 'px)';
             }
 
-            viewport.addEventListener('pointerdown', (event) => {
+            viewport.addEventListener('pointerdown', event => {
                 if (event.pointerType === 'mouse' && event.button !== 0) return;
-                dragging = true;
-                moved = false;
-                startX = event.clientX;
+                dragging = true; moved = false; startX = event.clientX;
                 const match = track.style.transform.match(/translateX\((-?[\d.]+)px\)/);
                 startOffset = match ? Number(match[1]) : 0;
                 track.style.transition = 'none';
                 viewport.classList.add('is-dragging');
                 viewport.setPointerCapture(event.pointerId);
             });
-            viewport.addEventListener('pointermove', (event) => {
+            viewport.addEventListener('pointermove', event => {
                 if (!dragging) return;
                 const delta = event.clientX - startX;
                 if (Math.abs(delta) > 5) moved = true;
                 track.style.transform = 'translateX(' + (startOffset + delta) + 'px)';
             });
-            function finishDrag(event) {
+            function finish(event) {
                 if (!dragging) return;
                 dragging = false;
                 viewport.classList.remove('is-dragging');
@@ -315,18 +310,14 @@
                 if (Math.abs(delta) > 45) layout(active + (delta < 0 ? 1 : -1));
                 else layout(active);
             }
-            viewport.addEventListener('pointerup', finishDrag);
-            viewport.addEventListener('pointercancel', finishDrag);
-            viewport.addEventListener('click', (event) => {
-                if (moved) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    moved = false;
-                }
+            viewport.addEventListener('pointerup', finish);
+            viewport.addEventListener('pointercancel', finish);
+            viewport.addEventListener('click', event => {
+                if (moved) { event.preventDefault(); event.stopPropagation(); moved = false; }
             }, true);
             window.addEventListener('resize', () => layout(active, false));
             window.addEventListener('load', () => layout(active, false), { once: true });
-            layout(active, false);
+            layout(0, false);
         })();
     </script>
 
