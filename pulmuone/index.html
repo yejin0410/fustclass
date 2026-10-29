@@ -345,15 +345,19 @@
             const show = (index) => {
                 active = (index + cards.length) % cards.length;
                 const card = cards[active];
-                track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+                track.style.transform = 'translateX(-' + card.offsetLeft + 'px)';
                 cards.forEach((item, i) => item.classList.toggle('is-featured', i === active));
-                tabs.forEach((tab, i) => { tab.classList.toggle('is-active', i === active); tab.setAttribute('aria-pressed', String(i === active)); });
+                tabs.forEach((tab, i) => {
+                    tab.classList.toggle('is-active', i === active);
+                    tab.setAttribute('aria-pressed', String(i === active));
+                });
                 currentLabel.textContent = String(active + 1).padStart(2, '0');
             };
             tabs.forEach((tab, i) => tab.addEventListener('click', () => show(i)));
             section.querySelector('.pulmuone-lineup__prev').addEventListener('click', () => show(active - 1));
             section.querySelector('.pulmuone-lineup__next').addEventListener('click', () => show(active + 1));
             window.addEventListener('resize', () => show(active));
+            show(0);
         })();
     </script>
 
