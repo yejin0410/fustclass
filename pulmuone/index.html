@@ -227,8 +227,8 @@
 
             const updateFill = () => {
                 const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-                const startScroll = sectionTop - window.innerHeight * 0.1;
-                const fillDistance = Math.max(500, window.innerHeight * 0.85);
+                const startScroll = sectionTop - window.innerHeight * 0.55;
+                const fillDistance = Math.max(500, window.innerHeight * 0.9);
                 const progress = Math.max(0, Math.min(1, (window.scrollY - startScroll) / fillDistance));
                 title.style.setProperty('--text-fill-progress', (progress * 100) + '%');
             };
