@@ -1408,7 +1408,7 @@ body,
     display: flex;
     align-items: center;
     gap: 27px;
-    width: calc(100% - 126px);
+    width: min(100%, 1200px);
     margin: 32px auto 0;
     overflow-x: auto;
     overflow-y: hidden;
