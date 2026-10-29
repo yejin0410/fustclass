@@ -1596,3 +1596,25 @@ body,
 #wrap .campaign-vehicle-style__detail span { font-size:18px; }
 @media(max-width:900px) { #wrap .campaign-vehicle-style__detail { margin-top:52px; } }
 @media(max-width:560px) { #wrap .campaign-vehicle-style__detail { margin-top:38px; } }
+
+
+/* Final layout correction: match the reference's wide center card and cropped side cards */
+#wrap .campaign-vehicle-style { overflow:hidden; }
+#wrap .campaign-vehicle-style__inner { max-width:none; }
+#wrap .campaign-vehicle-style__viewport { width:100%; overflow:hidden; }
+#wrap .campaign-vehicle-style__track { position:relative; display:flex; align-items:center; gap:24px; width:max-content; padding:0; }
+#wrap .campaign-vehicle-style__card { flex:0 0 28vw; width:28vw; max-width:none; height:520px; opacity:.82; transform:scale(.75); transform-origin:center; transition:flex-basis .6s ease,transform .6s ease,opacity .4s ease; }
+#wrap .campaign-vehicle-style__card.is-active { flex-basis:52vw; width:52vw; max-width:920px; opacity:1; transform:scale(1); }
+#wrap .campaign-vehicle-style__card>a { width:100%; height:100%; }
+#wrap .campaign-vehicle-style__card>a>img { width:100%; height:100%; object-fit:cover; }
+#wrap .campaign-vehicle-style__detail { margin-top:72px; }
+@media(max-width:900px) {
+ #wrap .campaign-vehicle-style__card { flex-basis:30vw; width:30vw; height:420px; }
+ #wrap .campaign-vehicle-style__card.is-active { flex-basis:72vw; width:72vw; }
+}
+@media(max-width:560px) {
+ #wrap .campaign-vehicle-style__card { flex-basis:34vw; width:34vw; height:350px; }
+ #wrap .campaign-vehicle-style__card.is-active { flex-basis:82vw; width:82vw; }
+ #wrap .campaign-vehicle-style__track { gap:14px; }
+ #wrap .campaign-vehicle-style__detail { margin-top:38px; }
+}
