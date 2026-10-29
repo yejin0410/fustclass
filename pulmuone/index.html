@@ -245,26 +245,37 @@
 
 
     <script>
-        // 캠페인 이미지가 일정 간격으로 옆으로 넘어가도록 합니다.
+        // 캠페인 갤러리: 가운데 이미지를 시작점으로 실제 카드 위치에 맞춰 이동합니다.
         (() => {
             const gallery = document.querySelector('.campaign-section__gallery');
             if (!gallery) return;
+            const items = Array.from(gallery.children);
+            if (items.length < 2) return;
+            let current = 1;
             let timer;
+
+            const moveTo = (index, behavior = 'smooth') => {
+                const item = items[index];
+                const left = item.offsetLeft - gallery.offsetLeft
+                    - (gallery.clientWidth - item.clientWidth) / 2;
+                gallery.scrollTo({ left: Math.max(0, Math.min(left, gallery.scrollWidth - gallery.clientWidth)), behavior });
+                current = index;
+            };
             const start = () => {
                 clearInterval(timer);
                 timer = setInterval(() => {
-                    const firstItem = gallery.firstElementChild;
-                    if (!firstItem) return;
-                    const gap = parseFloat(getComputedStyle(gallery).gap) || 0;
-                    const step = firstItem.getBoundingClientRect().width + gap;
-                    const atEnd = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 5;
-                    gallery.scrollTo({ left: atEnd ? 0 : gallery.scrollLeft + step, behavior: 'smooth' });
+                    const next = current >= items.length - 1 ? 1 : current + 1;
+                    moveTo(next);
                 }, 3500);
             };
+            moveTo(current, 'auto');
             gallery.addEventListener('mouseenter', () => clearInterval(timer));
             gallery.addEventListener('mouseleave', start);
             gallery.addEventListener('touchstart', () => clearInterval(timer), { passive: true });
             gallery.addEventListener('touchend', start, { passive: true });
+            gallery.addEventListener('scroll', () => {
+                if (timer) clearInterval(timer);
+            }, { passive: true });
             start();
         })();
     </script>
