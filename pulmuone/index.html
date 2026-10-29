@@ -130,7 +130,8 @@
 <article class="campaign-vehicle-style__card"><a href="#about"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/ce82d.png" alt="흙을 손에 담은 모습"><div class="campaign-vehicle-style__copy"><p>03 / FOR THE PLANET</p><h3>작은 행동으로<br>지구를 건강하게</h3><span>풀무원의 실천 보기 <b aria-hidden="true">↗</b></span></div></a></article>
 </div></div>
 
-</div></section>
+</div><div class="campaign-vehicle-style__detail"><a href="#right-food">자세히 보기 <span aria-hidden="true">→</span></a></div>
+</section>
 
             <section class="pulmuone-lineup" id="lineup" aria-labelledby="lineup-title">
                 <div class="pulmuone-lineup__inner">
@@ -266,38 +267,66 @@
 
 
     <script>
-        // 캠페인 카드: 선택한 카드를 중앙에 크게 표시합니다.
+        // 캠페인 카드는 화살표 버튼 대신 마우스 드래그와 터치 스와이프로 넘깁니다.
         (() => {
             const section = document.querySelector('.campaign-vehicle-style');
             if (!section) return;
             const track = section.querySelector('.campaign-vehicle-style__track');
             const viewport = section.querySelector('.campaign-vehicle-style__viewport');
             const cards = Array.from(section.querySelectorAll('.campaign-vehicle-style__card'));
-            const tabs = Array.from(section.querySelectorAll('.campaign-vehicle-style__tab'));
-            const current = section.querySelector('.campaign-vehicle-style__current');
-            let active = 0;
+            let active = 1;
+            let startX = 0;
+            let startOffset = 0;
+            let dragging = false;
+            let moved = false;
 
-            function show(index) {
+            function layout(index, animate = true) {
                 active = (index + cards.length) % cards.length;
-                // 이전 카드 - 선택 카드 - 다음 카드 순서로 배치해 양옆이 보이게 합니다.
-                const order = [(active + cards.length - 1) % cards.length, active, (active + 1) % cards.length];
-                order.forEach(i => track.appendChild(cards[i]));
                 cards.forEach((card, i) => card.classList.toggle('is-active', i === active));
-                tabs.forEach((tab, i) => {
-                    tab.classList.toggle('is-active', i === active);
-                    tab.setAttribute('aria-selected', String(i === active));
-                });
-                current.textContent = String(active + 1).padStart(2, '0');
-                requestAnimationFrame(() => {
-                    const selected = cards[active];
-                    const offset = selected.offsetLeft - track.offsetLeft - (viewport.clientWidth - selected.clientWidth) / 2;
-                    track.style.transform = 'translateX(' + (-offset) + 'px)';
-                });
+                track.style.transition = animate ? 'transform .55s cubic-bezier(.22,.61,.36,1)' : 'none';
+                const card = cards[active];
+                const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+                const offset = cardCenter - viewport.clientWidth / 2;
+                track.style.transform = 'translateX(' + (-offset) + 'px)';
             }
 
-            tabs.forEach((tab, index) => tab.addEventListener('click', () => show(index)));
-            window.addEventListener('resize', () => show(active));
-            show(0);
+            viewport.addEventListener('pointerdown', (event) => {
+                if (event.pointerType === 'mouse' && event.button !== 0) return;
+                dragging = true;
+                moved = false;
+                startX = event.clientX;
+                const match = track.style.transform.match(/translateX\((-?[\d.]+)px\)/);
+                startOffset = match ? Number(match[1]) : 0;
+                track.style.transition = 'none';
+                viewport.classList.add('is-dragging');
+                viewport.setPointerCapture(event.pointerId);
+            });
+            viewport.addEventListener('pointermove', (event) => {
+                if (!dragging) return;
+                const delta = event.clientX - startX;
+                if (Math.abs(delta) > 5) moved = true;
+                track.style.transform = 'translateX(' + (startOffset + delta) + 'px)';
+            });
+            function finishDrag(event) {
+                if (!dragging) return;
+                dragging = false;
+                viewport.classList.remove('is-dragging');
+                const delta = event.clientX - startX;
+                if (Math.abs(delta) > 45) layout(active + (delta < 0 ? 1 : -1));
+                else layout(active);
+            }
+            viewport.addEventListener('pointerup', finishDrag);
+            viewport.addEventListener('pointercancel', finishDrag);
+            viewport.addEventListener('click', (event) => {
+                if (moved) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    moved = false;
+                }
+            }, true);
+            window.addEventListener('resize', () => layout(active, false));
+            window.addEventListener('load', () => layout(active, false), { once: true });
+            layout(active, false);
         })();
     </script>
 
