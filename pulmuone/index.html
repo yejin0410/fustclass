@@ -245,6 +245,31 @@
 
 
     <script>
+        // 캠페인 이미지가 일정 간격으로 옆으로 넘어가도록 합니다.
+        (() => {
+            const gallery = document.querySelector('.campaign-section__gallery');
+            if (!gallery) return;
+            let timer;
+            const start = () => {
+                clearInterval(timer);
+                timer = setInterval(() => {
+                    const firstItem = gallery.firstElementChild;
+                    if (!firstItem) return;
+                    const gap = parseFloat(getComputedStyle(gallery).gap) || 0;
+                    const step = firstItem.getBoundingClientRect().width + gap;
+                    const atEnd = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 5;
+                    gallery.scrollTo({ left: atEnd ? 0 : gallery.scrollLeft + step, behavior: 'smooth' });
+                }, 3500);
+            };
+            gallery.addEventListener('mouseenter', () => clearInterval(timer));
+            gallery.addEventListener('mouseleave', start);
+            gallery.addEventListener('touchstart', () => clearInterval(timer), { passive: true });
+            gallery.addEventListener('touchend', start, { passive: true });
+            start();
+        })();
+    </script>
+
+    <script>
         // ABOUT 문구: 섹션에 도달한 뒤 스크롤할수록 왼쪽부터 검은색으로 채웁니다.
         (() => {
             const title = document.querySelector('.scroll-fill-text');
