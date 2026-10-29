@@ -1540,3 +1540,23 @@ body,
 #wrap .pulmuone-lineup__arrows button:hover{background:#2f6e23;border-color:#2f6e23;color:#fff}
 @media(max-width:900px){#wrap .pulmuone-lineup{padding:72px 20px}#wrap .pulmuone-lineup__intro{font-size:16px}#wrap .pulmuone-lineup__tabs{gap:22px;margin-top:36px;overflow-x:auto}#wrap .pulmuone-lineup__tab{flex:0 0 auto;font-size:15px}#wrap .pulmuone-lineup__track{gap:18px}#wrap .pulmuone-lineup__card{flex-basis:82%}#wrap .pulmuone-lineup__card-copy h3{font-size:25px}}
 @media(max-width:560px){#wrap .pulmuone-lineup{padding:56px 20px}#wrap .pulmuone-lineup__heading{align-items:flex-start;flex-direction:column;gap:24px}#wrap .pulmuone-lineup__heading h2{font-size:38px}#wrap .pulmuone-lineup__intro{font-size:14px}#wrap .pulmuone-lineup__tabs{gap:18px;margin:32px 0 20px}#wrap .pulmuone-lineup__track{gap:14px}#wrap .pulmuone-lineup__card{flex-basis:86%}#wrap .pulmuone-lineup__card-copy{padding-top:16px}#wrap .pulmuone-lineup__card-copy h3{font-size:25px}#wrap .pulmuone-lineup__card-copy span{font-size:13px}#wrap .pulmuone-lineup__controls{margin-top:28px}#wrap .pulmuone-lineup__arrows button{width:42px;height:42px}}
+
+/* Campaign carousel: keep the main story centered instead of showing the gallery's left edge */
+#wrap .campaign-section__gallery {
+    width: min(100%, 1200px);
+    margin-left: auto;
+    margin-right: auto;
+    scroll-padding-inline: 24px;
+}
+#wrap .campaign-section__feature {
+    flex-basis: min(952px, 68%);
+}
+@media (max-width: 900px) {
+    #wrap .campaign-section__gallery { width: 100%; }
+}
+@media (max-width: 560px) {
+    #wrap .campaign-section__gallery { width: calc(100% + 20px); }
+}
+/* Lineup cards: image fill and clear card rhythm */
+#wrap .pulmuone-lineup__card > a { display:block; height:100%; }
+#wrap .pulmuone-lineup__card img { display:block; width:100%; height:100%; object-fit:cover; }
