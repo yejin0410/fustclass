@@ -270,30 +270,37 @@
 
 
     <script>
-        // 캠페인 탭: 선택한 주제를 첫 번째 카드로 배치합니다.
+        // 캠페인 카드: 선택한 카드를 중앙에 크게 표시합니다.
         (() => {
             const section = document.querySelector('.campaign-vehicle-style');
             if (!section) return;
             const track = section.querySelector('.campaign-vehicle-style__track');
+            const viewport = section.querySelector('.campaign-vehicle-style__viewport');
             const cards = Array.from(section.querySelectorAll('.campaign-vehicle-style__card'));
             const tabs = Array.from(section.querySelectorAll('.campaign-vehicle-style__tab'));
             const current = section.querySelector('.campaign-vehicle-style__current');
             let active = 0;
 
             function show(index) {
-                active = index;
-                // 선택한 카드를 앞으로 이동하고 나머지 카드도 이어서 보여줍니다.
-                cards.forEach((card, i) => {
-                    track.appendChild(cards[(index + i) % cards.length]);
-                });
+                active = (index + cards.length) % cards.length;
+                // 이전 카드 - 선택 카드 - 다음 카드 순서로 배치해 양옆이 보이게 합니다.
+                const order = [(active + cards.length - 1) % cards.length, active, (active + 1) % cards.length];
+                order.forEach(i => track.appendChild(cards[i]));
+                cards.forEach((card, i) => card.classList.toggle('is-active', i === active));
                 tabs.forEach((tab, i) => {
-                    tab.classList.toggle('is-active', i === index);
-                    tab.setAttribute('aria-selected', String(i === index));
+                    tab.classList.toggle('is-active', i === active);
+                    tab.setAttribute('aria-selected', String(i === active));
                 });
-                current.textContent = String(index + 1).padStart(2, '0');
+                current.textContent = String(active + 1).padStart(2, '0');
+                requestAnimationFrame(() => {
+                    const selected = cards[active];
+                    const offset = selected.offsetLeft - track.offsetLeft - (viewport.clientWidth - selected.clientWidth) / 2;
+                    track.style.transform = 'translateX(' + (-offset) + 'px)';
+                });
             }
 
             tabs.forEach((tab, index) => tab.addEventListener('click', () => show(index)));
+            window.addEventListener('resize', () => show(active));
             show(0);
         })();
     </script>
