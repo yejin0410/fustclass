@@ -1618,3 +1618,11 @@ body,
  #wrap .campaign-vehicle-style__track { gap:14px; }
  #wrap .campaign-vehicle-style__detail { margin-top:38px; }
 }
+
+
+/* Remove the small campaign caption/link inside each card; keep the main detail button */
+#wrap .campaign-vehicle-style__copy span { display:none !important; }
+#wrap .campaign-vehicle-style__card>a::after { transition:opacity .35s ease,transform .35s ease,background .35s ease; }
+/* Slower, smoother carousel motion */
+#wrap .campaign-vehicle-style__track { transition:transform 1.25s cubic-bezier(.22,.61,.36,1) !important; }
+#wrap .campaign-vehicle-style__card { transition:flex-basis 1.25s cubic-bezier(.22,.61,.36,1),transform 1.25s cubic-bezier(.22,.61,.36,1),opacity .8s ease; }
