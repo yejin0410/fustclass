@@ -1149,3 +1149,88 @@ body,
     #wrap .pulmuone-footer__info p { font-size: 12px; }
     #wrap .pulmuone-footer__info p:first-child { font-size: 13px; }
 }
+
+/* Figma 33:41 기준 레이아웃 간격 정리 (기존 디자인/색상/이미지는 유지) */
+#wrap .site-header {
+    box-sizing: border-box;
+}
+#wrap .site-header .header-inner,
+#wrap .site-header .header-main {
+    width: min(1720px, calc(100% - 40px));
+    margin-left: auto;
+    margin-right: auto;
+}
+#wrap .about-pulmuone {
+    box-sizing: border-box;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+#wrap .about-pulmuone__inner {
+    width: min(100%, 1720px);
+    margin-left: auto;
+    margin-right: auto;
+}
+#wrap .about-pulmuone__content {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 333px) !important;
+    column-gap: clamp(32px, 3.125vw, 60px) !important;
+}
+#wrap .about-pulmuone__text {
+    padding-left: clamp(0px, 1.72vw, 33px) !important;
+}
+#wrap .about-pulmuone__text .about-pulmuone__eyebrow {
+    padding-bottom: 24px !important;
+}
+#wrap .about-pulmuone__text h2.scroll-fill-text {
+    padding-bottom: 8px !important;
+    line-height: 1.33;
+}
+#wrap .about-pulmuone__text .about-pulmuone__description {
+    line-height: 1.5;
+}
+#wrap .right-food-section {
+    padding: 110px 20px 100px !important;
+}
+#wrap .right-food-section__inner {
+    width: min(100%, 1720px);
+    margin-left: auto;
+    margin-right: auto;
+}
+#wrap .right-food-section__cards {
+    gap: clamp(20px, 2.1vw, 40px);
+}
+#wrap .newsroom-section {
+    padding: 110px 20px !important;
+    box-sizing: border-box;
+}
+#wrap .newsroom-section__inner {
+    width: min(1720px, 100%);
+}
+#wrap .pulmuone-footer__inner {
+    width: min(1720px, calc(100% - 40px));
+}
+@media (max-width: 900px) {
+    #wrap .right-food-section {
+        padding: 72px 20px !important;
+    }
+    #wrap .about-pulmuone__content {
+        grid-template-columns: 1fr !important;
+        column-gap: 0 !important;
+    }
+    #wrap .about-pulmuone__text {
+        padding-left: 0 !important;
+    }
+    #wrap .newsroom-section {
+        padding: 72px 20px !important;
+    }
+}
+@media (max-width: 560px) {
+    #wrap .about-pulmuone__text .about-pulmuone__eyebrow {
+        padding-bottom: 16px !important;
+    }
+    #wrap .about-pulmuone__text h2.scroll-fill-text {
+        padding-bottom: 6px !important;
+    }
+    #wrap .right-food-section__cards {
+        gap: 20px;
+    }
+}
