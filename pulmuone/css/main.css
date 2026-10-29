@@ -1234,3 +1234,136 @@ body,
         gap: 20px;
     }
 }
+
+/* 정확한 Figma 33:41 프레임 기준으로 섹션 여백 재정렬 */
+#wrap .about-pulmuone {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 110px 20px !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+#wrap .about-pulmuone__inner {
+    width: min(100%, 1720px) !important;
+    max-width: 1720px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    min-height: 634px !important;
+    height: auto !important;
+    position: relative !important;
+    top: auto !important;
+    box-sizing: border-box !important;
+}
+#wrap .about-pulmuone__content {
+    display: grid !important;
+    grid-template-columns: minmax(0, 910px) 333px !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 40px !important;
+    width: 100% !important;
+    min-height: 634px !important;
+    padding: 0 93px 0 110px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+#wrap .about-pulmuone__text {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 9px !important;
+}
+#wrap .about-pulmuone__text .about-pulmuone__eyebrow {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#wrap .about-pulmuone__text h2.scroll-fill-text {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.33 !important;
+}
+#wrap .about-pulmuone__text .about-pulmuone__description {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.5 !important;
+}
+#wrap .about-pulmuone__visual {
+    width: 333px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    justify-self: end !important;
+    align-self: center !important;
+}
+#wrap .right-food-section {
+    box-sizing: border-box !important;
+    padding: 110px 20px 100px !important;
+    margin: 0 !important;
+}
+#wrap .right-food-section__inner {
+    width: min(100%, 1720px) !important;
+    margin: 0 auto !important;
+}
+#wrap .right-food-section__cards {
+    margin-top: 58px !important;
+    margin-right: 45px !important;
+    margin-left: 66px !important;
+    gap: 40px !important;
+}
+#wrap .newsroom-section {
+    box-sizing: border-box !important;
+    padding: 110px 20px !important;
+}
+#wrap .newsroom-section__inner {
+    width: min(100%, 1720px) !important;
+    margin: 0 auto !important;
+}
+#wrap .pulmuone-footer__inner {
+    width: min(1720px, calc(100% - 40px)) !important;
+    margin: 0 auto !important;
+}
+@media (max-width: 1200px) {
+    #wrap .about-pulmuone__content {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 30%) !important;
+        padding: 0 3vw !important;
+        gap: 4vw !important;
+    }
+}
+@media (max-width: 900px) {
+    #wrap .about-pulmuone {
+        padding: 72px 20px !important;
+    }
+    #wrap .about-pulmuone__inner,
+    #wrap .about-pulmuone__content {
+        min-height: 0 !important;
+        height: auto !important;
+    }
+    #wrap .about-pulmuone__content {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+        padding: 0 !important;
+    }
+    #wrap .about-pulmuone__visual {
+        width: min(333px, 78%) !important;
+        justify-self: end !important;
+    }
+    #wrap .right-food-section {
+        padding: 72px 20px !important;
+    }
+    #wrap .right-food-section__cards {
+        margin: 36px 0 0 !important;
+        gap: 20px !important;
+    }
+    #wrap .newsroom-section {
+        padding: 72px 20px !important;
+    }
+}
+@media (max-width: 560px) {
+    #wrap .about-pulmuone {
+        padding: 56px 20px !important;
+    }
+    #wrap .right-food-section__cards {
+        grid-template-columns: 1fr !important;
+    }
+}
