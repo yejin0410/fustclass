@@ -1582,3 +1582,38 @@ body,
 #wrap .campaign-vehicle-style__footer button:hover { background:#2f6e23; border-color:#2f6e23; color:#fff; }
 @media(max-width:900px){#wrap .campaign-vehicle-style{padding:72px 20px}#wrap .campaign-vehicle-style__tabs{margin-left:0;gap:22px}#wrap .campaign-vehicle-style__card{flex-basis:88%;height:360px;border-radius:22px}}
 @media(max-width:560px){#wrap .campaign-vehicle-style{padding:56px 20px}#wrap .campaign-vehicle-style h2{font-size:36px}#wrap .campaign-vehicle-style__tabs{gap:16px;margin-top:28px}#wrap .campaign-vehicle-style__tab{font-size:14px}#wrap .campaign-vehicle-style__card{flex-basis:100%;height:310px;border-radius:18px}#wrap .campaign-vehicle-style__copy{padding:26px}#wrap .campaign-vehicle-style__copy h3{font-size:34px}#wrap .campaign-vehicle-style__copy a{font-size:14px}}
+
+/* Kia Vehicle-inspired campaign lineup: category navigation, no arrow controls */
+#wrap .campaign-vehicle-style { padding:100px 20px 96px; }
+#wrap .campaign-vehicle-style__tabs { display:flex; gap:30px; margin:36px 0 24px 66px; flex-wrap:wrap; }
+#wrap .campaign-vehicle-style__tab { border:0; border-bottom:2px solid transparent; background:transparent; padding:0 0 12px; color:#8c918b; font-size:17px; font-weight:600; cursor:pointer; transition:color .2s,border-color .2s; }
+#wrap .campaign-vehicle-style__tab.is-active { color:#2f6e23; border-color:#2f6e23; }
+#wrap .campaign-vehicle-style__viewport { overflow:hidden; width:min(100%,1320px); margin:0 auto; }
+#wrap .campaign-vehicle-style__track { display:flex; align-items:stretch; gap:22px; transition:transform .6s cubic-bezier(.22,.61,.36,1); will-change:transform; }
+#wrap .campaign-vehicle-style__card { position:relative; flex:0 0 calc((100% - 44px)/3); min-width:0; height:390px; overflow:hidden; border-radius:22px; background:#e8eddf; }
+#wrap .campaign-vehicle-style__card>a { display:block; position:relative; height:100%; color:inherit; text-decoration:none; }
+#wrap .campaign-vehicle-style__card::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,rgba(0,0,0,.66),rgba(0,0,0,.02) 78%); pointer-events:none; }
+#wrap .campaign-vehicle-style__card> a > img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+#wrap .campaign-vehicle-style__card:hover > a > img { transform:scale(1.04); }
+#wrap .campaign-vehicle-style__copy { position:absolute; z-index:1; inset:0; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-end; padding:28px; box-sizing:border-box; color:#fff; }
+#wrap .campaign-vehicle-style__copy p { margin:0 0 12px; font-size:11px; font-weight:700; letter-spacing:.08em; }
+#wrap .campaign-vehicle-style__copy h3 { margin:0; font-size:clamp(23px,2vw,34px); line-height:1.25; letter-spacing:-.04em; font-weight:650; }
+#wrap .campaign-vehicle-style__copy span { display:inline-flex; gap:12px; align-items:center; margin-top:20px; font-size:14px; font-weight:600; }
+#wrap .campaign-vehicle-style__copy b { font-size:18px; font-weight:400; }
+#wrap .campaign-vehicle-style__pagination { display:flex; gap:12px; align-items:center; width:min(100%,1320px); margin:22px auto 0; color:#9a9e98; font-size:13px; }
+#wrap .campaign-vehicle-style__current { color:#2f6e23; font-weight:700; }
+#wrap .campaign-vehicle-style__pagination-line { width:56px; height:1px; background:#2f6e23; }
+@media(max-width:900px) {
+ #wrap .campaign-vehicle-style { padding:72px 20px; }
+ #wrap .campaign-vehicle-style__tabs { margin-left:0; gap:22px; }
+ #wrap .campaign-vehicle-style__card { flex-basis:calc((100% - 22px)/2); height:340px; }
+}
+@media(max-width:560px) {
+ #wrap .campaign-vehicle-style { padding:56px 20px; }
+ #wrap .campaign-vehicle-style h2 { font-size:36px; }
+ #wrap .campaign-vehicle-style__tabs { gap:16px; margin-top:26px; }
+ #wrap .campaign-vehicle-style__tab { font-size:14px; }
+ #wrap .campaign-vehicle-style__card { flex-basis:86%; height:330px; }
+ #wrap .campaign-vehicle-style__copy { padding:22px; }
+ #wrap .campaign-vehicle-style__copy h3 { font-size:28px; }
+}
