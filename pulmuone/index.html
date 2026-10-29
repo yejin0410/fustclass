@@ -143,6 +143,38 @@
                 </div>
             </section>
 
+            <section class="pulmuone-lineup" id="lineup" aria-labelledby="lineup-title">
+                <div class="pulmuone-lineup__inner">
+                    <div class="pulmuone-lineup__heading"><div>
+                        <p class="pulmuone-lineup__eyebrow">PULMUONE</p>
+                        <h2 id="lineup-title">풀무원의 가치</h2>
+                        <p class="pulmuone-lineup__intro">더 나은 식생활과 지속가능한 내일을 위한 풀무원의 다양한 실천을 만나보세요.</p>
+                    </div><a class="pulmuone-lineup__all" href="#right-food">전체 보기 <span aria-hidden="true">↗</span></a></div>
+                    <div class="pulmuone-lineup__tabs" role="group" aria-label="풀무원 가치 선택">
+                        <button type="button" class="pulmuone-lineup__tab is-active" aria-pressed="true" data-lineup="0">바른먹거리</button>
+                        <button type="button" class="pulmuone-lineup__tab" aria-pressed="false" data-lineup="1">지속가능한 식생활</button>
+                        <button type="button" class="pulmuone-lineup__tab" aria-pressed="false" data-lineup="2">건강한 내일</button>
+                    </div>
+                    <div class="pulmuone-lineup__viewport"><div class="pulmuone-lineup__track">
+                        <article class="pulmuone-lineup__card is-featured"><a href="#right-food">
+                            <img src="https://www.figma.com/api/mcp/asset/90fdeead-2e82-4ea2-bdb3-f253db398a7b" alt="바른먹거리의 원칙을 보여주는 이미지">
+                            <div class="pulmuone-lineup__card-copy"><p>01 / RIGHT FOOD</p><h3>바른먹거리</h3><span>나와 가족, 지구의 건강을 생각합니다 <b aria-hidden="true">↗</b></span></div>
+                        </a></article>
+                        <article class="pulmuone-lineup__card"><a href="#campaign">
+                            <img src="https://www.figma.com/api/mcp/asset/440db5dc-d1ad-4dfe-9b4a-c2314ffd4bb7" alt="지속가능한 식생활을 보여주는 이미지">
+                            <div class="pulmuone-lineup__card-copy"><p>02 / SUSTAINABILITY</p><h3>지속가능한 식생활</h3><span>지구를 위한 좋은 선택을 이어갑니다 <b aria-hidden="true">↗</b></span></div>
+                        </a></article>
+                        <article class="pulmuone-lineup__card"><a href="#about">
+                            <img src="https://www.figma.com/api/mcp/asset/56bb4ba8-d4ba-4e30-96f8-1ecd7a5b4951" alt="건강한 식생활을 보여주는 이미지">
+                            <div class="pulmuone-lineup__card-copy"><p>03 / HEALTHY LIFE</p><h3>건강한 내일</h3><span>사람과 지구가 함께 건강한 미래를 만듭니다 <b aria-hidden="true">↗</b></span></div>
+                        </a></article>
+                    </div></div>
+                    <div class="pulmuone-lineup__controls"><p><span class="pulmuone-lineup__current">01</span><span> / 03</span></p><div class="pulmuone-lineup__arrows">
+                        <button type="button" class="pulmuone-lineup__prev" aria-label="이전 카드">←</button><button type="button" class="pulmuone-lineup__next" aria-label="다음 카드">→</button>
+                    </div></div>
+                </div>
+            </section>
+
             <section class="newsroom-section" id="news" aria-labelledby="newsroom-title">
                 <div class="newsroom-section__inner">
                     <p class="newsroom-section__eyebrow">PULMONE NEWSROOM</p>
@@ -298,6 +330,30 @@
             window.addEventListener('scroll', updateFill, { passive: true });
             window.addEventListener('resize', updateFill);
             updateFill();
+        })();
+    </script>
+
+    <script>
+        (() => {
+            const section = document.querySelector('.pulmuone-lineup');
+            if (!section) return;
+            const track = section.querySelector('.pulmuone-lineup__track');
+            const cards = Array.from(section.querySelectorAll('.pulmuone-lineup__card'));
+            const tabs = Array.from(section.querySelectorAll('.pulmuone-lineup__tab'));
+            const currentLabel = section.querySelector('.pulmuone-lineup__current');
+            let active = 0;
+            const show = (index) => {
+                active = (index + cards.length) % cards.length;
+                const card = cards[active];
+                track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+                cards.forEach((item, i) => item.classList.toggle('is-featured', i === active));
+                tabs.forEach((tab, i) => { tab.classList.toggle('is-active', i === active); tab.setAttribute('aria-pressed', String(i === active)); });
+                currentLabel.textContent = String(active + 1).padStart(2, '0');
+            };
+            tabs.forEach((tab, i) => tab.addEventListener('click', () => show(i)));
+            section.querySelector('.pulmuone-lineup__prev').addEventListener('click', () => show(active - 1));
+            section.querySelector('.pulmuone-lineup__next').addEventListener('click', () => show(active + 1));
+            window.addEventListener('resize', () => show(active));
         })();
     </script>
 
