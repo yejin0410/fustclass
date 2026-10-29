@@ -1521,9 +1521,9 @@ body,
 #wrap .pulmuone-lineup__tab{position:relative;padding:0 0 16px;border:0;background:transparent;color:#858a83;font:inherit;font-size:17px;cursor:pointer}
 #wrap .pulmuone-lineup__tab.is-active{color:#242624;font-weight:700}
 #wrap .pulmuone-lineup__tab.is-active:after{position:absolute;right:0;bottom:-1px;left:0;height:3px;background:#2f6e23;content:""}
-#wrap .pulmuone-lineup__viewport{overflow:hidden}
-#wrap .pulmuone-lineup__track{display:flex;align-items:stretch;gap:24px;transition:transform .45s ease}
-#wrap .pulmuone-lineup__card{flex:0 0 calc((100% - 48px)/3);min-width:0}
+#wrap .pulmuone-lineup__viewport{overflow:hidden;width:100%}
+#wrap .pulmuone-lineup__track{display:flex;align-items:stretch;gap:24px;transition:transform .65s cubic-bezier(.22,.61,.36,1);will-change:transform}
+#wrap .pulmuone-lineup__card{flex:0 0 76%;min-width:0}
 #wrap .pulmuone-lineup__card a{display:block;height:100%;color:inherit;text-decoration:none}
 #wrap .pulmuone-lineup__card img{display:block;width:100%;aspect-ratio:1.43;object-fit:cover;background:#e3e7df;transition:transform .5s ease}
 #wrap .pulmuone-lineup__card a:hover img{transform:scale(1.025)}
@@ -1538,5 +1538,5 @@ body,
 #wrap .pulmuone-lineup__arrows{display:flex;gap:10px}
 #wrap .pulmuone-lineup__arrows button{display:grid;place-items:center;width:48px;height:48px;border:1px solid #cbd1c7;border-radius:50%;background:transparent;color:#2d292a;font-size:22px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
 #wrap .pulmuone-lineup__arrows button:hover{background:#2f6e23;border-color:#2f6e23;color:#fff}
-@media(max-width:900px){#wrap .pulmuone-lineup{padding:72px 20px}#wrap .pulmuone-lineup__intro{font-size:16px}#wrap .pulmuone-lineup__tabs{gap:22px;margin-top:36px;overflow-x:auto}#wrap .pulmuone-lineup__tab{flex:0 0 auto;font-size:15px}#wrap .pulmuone-lineup__track{gap:18px}#wrap .pulmuone-lineup__card{flex-basis:calc((100% - 18px)/2)}#wrap .pulmuone-lineup__card-copy h3{font-size:25px}}
+@media(max-width:900px){#wrap .pulmuone-lineup{padding:72px 20px}#wrap .pulmuone-lineup__intro{font-size:16px}#wrap .pulmuone-lineup__tabs{gap:22px;margin-top:36px;overflow-x:auto}#wrap .pulmuone-lineup__tab{flex:0 0 auto;font-size:15px}#wrap .pulmuone-lineup__track{gap:18px}#wrap .pulmuone-lineup__card{flex-basis:82%}#wrap .pulmuone-lineup__card-copy h3{font-size:25px}}
 @media(max-width:560px){#wrap .pulmuone-lineup{padding:56px 20px}#wrap .pulmuone-lineup__heading{align-items:flex-start;flex-direction:column;gap:24px}#wrap .pulmuone-lineup__heading h2{font-size:38px}#wrap .pulmuone-lineup__intro{font-size:14px}#wrap .pulmuone-lineup__tabs{gap:18px;margin:32px 0 20px}#wrap .pulmuone-lineup__track{gap:14px}#wrap .pulmuone-lineup__card{flex-basis:86%}#wrap .pulmuone-lineup__card-copy{padding-top:16px}#wrap .pulmuone-lineup__card-copy h3{font-size:25px}#wrap .pulmuone-lineup__card-copy span{font-size:13px}#wrap .pulmuone-lineup__controls{margin-top:28px}#wrap .pulmuone-lineup__arrows button{width:42px;height:42px}}
