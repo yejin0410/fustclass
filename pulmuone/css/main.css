@@ -1122,7 +1122,7 @@ body,
 #wrap .pulmuone-footer__top, #wrap .pulmuone-footer__bottom { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 #wrap .pulmuone-footer__top { padding-bottom: 34px; border-bottom: 1px solid #dfe3dc; }
 #wrap .pulmuone-footer__brand { display: inline-flex; align-items: center; flex: 0 0 auto; }
-#wrap .pulmuone-footer__brand img { display: block; width: 128px; max-height: 48px; object-fit: contain; }
+#wrap .pulmuone-footer__brand img { display: block; width: 128px; max-height: 48px; object-fit: contain; mix-blend-mode: multiply; }
 #wrap .pulmuone-footer__brand span { color: #2f6e23; font-size: 28px; font-weight: 800; letter-spacing: -1.5px; }
 #wrap .pulmuone-footer__links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px 28px; }
 #wrap .pulmuone-footer__links a { color: #555b54; font-size: 15px; font-weight: 500; text-decoration: none; }
