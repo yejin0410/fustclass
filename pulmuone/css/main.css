@@ -1584,3 +1584,15 @@ body,
 /* Hide/remove the campaign category tabs and 01–03 pagination per request */
 #wrap .campaign-vehicle-style__tabs,
 #wrap .campaign-vehicle-style__pagination { display:none !important; }
+
+
+/* Campaign carousel: drag/swipe interaction and centered detail CTA */
+#wrap .campaign-vehicle-style__viewport { cursor:grab; touch-action:pan-y; }
+#wrap .campaign-vehicle-style__viewport.is-dragging { cursor:grabbing; }
+#wrap .campaign-vehicle-style__card>a>img { user-select:none; -webkit-user-drag:none; }
+#wrap .campaign-vehicle-style__detail { display:flex; justify-content:center; margin:72px auto 0; }
+#wrap .campaign-vehicle-style__detail a { display:inline-flex; align-items:center; justify-content:center; gap:14px; min-width:166px; padding:13px 26px; border:1px solid #777; border-radius:3px; color:inherit; background:transparent; text-decoration:none; font-size:14px; transition:background .25s,color .25s,border-color .25s; }
+#wrap .campaign-vehicle-style__detail a:hover { background:#2f6e23; color:#fff; border-color:#2f6e23; }
+#wrap .campaign-vehicle-style__detail span { font-size:18px; }
+@media(max-width:900px) { #wrap .campaign-vehicle-style__detail { margin-top:52px; } }
+@media(max-width:560px) { #wrap .campaign-vehicle-style__detail { margin-top:38px; } }
