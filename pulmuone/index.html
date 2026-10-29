@@ -119,17 +119,21 @@
 
             <section class="campaign-section campaign-vehicle-style" id="campaign" aria-labelledby="campaign-title">
 <div class="campaign-section__inner">
-<p class="campaign-section__eyebrow">RIGHT FOOD</p><h2 id="campaign-title">캠페인과 함께 만드는 변화</h2>
+<p class="campaign-section__eyebrow">RIGHT FOOD</p>
+<h2 id="campaign-title">캠페인과 함께 만드는 변화</h2>
 <p class="campaign-section__subtitle">사람과 지구를 위한 작은 실천이 더 나은 내일을 만듭니다.</p>
-<div class="campaign-vehicle-style__tabs" role="group" aria-label="캠페인 주제 선택">
-<button type="button" class="campaign-vehicle-style__tab is-active" aria-pressed="true">지속가능한 식생활</button>
-<button type="button" class="campaign-vehicle-style__tab" aria-pressed="false">바른먹거리</button>
-<button type="button" class="campaign-vehicle-style__tab" aria-pressed="false">환경을 위한 실천</button></div>
-<div class="campaign-vehicle-style__viewport"><div class="campaign-vehicle-style__track">
-<article class="campaign-vehicle-style__card is-active"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/d9eaa.png" alt="초록 식물과 함께하는 지속가능한 식생활"><div class="campaign-vehicle-style__copy"><p>01 / SUSTAINABLE LIFE</p><h3>지구를 위해,<br>오늘부터 작은 실천</h3><a href="#right-food">캠페인 자세히 보기 <span aria-hidden="true">↗</span></a></div></article>
-<article class="campaign-vehicle-style__card"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/fa6f9.png" alt="신선한 콩과 잎사귀"><div class="campaign-vehicle-style__copy"><p>02 / RIGHT FOOD</p><h3>좋은 음식이<br>좋은 내일을 만듭니다</h3><a href="#right-food">바른먹거리 알아보기 <span aria-hidden="true">↗</span></a></div></article>
-<article class="campaign-vehicle-style__card"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/ce82d.png" alt="흙을 손에 담은 모습"><div class="campaign-vehicle-style__copy"><p>03 / FOR THE PLANET</p><h3>작은 행동으로<br>지구를 건강하게</h3><a href="#about">풀무원의 실천 보기 <span aria-hidden="true">↗</span></a></div></article>
-</div></div><div class="campaign-vehicle-style__footer"><p><span class="campaign-vehicle-style__current">01</span> / 03</p><div><button type="button" class="campaign-vehicle-style__prev" aria-label="이전 캠페인">←</button><button type="button" class="campaign-vehicle-style__next" aria-label="다음 캠페인">→</button></div></div>
+<div class="campaign-vehicle-style__tabs" role="tablist" aria-label="캠페인 주제">
+<button type="button" class="campaign-vehicle-style__tab is-active" role="tab" aria-selected="true" data-campaign="0">지속가능한 식생활</button>
+<button type="button" class="campaign-vehicle-style__tab" role="tab" aria-selected="false" data-campaign="1">바른먹거리</button>
+<button type="button" class="campaign-vehicle-style__tab" role="tab" aria-selected="false" data-campaign="2">환경을 위한 실천</button>
+</div>
+<div class="campaign-vehicle-style__viewport">
+<div class="campaign-vehicle-style__track">
+<article class="campaign-vehicle-style__card is-active"><a href="#right-food"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/d9eaa.png" alt="초록 식물과 함께하는 지속가능한 식생활"><div class="campaign-vehicle-style__copy"><p>01 / SUSTAINABLE LIFE</p><h3>지구를 위해,<br>오늘부터 작은 실천</h3><span>캠페인 자세히 보기 <b aria-hidden="true">↗</b></span></div></a></article>
+<article class="campaign-vehicle-style__card"><a href="#right-food"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/fa6f9.png" alt="신선한 콩과 잎사귀"><div class="campaign-vehicle-style__copy"><p>02 / RIGHT FOOD</p><h3>좋은 음식이<br>좋은 내일을 만듭니다</h3><span>바른먹거리 알아보기 <b aria-hidden="true">↗</b></span></div></a></article>
+<article class="campaign-vehicle-style__card"><a href="#about"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/ce82d.png" alt="흙을 손에 담은 모습"><div class="campaign-vehicle-style__copy"><p>03 / FOR THE PLANET</p><h3>작은 행동으로<br>지구를 건강하게</h3><span>풀무원의 실천 보기 <b aria-hidden="true">↗</b></span></div></a></article>
+</div></div>
+<div class="campaign-vehicle-style__pagination" aria-label="현재 선택된 캠페인"><span class="campaign-vehicle-style__current">01</span><span class="campaign-vehicle-style__pagination-line"></span><span>03</span></div>
 </div></section>
 
             <section class="pulmuone-lineup" id="lineup" aria-labelledby="lineup-title">
@@ -271,20 +275,24 @@
             const section = document.querySelector('.campaign-vehicle-style');
             if (!section) return;
             const track = section.querySelector('.campaign-vehicle-style__track');
+            const viewport = section.querySelector('.campaign-vehicle-style__viewport');
             const cards = Array.from(section.querySelectorAll('.campaign-vehicle-style__card'));
             const tabs = Array.from(section.querySelectorAll('.campaign-vehicle-style__tab'));
             const current = section.querySelector('.campaign-vehicle-style__current');
             let active = 0;
             const show = (index) => {
                 active = (index + cards.length) % cards.length;
-                track.style.transform = 'translateX(-' + cards[active].offsetLeft + 'px)';
-                cards.forEach((card, i) => card.classList.toggle('is-active', i === active));
-                tabs.forEach((tab, i) => { tab.classList.toggle('is-active', i === active); tab.setAttribute('aria-pressed', String(i === active)); });
+                const card = cards[active];
+                const left = card.offsetLeft - track.offsetLeft;
+                track.style.transform = 'translateX(-' + left + 'px)';
+                cards.forEach((item, i) => item.classList.toggle('is-active', i === active));
+                tabs.forEach((tab, i) => {
+                    tab.classList.toggle('is-active', i === active);
+                    tab.setAttribute('aria-selected', String(i === active));
+                });
                 current.textContent = String(active + 1).padStart(2, '0');
             };
             tabs.forEach((tab, i) => tab.addEventListener('click', () => show(i)));
-            section.querySelector('.campaign-vehicle-style__prev').addEventListener('click', () => show(active - 1));
-            section.querySelector('.campaign-vehicle-style__next').addEventListener('click', () => show(active + 1));
             window.addEventListener('resize', () => show(active));
             window.addEventListener('load', () => show(active), { once: true });
             show(0);
