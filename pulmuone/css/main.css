@@ -1579,3 +1579,8 @@ body,
  #wrap .campaign-vehicle-style__copy h3 { font-size:28px; }
  #wrap .campaign-vehicle-style__card>a::after { right:18px; bottom:18px; width:44px; height:44px; }
 }
+
+
+/* Hide/remove the campaign category tabs and 01–03 pagination per request */
+#wrap .campaign-vehicle-style__tabs,
+#wrap .campaign-vehicle-style__pagination { display:none !important; }
