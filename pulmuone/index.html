@@ -335,6 +335,19 @@
 
     <script>
         (() => {
+            const gallery = document.querySelector('.campaign-section__gallery');
+            const feature = gallery && gallery.querySelector('.campaign-section__feature');
+            if (!gallery || !feature) return;
+            const centerFeature = () => {
+                const left = feature.offsetLeft - (gallery.clientWidth - feature.clientWidth) / 2;
+                gallery.scrollTo({ left: Math.max(0, left), behavior: 'auto' });
+            };
+            if (document.readyState === 'complete') centerFeature();
+            else window.addEventListener('load', centerFeature, { once: true });
+            window.addEventListener('resize', centerFeature);
+        })();
+
+        (() => {
             const section = document.querySelector('.pulmuone-lineup');
             if (!section) return;
             const track = section.querySelector('.pulmuone-lineup__track');
