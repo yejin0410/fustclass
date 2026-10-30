@@ -1758,3 +1758,15 @@ body,
     #wrap .campaign-vehicle-style__viewport.swiper { height:380px !important; }
     #wrap .campaign-vehicle-style__card.swiper-slide { flex-basis:86vw !important; width:86vw !important; height:340px !important; }
 }
+
+
+/* Newsroom card title: underline only on hover */
+#wrap .newsroom-card h3 {
+    font-size: clamp(18px, 1.25vw, 20px);
+    text-decoration: none;
+}
+#wrap .newsroom-card:hover h3,
+#wrap .newsroom-card:focus-visible h3 {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
