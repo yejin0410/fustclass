@@ -1695,3 +1695,66 @@ body,
 @media(max-width:560px) {
     #wrap .campaign-vehicle-style__card.swiper-slide { flex-basis:86vw; width:86vw; height:350px; }
 }
+
+
+/* FINAL: hero slide height is inherited from its Swiper parent */
+#wrap .hero-sec > .swiper { height:670px !important; }
+#wrap .hero-sec > .swiper > .swiper-wrapper { height:100% !important; }
+#wrap .hero-sec > .swiper .swiper-slide { height:100% !important; }
+
+/* FINAL: campaign uses native Swiper sizing and centered slide layout */
+#wrap .campaign-vehicle-style__viewport.swiper {
+    display:block !important;
+    width:100% !important;
+    height:570px !important;
+    margin:0 auto !important;
+    padding:20px 0 !important;
+    overflow:hidden !important;
+    touch-action:pan-y !important;
+    cursor:grab !important;
+}
+#wrap .campaign-vehicle-style__viewport.swiper:active { cursor:grabbing !important; }
+#wrap .campaign-vehicle-style__track.swiper-wrapper {
+    display:flex !important;
+    align-items:center !important;
+    width:100% !important;
+    height:100% !important;
+    gap:0 !important;
+    padding:0 !important;
+}
+#wrap .campaign-vehicle-style__card.swiper-slide {
+    display:block !important;
+    position:relative !important;
+    flex:0 0 70vw !important;
+    width:70vw !important;
+    max-width:960px !important;
+    height:500px !important;
+    margin:0 !important;
+    opacity:.65 !important;
+    transform:scale(.82) !important;
+    transition:transform 1.2s ease,opacity 1.2s ease !important;
+}
+#wrap .campaign-vehicle-style__card.swiper-slide-active {
+    opacity:1 !important;
+    transform:scale(1) !important;
+}
+#wrap .campaign-vehicle-style__card.swiper-slide>a {
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+}
+#wrap .campaign-vehicle-style__card.swiper-slide>a>img {
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+}
+@media(max-width:900px) {
+    #wrap .hero-sec > .swiper { height:100dvh !important; }
+    #wrap .campaign-vehicle-style__viewport.swiper { height:450px !important; }
+    #wrap .campaign-vehicle-style__card.swiper-slide { flex-basis:78vw !important; width:78vw !important; height:400px !important; }
+}
+@media(max-width:560px) {
+    #wrap .campaign-vehicle-style__viewport.swiper { height:380px !important; }
+    #wrap .campaign-vehicle-style__card.swiper-slide { flex-basis:86vw !important; width:86vw !important; height:340px !important; }
+}
