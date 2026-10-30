@@ -123,11 +123,11 @@
 <h2 id="campaign-title">캠페인과 함께 만드는 변화</h2>
 <p class="campaign-section__subtitle">사람과 지구를 위한 작은 실천이 더 나은 내일을 만듭니다.</p>
 
-<div class="campaign-vehicle-style__viewport">
-<div class="campaign-vehicle-style__track">
-<article class="campaign-vehicle-style__card is-active"><a href="#right-food"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/d9eaa.png" alt="초록 식물과 함께하는 지속가능한 식생활"><div class="campaign-vehicle-style__copy"><p>01 / SUSTAINABLE LIFE</p><h3>지구를 위해,<br>오늘부터 작은 실천</h3></div></a></article>
-<article class="campaign-vehicle-style__card"><a href="#right-food"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/fa6f9.png" alt="신선한 콩과 잎사귀"><div class="campaign-vehicle-style__copy"><p>02 / RIGHT FOOD</p><h3>좋은 음식이<br>좋은 내일을 만듭니다</h3></div></a></article>
-<article class="campaign-vehicle-style__card"><a href="#about"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/ce82d.png" alt="흙을 손에 담은 모습"><div class="campaign-vehicle-style__copy"><p>03 / FOR THE PLANET</p><h3>작은 행동으로<br>지구를 건강하게</h3></div></a></article>
+<div class="campaign-vehicle-style__viewport swiper">
+<div class="campaign-vehicle-style__track swiper-wrapper">
+<article class="campaign-vehicle-style__card swiper-slide"><a href="#right-food"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/d9eaa.png" alt="초록 식물과 함께하는 지속가능한 식생활"><div class="campaign-vehicle-style__copy"><p>01 / SUSTAINABLE LIFE</p><h3>지구를 위해,<br>오늘부터 작은 실천</h3></div></a></article>
+<article class="campaign-vehicle-style__card swiper-slide"><a href="#right-food"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/fa6f9.png" alt="신선한 콩과 잎사귀"><div class="campaign-vehicle-style__copy"><p>02 / RIGHT FOOD</p><h3>좋은 음식이<br>좋은 내일을 만듭니다</h3></div></a></article>
+<article class="campaign-vehicle-style__card swiper-slide"><a href="#about"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/ce82d.png" alt="흙을 손에 담은 모습"><div class="campaign-vehicle-style__copy"><p>03 / FOR THE PLANET</p><h3>작은 행동으로<br>지구를 건강하게</h3></div></a></article>
 </div></div>
 
 </div><div class="campaign-vehicle-style__detail"><a href="#right-food">자세히 보기 <span aria-hidden="true">→</span></a></div>
@@ -237,58 +237,20 @@
 
 
     <script>
-        // 마우스 드래그 또는 터치 스와이프로 캠페인 카드를 넘깁니다.
-        (() => {
-            const section = document.querySelector('.campaign-vehicle-style');
-            if (!section) return;
-            const track = section.querySelector('.campaign-vehicle-style__track');
-            const viewport = section.querySelector('.campaign-vehicle-style__viewport');
-            const cards = Array.from(section.querySelectorAll('.campaign-vehicle-style__card'));
-            let active = 0, startX = 0, startOffset = 0, dragging = false, moved = false;
-
-            function layout(index, animate = true) {
-                active = (index + cards.length) % cards.length;
-                const order = [(active + cards.length - 1) % cards.length, active, (active + 1) % cards.length];
-                order.forEach(i => track.appendChild(cards[i]));
-                cards.forEach((card, i) => card.classList.toggle('is-active', i === active));
-                track.style.transition = animate ? 'transform 2s cubic-bezier(.22,.61,.36,1)' : 'none';
-                const selected = cards[active];
-                const offset = selected.offsetLeft + selected.offsetWidth / 2 - viewport.clientWidth / 2;
-                track.style.transform = 'translateX(' + (-offset) + 'px)';
+        // 캠페인 카드 Swiper
+        const campaignSwiper = new Swiper('.campaign-vehicle-style__viewport', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 24,
+            loop: true,
+            speed: 1400,
+            grabCursor: true,
+            watchSlidesProgress: true,
+            breakpoints: {
+                0: { spaceBetween: 14 },
+                768: { spaceBetween: 24 }
             }
-
-            viewport.addEventListener('pointerdown', event => {
-                if (event.pointerType === 'mouse' && event.button !== 0) return;
-                dragging = true; moved = false; startX = event.clientX;
-                const match = track.style.transform.match(/translateX\((-?[\d.]+)px\)/);
-                startOffset = match ? Number(match[1]) : 0;
-                track.style.transition = 'none';
-                viewport.classList.add('is-dragging');
-                viewport.setPointerCapture(event.pointerId);
-            });
-            viewport.addEventListener('pointermove', event => {
-                if (!dragging) return;
-                const delta = event.clientX - startX;
-                if (Math.abs(delta) > 5) moved = true;
-                track.style.transform = 'translateX(' + (startOffset + delta) + 'px)';
-            });
-            function finish(event) {
-                if (!dragging) return;
-                dragging = false;
-                viewport.classList.remove('is-dragging');
-                const delta = event.clientX - startX;
-                if (Math.abs(delta) > 45) layout(active + (delta < 0 ? 1 : -1));
-                else layout(active);
-            }
-            viewport.addEventListener('pointerup', finish);
-            viewport.addEventListener('pointercancel', finish);
-            viewport.addEventListener('click', event => {
-                if (moved) { event.preventDefault(); event.stopPropagation(); moved = false; }
-            }, true);
-            window.addEventListener('resize', () => layout(active, false));
-            window.addEventListener('load', () => layout(active, false), { once: true });
-            layout(0, false);
-        })();
+        });
     </script>
 
     <script>
