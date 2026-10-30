@@ -241,11 +241,14 @@
         const campaignSwiper = new Swiper('.campaign-vehicle-style__viewport', {
             slidesPerView: 'auto',
             centeredSlides: true,
+            centeredSlidesBounds: false,
             spaceBetween: 24,
             loop: true,
-            speed: 1400,
+            speed: 1600,
             grabCursor: true,
             watchSlidesProgress: true,
+            observer: true,
+            observeParents: true,
             breakpoints: {
                 0: { spaceBetween: 14 },
                 768: { spaceBetween: 24 }
