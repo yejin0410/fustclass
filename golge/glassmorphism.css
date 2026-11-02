@@ -134,3 +134,29 @@
         -webkit-backdrop-filter: none;
     }
 }
+
+/* Layout repair: keep the login content together and clear of the theme menu */
+#wrap.glassmorphism{width:min(100%,430px);height:100dvh;min-height:680px;overflow:hidden}
+#wrap.glassmorphism main{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:stretch;gap:18px;padding:92px 24px 112px}
+#wrap.glassmorphism .close_btn{top:22px;left:20px;width:44px;height:44px;border:1px solid rgba(255,255,255,.8);border-radius:15px;background:rgba(255,255,255,.48);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+#wrap.glassmorphism .brand_logo{position:static;width:54px;height:54px;padding:8px;border:1px solid rgba(255,255,255,.8);border-radius:17px;background:rgba(255,255,255,.55);box-shadow:0 12px 30px rgba(57,74,130,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+#wrap.glassmorphism .brand_logo img{width:100%;height:100%;object-fit:contain}
+#wrap.glassmorphism .title{position:static;font-size:30px;line-height:1.2;font-weight:750;letter-spacing:-.06em;color:var(--glass-ink)}
+#wrap.glassmorphism form,#wrap.glassmorphism fieldset{position:static;width:100%}
+#wrap.glassmorphism .login_group{position:static;width:100%;padding:22px;border:1px solid rgba(255,255,255,.8);border-radius:24px;background:rgba(255,255,255,.58);box-shadow:0 18px 45px rgba(57,74,130,.16);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+#wrap.glassmorphism .login_description{margin:0 0 20px;font-size:14px;line-height:1.7;color:var(--glass-ink)}
+#wrap.glassmorphism .input_box{width:100%;padding:0}
+#wrap.glassmorphism .input_box input{box-sizing:border-box;width:100%;height:52px;padding:0 14px;border:1px solid rgba(255,255,255,.95);border-radius:12px;background:rgba(255,255,255,.72);color:var(--glass-ink);font-size:15px}
+#wrap.glassmorphism .input_box input::placeholder{color:var(--glass-muted)}
+#wrap.glassmorphism .find_email,#wrap.glassmorphism .create_account{display:inline-block;color:#405fc4;font-size:14px;font-weight:700;text-decoration:none}
+#wrap.glassmorphism .find_email{margin-top:16px;line-height:1.4}
+#wrap.glassmorphism .login_bottom{position:static;display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:22px;padding:0 2px}
+#wrap.glassmorphism .next_btn{display:inline-flex;align-items:center;justify-content:center;width:auto;min-width:76px;height:44px;padding:0 20px;border:1px solid rgba(255,255,255,.5);border-radius:14px;background:linear-gradient(135deg,#7189ef,#5472d9);color:#fff;font-size:14px;font-weight:700;box-shadow:0 8px 18px rgba(73,94,190,.28)}
+#wrap.glassmorphism .back_btn{left:20px;bottom:22px;width:52px;height:52px}
+#wrap.glassmorphism .back_btn button{width:100%;height:100%;border:1px solid rgba(255,255,255,.8);border-radius:16px;background:rgba(255,255,255,.48);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+#wrap.glassmorphism .back_btn .arrow{border-color:var(--glass-ink)}
+#wrap.glassmorphism .page_icon{top:22px;right:20px;width:42px;height:42px;border:1px solid rgba(255,255,255,.8);border-radius:13px;background:rgba(255,255,255,.45)}
+#wrap.glassmorphism .share_btn{right:20px;bottom:28px;width:92px;height:auto}
+@media(max-width:390px){#wrap.glassmorphism main{padding-right:20px;padding-left:20px}#wrap.glassmorphism .login_group{padding:19px}}
+@media(max-height:720px){#wrap.glassmorphism{min-height:600px}#wrap.glassmorphism main{gap:12px;padding-top:78px;padding-bottom:88px}#wrap.glassmorphism .brand_logo{width:46px;height:46px}#wrap.glassmorphism .title{font-size:26px}#wrap.glassmorphism .login_group{padding:16px}}
+@media(prefers-reduced-transparency:reduce){#wrap.glassmorphism .login_group,#wrap.glassmorphism .brand_logo,#wrap.glassmorphism .close_btn,#wrap.glassmorphism .back_btn button{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}}
