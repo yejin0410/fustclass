@@ -39,7 +39,10 @@
 #wrap.glassmorphism main,
 #wrap.glassmorphism .back_btn,
 #wrap.glassmorphism .page_icon,
-#wrap.glassmorphism .share_btn { z-index: 1; }
+#wrap.glassmorphism .share_btn { position: relative; z-index: 1; }
+#wrap.glassmorphism .back_btn,
+#wrap.glassmorphism .page_icon,
+#wrap.glassmorphism .share_btn { position: absolute; }
 #wrap.glassmorphism .close_btn {
     border: 1px solid rgba(255,255,255,.75);
     border-radius: 16px;
