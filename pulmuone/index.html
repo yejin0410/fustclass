@@ -125,8 +125,8 @@
 
 <div class="campaign-vehicle-style__viewport swiper">
 <div class="campaign-vehicle-style__track swiper-wrapper">
-<article class="campaign-vehicle-style__card swiper-slide"><a href="#right-food"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/fa6f9.png" alt="신선한 콩과 잎사귀"><div class="campaign-vehicle-style__copy"><p>01 / RIGHT FOOD</p><h3>좋은 음식이<br>좋은 내일을 만듭니다</h3></div></a></article>
-<article class="campaign-vehicle-style__card swiper-slide"><a href="#right-food"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/d9eaa.png" alt="초록 식물과 함께하는 지속가능한 식생활"><div class="campaign-vehicle-style__copy"><p>02 / SUSTAINABLE LIFE</p><h3>지구를 위해,<br>오늘부터 작은 실천</h3></div></a></article>
+<article class="campaign-vehicle-style__card swiper-slide"><a href="#right-food"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/d9eaa.png" alt="초록 식물과 함께하는 지속가능한 식생활"><div class="campaign-vehicle-style__copy"><p>01 / SUSTAINABLE LIFE</p><h3>지구를 위해,<br>오늘부터 작은 실천</h3></div></a></article>
+<article class="campaign-vehicle-style__card swiper-slide"><a href="#right-food"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/fa6f9.png" alt="신선한 콩과 잎사귀"><div class="campaign-vehicle-style__copy"><p>02 / RIGHT FOOD</p><h3>좋은 음식이<br>좋은 내일을 만듭니다</h3></div></a></article>
 <article class="campaign-vehicle-style__card swiper-slide"><a href="#about"><img src="https://www.figma.com/api/mcp/asset/83eb978d-4413-4591-8baa-2a4172892585/ce82d.png" alt="흙을 손에 담은 모습"><div class="campaign-vehicle-style__copy"><p>03 / FOR THE PLANET</p><h3>작은 행동으로<br>지구를 건강하게</h3></div></a></article>
 </div></div>
 
@@ -241,7 +241,7 @@
         const campaignSwiper = new Swiper('.campaign-vehicle-style__viewport', {
             slidesPerView: 'auto',
             slidesPerGroup: 1,
-            initialSlide: 0,
+            initialSlide: 1,
             centeredSlides: true,
             centeredSlidesBounds: false,
             spaceBetween: 24,
@@ -268,8 +268,6 @@
                 768: { spaceBetween: 24 }
             }
         });
-        // 첫 화면에서 RIGHT FOOD(현재 첫 번째 카드)가 반드시 중앙에 오도록 초기 위치 고정
-        campaignSwiper.slideTo(0, 0);
     </script>
 
     <script>
