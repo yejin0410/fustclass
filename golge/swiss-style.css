@@ -1,0 +1,140 @@
+/* Swiss Style theme — Google login page */
+/* 그리드와 강한 타이포그래피, 빨강·검정·오프화이트 중심 */
+:root {
+    --swiss-red: #e6322b;
+    --swiss-black: #171717;
+    --swiss-paper: #f5f3ee;
+    --swiss-line: #b8b5ae;
+}
+
+/* 기존 Neo Brutalism의 색상·그림자 효과를 덮고 스위스 스타일로 전환 */
+body {
+    background: var(--swiss-paper);
+    color: var(--swiss-black);
+    font-family: Arial, "Noto Sans KR", sans-serif;
+}
+
+#wrap {
+    background:
+        linear-gradient(90deg, var(--swiss-red) 0 9%, transparent 9% 100%),
+        var(--swiss-paper);
+    color: var(--swiss-black);
+    border: 0;
+}
+
+/* 요소를 왼쪽 기준으로 정렬하고 장식은 최소화 */
+.close_btn {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.brand_logo {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.title {
+    color: var(--swiss-black);
+    font-family: Arial, "Noto Sans KR", sans-serif;
+    font-size: min(10.25vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.075em;
+    line-height: 0.95;
+    text-shadow: none;
+}
+
+.login_group {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.login_description {
+    color: var(--swiss-black);
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.input_box {
+    border-bottom: 2px solid var(--swiss-black);
+    padding-bottom: 0;
+}
+
+.input_box input {
+    height: min(12.8205vw, 5rem);
+    padding: 1.2rem 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--swiss-black);
+    box-shadow: none;
+}
+
+.input_box input::placeholder {
+    color: #77736d;
+}
+
+.input_box input:focus {
+    outline: 2px solid var(--swiss-red);
+    outline-offset: 3px;
+}
+
+.find_email,
+.create_account {
+    color: var(--swiss-red);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.next_btn {
+    min-height: 44px;
+    border: 0;
+    border-radius: 0;
+    background: var(--swiss-red);
+    color: #fff;
+    font-size: min(3.5897vw, 1.4rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    box-shadow: none;
+    transition: background-color 150ms ease;
+}
+
+.next_btn:hover {
+    transform: none;
+    box-shadow: none;
+    background: var(--swiss-black);
+}
+
+.back_btn button {
+    border: 1px solid var(--swiss-black);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.back_btn .arrow {
+    border-color: var(--swiss-black);
+}
+
+.page_icon {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.share_btn {
+    filter: none;
+}
+
+/* 좁은 화면에서도 왼쪽 빨간 면과 본문 간격을 유지 */
+@media (max-width: 390px) {
+    #wrap {
+        background:
+            linear-gradient(90deg, var(--swiss-red) 0 9%, transparent 9% 100%),
+            var(--swiss-paper);
+    }
+}
