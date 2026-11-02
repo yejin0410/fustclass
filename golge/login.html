@@ -3,12 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google 로그인</title>
+    <title>Google 로그인 디자인 테마 비교</title>
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="risograph.css?v=2">
+    <link id="theme-style" rel="stylesheet" href="risograph.css?v=3">
+    <style>
+        .theme-picker {
+            position: fixed;
+            z-index: 9999;
+            top: 12px;
+            right: max(12px, calc((100vw - 390px) / 2 + 12px));
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border: 1px solid rgba(30, 35, 50, .14);
+            border-radius: 12px;
+            background: rgba(255,255,255,.94);
+            box-shadow: 0 4px 16px rgba(0,0,0,.12);
+            color: #202124;
+            font: 500 12px/1.2 Arial, sans-serif;
+        }
+        .theme-picker label { white-space: nowrap; }
+        .theme-picker select {
+            max-width: 142px;
+            padding: 7px 24px 7px 9px;
+            border: 1px solid #c8cbd2;
+            border-radius: 7px;
+            background: #fff;
+            color: #202124;
+            font: inherit;
+            cursor: pointer;
+        }
+        .theme-picker select:focus-visible {
+            outline: 2px solid #5277df;
+            outline-offset: 2px;
+        }
+        @media (max-width: 420px) {
+            .theme-picker { top: 8px; right: 8px; gap: 5px; padding: 6px 7px; }
+            .theme-picker select { max-width: 126px; }
+        }
+    </style>
 </head>
 <body>
+    <div class="theme-picker">
+        <label for="theme-select">디자인 테마</label>
+        <select id="theme-select">
+            <option value="risograph" selected>17 Risograph</option>
+            <option value="glassmorphism">Glassmorphism</option>
+            <option value="bento-grid">Bento Grid</option>
+            <option value="neo-brutalism">Neo Brutalism</option>
+            <option value="swiss">Swiss Style</option>
+            <option value="default">기본 디자인</option>
+        </select>
+    </div>
+
     <div id="wrap" class="risograph">
         <header>
             <button type="button" class="close_btn">
@@ -16,31 +65,25 @@
                 <img src="img/Frame 88.svg" alt="">
             </button>
         </header>
-
         <main>
             <div class="brand_logo">
                 <img src="img/Gogol_icon.svg" alt="Google">
             </div>
-
             <h1 class="title">로그인</h1>
-
             <form action="">
                 <fieldset>
                     <legend class="sr-only">Google 계정 로그인</legend>
-
                     <div class="login_group">
                         <p class="login_description">
                             Google 계정을 사용하세요. 앱 및 Safari에서도<br>
                             Google 서비스에 로그인됩니다.
                         </p>
-
                         <div class="input_box">
                             <label for="email" class="sr-only">이메일 또는 휴대전화</label>
                             <input type="email" id="email" name="email" placeholder="이메일 또는 휴대전화">
                         </div>
                         <a href="#" class="find_email">이메일을 잊으셨나요?</a>
                     </div>
-
                     <div class="login_bottom">
                         <a href="#" class="create_account">계정 만들기</a>
                         <button type="submit" class="next_btn">다음</button>
@@ -48,16 +91,38 @@
                 </fieldset>
             </form>
         </main>
-
         <div class="back_btn">
             <button type="button">
                 <span class="sr-only">이전 화면</span>
                 <span class="arrow"></span>
             </button>
         </div>
-
         <img class="page_icon" src="img/page_icon.svg" alt="">
         <img class="share_btn" src="img/Share.svg" alt="">
     </div>
+
+    <script>
+        const themeSelect = document.querySelector("#theme-select");
+        const themeStyle = document.querySelector("#theme-style");
+        const wrap = document.querySelector("#wrap");
+
+        const themeFiles = {
+            "risograph": "risograph.css?v=3",
+            "glassmorphism": "glassmorphism.css?v=1",
+            "bento-grid": "bento-grid.css?v=1",
+            "neo-brutalism": "neo-brutalism.css?v=2",
+            "swiss": "swiss-style.css?v=1",
+            "default": ""
+        };
+
+        themeSelect.addEventListener("change", function () {
+            const selectedTheme = this.value;
+            wrap.className = selectedTheme === "default" ? "" : selectedTheme;
+            themeStyle.href = themeFiles[selectedTheme];
+            if (selectedTheme === "default") {
+                themeStyle.removeAttribute("href");
+            }
+        });
+    </script>
 </body>
 </html>
