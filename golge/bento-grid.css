@@ -1,0 +1,235 @@
+/* Bento Grid theme — Google login page */
+/* 카드형 그리드로 정보를 나누고, 각 카드의 역할을 색과 크기로 구분 */
+#wrap.bento-grid {
+    --bento-bg: #f1f3f4;
+    --bento-card: #ffffff;
+    --bento-ink: #202124;
+    --bento-blue: #d3e3fd;
+    --bento-yellow: #fce8b2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6rem minmax(0, 1fr) 5.6rem;
+    gap: 1.2rem;
+    box-sizing: border-box;
+    padding: 1.6rem;
+    background: var(--bento-bg);
+    color: var(--bento-ink);
+    font-family: "Google Sans Flex", Arial, sans-serif;
+}
+
+#wrap.bento-grid header {
+    position: relative;
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+}
+
+#wrap.bento-grid .close_btn {
+    position: static;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 1.6rem;
+    background: var(--bento-card);
+}
+
+#wrap.bento-grid .brand_logo {
+    position: static;
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    aspect-ratio: auto;
+    padding: 1.6rem;
+    border-radius: 2rem;
+    background: var(--bento-card);
+}
+
+#wrap.bento-grid .brand_logo img {
+    width: min(100%, 6.4rem);
+}
+
+#wrap.bento-grid main {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 11rem minmax(0, 1fr);
+    gap: 1.2rem;
+    min-height: 0;
+    padding: 0;
+}
+
+#wrap.bento-grid .title {
+    position: static;
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+    padding: 1.8rem;
+    border-radius: 2rem;
+    background: var(--bento-yellow);
+    color: var(--bento-ink);
+    font-size: min(9.2308vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.06em;
+}
+
+#wrap.bento-grid main form {
+    grid-column: 1 / -1;
+    min-height: 0;
+}
+
+#wrap.bento-grid main fieldset {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 1.2rem;
+    height: 100%;
+    min-height: 0;
+}
+
+#wrap.bento-grid .login_group {
+    position: static;
+    width: auto;
+    min-height: 0;
+    padding: 2rem;
+    border-radius: 2rem;
+    background: var(--bento-card);
+}
+
+#wrap.bento-grid .login_description {
+    margin-bottom: 2.4rem;
+    color: var(--bento-ink);
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+#wrap.bento-grid .input_box {
+    padding: 0;
+    border: 0;
+}
+
+#wrap.bento-grid .input_box input {
+    box-sizing: border-box;
+    height: 5rem;
+    padding: 1.2rem;
+    border: 1px solid #c4c7c5;
+    border-radius: 1.2rem;
+    background: #f8f9fa;
+    color: var(--bento-ink);
+    font-size: 1.5rem;
+}
+
+#wrap.bento-grid .input_box input::placeholder {
+    color: #5f6368;
+}
+
+#wrap.bento-grid .input_box input:focus {
+    outline: 2px solid #4285f4;
+    outline-offset: 2px;
+}
+
+#wrap.bento-grid .find_email,
+#wrap.bento-grid .create_account {
+    color: #1967d2;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#wrap.bento-grid .find_email {
+    display: inline-block;
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+}
+
+#wrap.bento-grid .login_bottom {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    padding: 1.6rem 2rem;
+    border-radius: 2rem;
+    background: var(--bento-blue);
+}
+
+#wrap.bento-grid .create_account {
+    font-size: 1.4rem;
+}
+
+#wrap.bento-grid .next_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 4.4rem;
+    border-radius: 1.4rem;
+    background: #1967d2;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+#wrap.bento-grid .back_btn {
+    position: static;
+    grid-column: 1;
+    grid-row: 3;
+    width: 5.2rem;
+    aspect-ratio: 1;
+}
+
+#wrap.bento-grid .back_btn button {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 1.6rem;
+    background: var(--bento-card);
+}
+
+#wrap.bento-grid .back_btn .arrow {
+    border-color: var(--bento-ink);
+}
+
+#wrap.bento-grid .page_icon {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+#wrap.bento-grid .share_btn {
+    position: static;
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: end;
+    align-self: center;
+    width: min(100%, 11.6rem);
+    height: auto;
+}
+
+@media (max-height: 700px) {
+    #wrap.bento-grid {
+        grid-template-rows: 5.2rem minmax(0, 1fr) 4.8rem;
+        gap: 0.8rem;
+        padding: 1.2rem;
+    }
+
+    #wrap.bento-grid main {
+        grid-template-rows: 8rem minmax(0, 1fr);
+        gap: 0.8rem;
+    }
+
+    #wrap.bento-grid .login_group {
+        padding: 1.4rem;
+    }
+
+    #wrap.bento-grid .login_description {
+        margin-bottom: 1.2rem;
+    }
+}
