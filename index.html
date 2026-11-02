@@ -1,15 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wayo class</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 24px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        h1 { margin-bottom: 24px; }
+        .project-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .project-links a {
+            display: inline-block;
+            padding: 12px 18px;
+            border: 1px solid #222;
+            border-radius: 8px;
+            color: #222;
+            text-decoration: none;
+        }
+        .project-links a:hover {
+            background: #222;
+            color: #fff;
+        }
+        .featured-link {
+            border: 2px solid #315ee8 !important;
+            color: #315ee8 !important;
+            font-weight: 700;
+        }
+        .featured-link:hover {
+            background: #315ee8 !important;
+            color: #fff !important;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello Githib!</h1>
-    <a href="bogerking/login.html">버거킹 로그인 UI</a>
-    <a href="golge/login.html">Google 로그인 디자인 테마 모음</a>
-    <a href="https://yejin0410.github.io/fustclass/pulmuone/">풀무원 리뉴얼 UI</a>
-    <a href="https://www.figma.com/design/CjriG3RdGTSrAlnkKbSz4W/%ED%92%80%EB%AC%B4%EC%9B%90-%EB%A6%AC%EB%89%B4%EC%96%BC-%EC%82%AC%EC%9D%B4%ED%8A%B8?node-id=45-102&t=3rkc7HQGPF7Mo63J-0">풀무원 리뉴얼 Figma</a>
+    <h1>wayo class</h1>
+    <nav class="project-links" aria-label="프로젝트 링크">
+        <a href="bogerking/login.html">버거킹 로그인 UI</a>
+        <a class="featured-link" href="./golge/login.html">Google 로그인 디자인 테마 모음</a>
+        <a href="https://yejin0410.github.io/fustclass/pulmuone/">풀무원 리뉴얼 UI</a>
+        <a href="https://www.figma.com/design/CjriG3RdGTSrAlnkKbSz4W/%ED%92%80%EB%AC%B4%EC%9B%90-%EB%A6%AC%EB%89%B4%EC%96%BC-%EC%82%AC%EC%9D%B4%ED%8A%B8?node-id=45-102&t=3rkc7HQGPF7Mo63J-0">풀무원 리뉴얼 Figma</a>
+    </nav>
 </body>
 </html>
