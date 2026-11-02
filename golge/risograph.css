@@ -1,0 +1,165 @@
+/* 17 Risograph — Google login page */
+/* 핑크와 블루 두 가지 잉크의 겹침과 인쇄 어긋남 표현 */
+#wrap.risograph {
+    --riso-pink: #f04b91;
+    --riso-blue: #2878c8;
+    --riso-paper: #fff8f4;
+    --riso-ink: #24202a;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--riso-paper);
+    color: var(--riso-ink);
+    font-family: "Google Sans Flex", Arial, sans-serif;
+}
+
+/* 종이 위에 찍힌 두 색의 잉크 면 */
+#wrap.risograph::before,
+#wrap.risograph::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+#wrap.risograph::before {
+    top: 8%;
+    right: -18%;
+    width: 48%;
+    aspect-ratio: 1;
+    background: var(--riso-pink);
+    opacity: 0.72;
+}
+
+#wrap.risograph::after {
+    top: 14%;
+    right: -9%;
+    width: 42%;
+    aspect-ratio: 1;
+    background: var(--riso-blue);
+    opacity: 0.72;
+}
+
+/* 버튼과 로고에 인쇄물처럼 단단한 면 구성 */
+#wrap.risograph .close_btn {
+    border: 2px solid var(--riso-blue);
+    border-radius: 0;
+    background: var(--riso-paper);
+    box-shadow: 3px 3px 0 var(--riso-pink);
+}
+
+#wrap.risograph .brand_logo {
+    border: 2px solid var(--riso-pink);
+    border-radius: 0;
+    background: var(--riso-paper);
+    box-shadow: 5px 5px 0 var(--riso-blue);
+}
+
+#wrap.risograph .title {
+    color: var(--riso-ink);
+    font-weight: 900;
+    letter-spacing: -0.075em;
+    text-shadow:
+        3px 2px 0 var(--riso-pink),
+        -2px -2px 0 var(--riso-blue);
+}
+
+/* 설명과 입력 영역을 종이 카드처럼 표현 */
+#wrap.risograph .login_group {
+    border: 2px solid var(--riso-blue);
+    border-radius: 0;
+    background: var(--riso-paper);
+    box-shadow: 6px 6px 0 var(--riso-pink);
+}
+
+#wrap.risograph .login_description {
+    color: var(--riso-ink);
+    font-weight: 700;
+    text-shadow: 1px 1px 0 rgba(240, 75, 145, 0.45);
+}
+
+#wrap.risograph .input_box input {
+    border: 2px solid var(--riso-blue);
+    border-radius: 0;
+    background: var(--riso-paper);
+    color: var(--riso-ink);
+    box-shadow: 3px 3px 0 var(--riso-pink);
+}
+
+#wrap.risograph .input_box input::placeholder {
+    color: var(--riso-ink);
+    opacity: 0.72;
+}
+
+#wrap.risograph .input_box input:focus {
+    outline: 2px dashed var(--riso-pink);
+    outline-offset: 3px;
+}
+
+#wrap.risograph .find_email,
+#wrap.risograph .create_account {
+    color: var(--riso-blue);
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+/* 하단 CTA는 핑크 잉크, 파란색 오프셋으로 강조 */
+#wrap.risograph .login_bottom {
+    border: 2px solid var(--riso-pink);
+    border-radius: 0;
+    background: var(--riso-blue);
+    box-shadow: 5px 5px 0 var(--riso-pink);
+}
+
+#wrap.risograph .create_account {
+    color: var(--riso-paper);
+}
+
+#wrap.risograph .next_btn {
+    border: 2px solid var(--riso-ink);
+    border-radius: 0;
+    background: var(--riso-pink);
+    color: var(--riso-paper);
+    font-weight: 900;
+    text-shadow: 1px 1px 0 var(--riso-blue);
+    box-shadow: 3px 3px 0 var(--riso-ink);
+}
+
+#wrap.risograph .next_btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--riso-ink);
+}
+
+/* 하단 아이콘도 같은 잉크 색상으로 통일 */
+#wrap.risograph .back_btn button {
+    border: 2px solid var(--riso-blue);
+    border-radius: 0;
+    background: var(--riso-paper);
+    box-shadow: 3px 3px 0 var(--riso-pink);
+}
+
+#wrap.risograph .back_btn .arrow {
+    border-color: var(--riso-blue);
+}
+
+#wrap.risograph .page_icon,
+#wrap.risograph .share_btn {
+    filter: sepia(1) saturate(5) hue-rotate(285deg);
+}
+
+@media (max-width: 390px) {
+    #wrap.risograph::before {
+        right: -24%;
+        width: 54%;
+    }
+
+    #wrap.risograph::after {
+        right: -15%;
+        width: 48%;
+    }
+}
