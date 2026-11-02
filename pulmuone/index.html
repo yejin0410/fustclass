@@ -237,16 +237,29 @@
 
 
     <script>
-        // 캠페인 카드 Swiper
+        // 캠페인 카드 Swiper: 드래그 거리를 줄이고 한 번에 한 장씩 안정적으로 이동
         const campaignSwiper = new Swiper('.campaign-vehicle-style__viewport', {
             slidesPerView: 'auto',
+            slidesPerGroup: 1,
             centeredSlides: true,
-            centeredSlidesBounds: false,
+            centeredSlidesBounds: true,
             spaceBetween: 24,
-            loop: true,
-            speed: 1600,
+            loop: false,
+            speed: 750,
             grabCursor: true,
             watchSlidesProgress: true,
+            threshold: 12,
+            touchRatio: 0.7,
+            touchAngle: 45,
+            resistance: true,
+            resistanceRatio: 0.85,
+            shortSwipes: true,
+            longSwipes: true,
+            longSwipesRatio: 0.2,
+            longSwipesMs: 300,
+            followFinger: true,
+            preventClicks: true,
+            preventClicksPropagation: true,
             observer: true,
             observeParents: true,
             breakpoints: {
