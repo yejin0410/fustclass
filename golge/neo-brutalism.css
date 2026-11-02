@@ -1,5 +1,5 @@
-/* Neo Brutalism theme — Google login page */
-:root {
+/* Neo Brutalism — scoped to this login theme only */
+#wrap.neo-brutalism {
     --neo-bg: #fff4a3;
     --neo-paper: #ffffff;
     --neo-ink: #111111;
@@ -7,87 +7,63 @@
     --neo-pink: #ff6bcb;
     --neo-blue: #6bd5ff;
     --neo-red: #ff5a4e;
-    --neo-shadow: 6px 6px 0 var(--neo-ink);
-}
-
-/* 페이지 전체: 밝은 원색과 검정 대비 */
-body {
-    background: var(--neo-bg);
-    color: var(--neo-ink);
-}
-
-#wrap {
     background: var(--neo-yellow);
     color: var(--neo-ink);
     border-left: 3px solid var(--neo-ink);
     border-right: 3px solid var(--neo-ink);
 }
-
-/* 상단 닫기 버튼과 로고에 선명한 프레임 */
-.close_btn {
+#wrap.neo-brutalism .close_btn {
     border: 3px solid var(--neo-ink);
     background: var(--neo-pink);
     box-shadow: 3px 3px 0 var(--neo-ink);
 }
-
-.brand_logo {
+#wrap.neo-brutalism .brand_logo {
+    box-sizing: border-box;
     padding: 7px;
     border: 3px solid var(--neo-ink);
     background: var(--neo-paper);
     box-shadow: 4px 4px 0 var(--neo-ink);
 }
-
-.title {
+#wrap.neo-brutalism .title {
     color: var(--neo-ink);
     font-weight: 900;
     letter-spacing: -0.06em;
     text-transform: uppercase;
     text-shadow: 2px 2px 0 var(--neo-paper);
 }
-
-.login_group {
+#wrap.neo-brutalism .login_group {
+    box-sizing: border-box;
     padding: 16px;
     border: 3px solid var(--neo-ink);
     background: var(--neo-paper);
-    box-shadow: var(--neo-shadow);
+    box-shadow: 6px 6px 0 var(--neo-ink);
 }
-
-.login_description {
+#wrap.neo-brutalism .login_description {
     color: var(--neo-ink);
     font-weight: 700;
 }
-
-.input_box input {
+#wrap.neo-brutalism .input_box input {
+    box-sizing: border-box;
     border: 3px solid var(--neo-ink);
     border-radius: 0;
     background: #fff;
     color: var(--neo-ink);
     box-shadow: 3px 3px 0 var(--neo-ink);
 }
-
-.input_box input::placeholder {
-    color: #555;
-}
-
-.input_box input:focus {
+#wrap.neo-brutalism .input_box input::placeholder { color: #555; }
+#wrap.neo-brutalism .input_box input:focus {
     outline: 3px solid var(--neo-pink);
     outline-offset: 2px;
 }
-
-.find_email,
-.create_account {
+#wrap.neo-brutalism .find_email,
+#wrap.neo-brutalism .create_account {
     color: #164fbd;
     font-weight: 800;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
 }
-
-.login_bottom {
-    align-items: center;
-}
-
-.next_btn {
+#wrap.neo-brutalism .next_btn {
     min-height: 44px;
     border: 3px solid var(--neo-ink);
     border-radius: 0;
@@ -98,42 +74,29 @@ body {
     box-shadow: 4px 4px 0 var(--neo-ink);
     transition: transform 120ms ease, box-shadow 120ms ease;
 }
-
-.next_btn:hover {
+#wrap.neo-brutalism .next_btn:hover {
     transform: translate(3px, 3px);
     box-shadow: 1px 1px 0 var(--neo-ink);
 }
-
-.back_btn button {
+#wrap.neo-brutalism .back_btn button {
     border: 3px solid var(--neo-ink);
     border-radius: 0;
     background: var(--neo-blue);
     box-shadow: 3px 3px 0 var(--neo-ink);
 }
-
-.back_btn .arrow {
-    border-color: var(--neo-ink);
-}
-
-.page_icon {
+#wrap.neo-brutalism .back_btn .arrow { border-color: var(--neo-ink); }
+#wrap.neo-brutalism .page_icon {
+    box-sizing: border-box;
     border: 3px solid var(--neo-ink);
     background: var(--neo-pink);
     box-shadow: 3px 3px 0 var(--neo-ink);
     object-fit: contain;
 }
-
-.share_btn {
-    filter: drop-shadow(3px 3px 0 var(--neo-ink));
-}
-
-/* 작은 화면에서도 테두리와 그림자가 콘텐츠를 밀어내지 않도록 유지 */
+#wrap.neo-brutalism .share_btn { filter: drop-shadow(3px 3px 0 var(--neo-ink)); }
 @media (max-width: 390px) {
-    .login_group {
+    #wrap.neo-brutalism .login_group {
         padding: 12px;
         box-shadow: 4px 4px 0 var(--neo-ink);
     }
-
-    .next_btn {
-        box-shadow: 3px 3px 0 var(--neo-ink);
-    }
+    #wrap.neo-brutalism .next_btn { box-shadow: 3px 3px 0 var(--neo-ink); }
 }
