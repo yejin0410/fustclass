@@ -2296,3 +2296,65 @@ border-radius: 16px; overflow: hidden;}
         margin-left: 0;
     }
 }
+
+/* RIGHT FOOD: restore the eyebrow and keep the heading elements in fixed grid areas */
+#wrap .right-food-section__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+        "eyebrow subtitle"
+        "title subtitle"
+        "cards cards";
+    align-items: start;
+}
+
+#wrap .right-food-section__eyebrow {
+    display: block;
+    grid-area: eyebrow;
+    justify-self: start;
+    align-self: end;
+    margin: 0 0 12px;
+    color: #2f6e23;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+#wrap .right-food-section h2 {
+    grid-area: title;
+    justify-self: start;
+    align-self: start;
+    margin: 0;
+    color: #222;
+}
+
+#wrap .right-food-section__subtitle {
+    grid-area: subtitle;
+    justify-self: end;
+    align-self: center;
+    margin: 0;
+    color: #777;
+}
+
+#wrap .right-food-section__cards {
+    grid-area: cards;
+}
+
+@media (max-width: 900px) {
+    #wrap .right-food-section__inner {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "eyebrow"
+            "title"
+            "subtitle"
+            "cards";
+    }
+
+    #wrap .right-food-section__eyebrow,
+    #wrap .right-food-section h2,
+    #wrap .right-food-section__subtitle {
+        justify-self: start;
+        align-self: start;
+        margin-left: 0;
+    }
+}
