@@ -2238,7 +2238,7 @@ border-radius: 16px; overflow: hidden;}
     float: none;
     align-self: flex-end;
     width: fit-content;
-    margin: 0 0 32px;
+    margin: 0 0 72px;
     z-index: auto;
 }
 
@@ -2250,6 +2250,6 @@ border-radius: 16px; overflow: hidden;}
 @media (max-width: 900px) {
     #wrap .newsroom-section__more {
         align-self: flex-start;
-        margin-bottom: 32px;
+        margin-bottom: 48px;
     }
 }
