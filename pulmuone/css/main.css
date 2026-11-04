@@ -2443,3 +2443,35 @@ border-radius: 16px; overflow: hidden;}
 #wrap .right-food-section__cards {
     grid-area: cards;
 }
+
+/* RIGHT FOOD: remove eyebrow and subtitle completely */
+#wrap .right-food-section__eyebrow,
+#wrap .right-food-section__subtitle {
+    display: none !important;
+}
+
+#wrap .right-food-section__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "title"
+        "cards";
+    align-items: start;
+}
+
+#wrap .right-food-section h2 {
+    grid-area: title;
+}
+
+#wrap .right-food-section__cards {
+    grid-area: cards;
+}
+
+@media (max-width: 900px) {
+    #wrap .right-food-section__inner {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "title"
+            "cards";
+    }
+}
