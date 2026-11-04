@@ -2444,34 +2444,33 @@ border-radius: 16px; overflow: hidden;}
     grid-area: cards;
 }
 
-/* RIGHT FOOD: remove eyebrow and subtitle completely */
+/* RIGHT FOOD: cards only */
 #wrap .right-food-section__eyebrow,
-#wrap .right-food-section__subtitle {
+#wrap .right-food-section__subtitle,
+#wrap .right-food-section h2,
+#wrap .right-food-section__more {
     display: none !important;
 }
 
 #wrap .right-food-section__inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-        "title"
-        "cards";
-    align-items: start;
-}
-
-#wrap .right-food-section h2 {
-    grid-area: title;
+    display: block;
 }
 
 #wrap .right-food-section__cards {
-    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    margin: 0;
 }
 
 @media (max-width: 900px) {
-    #wrap .right-food-section__inner {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-areas:
-            "title"
-            "cards";
+    #wrap .right-food-section__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    #wrap .right-food-section__cards {
+        grid-template-columns: 1fr;
     }
 }
