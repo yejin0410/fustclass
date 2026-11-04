@@ -648,9 +648,7 @@ top: 4vh;
     padding-right: 0 !important;
 }
 #wrap .right-food-section__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 position: relative;
     
@@ -1166,9 +1164,7 @@ border-radius: 16px; overflow: hidden;}
     padding-right: 0 !important;
 }
 #wrap .newsroom-section__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 position: relative;
 }
@@ -1255,9 +1251,7 @@ border-radius: 16px; overflow: hidden;}
     padding-right: 0 !important;
 }
     #wrap .newsroom-section__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 
 }
@@ -1278,9 +1272,7 @@ border-radius: 16px; overflow: hidden;}
 /* Footer - Pulmuone redesign */
 #wrap .pulmuone-footer { background: #f5f6f3; color: #2d292a; border-top: 1px solid #e5e8e2; padding: 54px 0 28px; }
 #wrap .pulmuone-footer__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 
 }
@@ -1302,9 +1294,7 @@ border-radius: 16px; overflow: hidden;}
 @media (max-width: 900px) {
     #wrap .pulmuone-footer { padding: 40px 0 24px; }
     #wrap .pulmuone-footer__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 
 }
@@ -1383,16 +1373,12 @@ border-radius: 16px; overflow: hidden;}
     padding-right: 0 !important;
 }
 #wrap .newsroom-section__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 
 }
 #wrap .pulmuone-footer__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 
 }
@@ -1517,16 +1503,12 @@ border-radius: 16px; overflow: hidden;}
     padding-right: 0 !important;
 }
 #wrap .newsroom-section__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 
 }
 #wrap .pulmuone-footer__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 
 }
@@ -1605,9 +1587,7 @@ min-height: 0 !important;
     padding-right: 0 !important;
 }
 #wrap .campaign-section__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 position: relative;
 }
@@ -1757,11 +1737,8 @@ border-radius: 16px; overflow: hidden;}
     padding-right: 0 !important;
 }
 #wrap .pulmuone-lineup__inner{
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
-margin:0 automax-width: 1720px;
 }
 #wrap .pulmuone-lineup__heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px}
 #wrap .pulmuone-lineup__eyebrow{margin:0 0 14px;color:#2f6e23;font-size:18px;font-weight:700;letter-spacing:.04em}
@@ -1803,9 +1780,7 @@ margin:0 automax-width: 1720px;
 /* Kia Vehicle-style campaign cards: large centered card with cropped side previews */
 #wrap .campaign-vehicle-style { padding: 88px 0 82px; overflow:hidden; }
 #wrap .campaign-vehicle-style .campaign-section__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 
 }
@@ -1871,9 +1846,7 @@ margin:0 automax-width: 1720px;
 /* Final layout correction: match the reference's wide center card and cropped side cards */
 #wrap .campaign-vehicle-style { overflow:hidden; }
 #wrap .campaign-vehicle-style__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 
 }
@@ -2047,9 +2020,7 @@ border-radius: 16px; overflow: hidden;}
     background: #fff;
 }
 #wrap .campaign-vehicle-style .campaign-section__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 
 }
@@ -2219,9 +2190,7 @@ border-radius: 16px; overflow: hidden;}
     padding-right: 0 !important;
 }
     #wrap .right-food-section__inner {
-    width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
-    margin-left: auto;
     margin-right: auto;
 grid-template-columns: 1fr;
         grid-template-areas: "title" "subtitle" "cards";
@@ -2304,5 +2273,33 @@ grid-template-columns: 1fr;
 }
     #wrap .right-food-section__subtitle {
         font-size: clamp(20px, 5vw, 26px) !important;
+    }
+}
+
+
+/* Shared section container: all sections except interactive ABOUT */
+#wrap .section-inner {
+    width: 100%;
+    max-width: 1720px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+#wrap .right-food-section__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title subtitle" "cards cards";
+    column-gap: 48px;
+    row-gap: 34px;
+    align-items: center;
+}
+@media (max-width: 900px) {
+    #wrap .right-food-section__inner {
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "subtitle" "cards";
+        row-gap: 18px;
     }
 }
