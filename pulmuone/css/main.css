@@ -1957,3 +1957,14 @@ body,
     #wrap .right-food-section__subtitle { font-size: 20px !important; }
 }
 
+
+
+/* Remove the lime background from RIGHT FOOD while preserving its current card layout */
+#wrap .right-food-section {
+    background: #fff !important;
+    color: #222 !important;
+}
+#wrap .right-food-section h2,
+#wrap .right-food-section__subtitle {
+    color: #222 !important;
+}
