@@ -8,24 +8,13 @@
     <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
     <!-- Pretendard Variable 폰트 -->
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
-    <link rel="stylesheet" href="css/main.css?v=20261104-inner-1720-final">
+    <link rel="stylesheet" href="css/main.css?v=20261104-section-inner">
     <style>
         /* RIGHT FOOD heading: compact stacked style matching the supplied reference */
         #right-food {
             padding: 46px 0 66px !important;
             background: #fff !important;
             color: #222 !important;
-        }
-        #right-food .right-food-section__inner {
-            width: min(1720px, calc(100% - 40px)) !important;
-            max-width: 1720px !important;
-            margin: 0 auto !important;
-            padding: 0 !important;
-            display: grid !important;
-            grid-template-columns: 1fr !important;
-            grid-template-areas: "eyebrow" "title" "subtitle" "cards" !important;
-            row-gap: 0 !important;
-            align-items: start !important;
         }
         #right-food .right-food-section__eyebrow {
             display: block !important;
@@ -66,11 +55,6 @@
         }
         @media (max-width: 700px) {
             #right-food { padding: 36px 0 48px !important; }
-            #right-food .right-food-section__inner {
-                width: calc(100% - 40px) !important;
-                grid-template-columns: 1fr !important;
-                grid-template-areas: "eyebrow" "title" "subtitle" "cards" !important;
-            }
             #wrap #wrap #right-food h2 { font-size: 14.36px !important; }
             #right-food .right-food-section__subtitle { font-size: 13px !important; }
             #right-food .right-food-section__cards { margin-top: 22px !important; }
@@ -159,7 +143,7 @@
             </section>
 
             <section class="right-food-section" id="right-food" aria-labelledby="right-food-title">
-                <div class="right-food-section__inner">
+                <div class="right-food-section__inner section-inner">
                     <p class="right-food-section__eyebrow">RIGHT FOOD</p>
                     <h2 id="right-food-title">바른먹거리</h2>
                     <p class="right-food-section__subtitle">나와 가족들의 건강, 더 나아가<br>지구환경의 건강까지</p>
@@ -185,7 +169,7 @@
             </section>
 
             <section class="campaign-section campaign-vehicle-style" id="campaign" aria-labelledby="campaign-title">
-<div class="campaign-section__inner">
+<div class="campaign-section__inner section-inner">
 <p class="campaign-section__eyebrow">RIGHT FOOD</p>
 <h2 id="campaign-title">캠페인과 함께 만드는 변화</h2>
 <p class="campaign-section__subtitle">사람과 지구를 위한 작은 실천이 더 나은 내일을 만듭니다.</p>
@@ -203,7 +187,7 @@
             
 
             <section class="newsroom-section" id="news" aria-labelledby="newsroom-title">
-                <div class="newsroom-section__inner">
+                <div class="newsroom-section__inner section-inner">
                     <p class="newsroom-section__eyebrow">PULMONE NEWSROOM</p>
                     <h2 id="newsroom-title">뉴스룸</h2>
                     <p class="newsroom-section__subtitle">풀무원의 다양한 소식과 생생한 뉴스를 매일 만나보실 수 있습니다.</p>
@@ -254,7 +238,7 @@
         </main>
 
         <footer class="pulmuone-footer" id="footer">
-            <div class="pulmuone-footer__inner">
+            <div class="pulmuone-footer__inner section-inner">
                 <div class="pulmuone-footer__top">
                     <a class="pulmuone-footer__brand" href="#top" aria-label="풀무원 맨 위로">
                         <img src="data:image/jpeg;base64,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" alt="풀무원 Pulmuone">
