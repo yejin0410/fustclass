@@ -654,7 +654,6 @@ top: 4vh;
     align-items: center;
 }
 #wrap .right-food-section__eyebrow {
-    margin: 0 0 24px 63px;
     color: #2f6e23;
     font-size: 20px;
     line-height: 1.4;
@@ -2165,10 +2164,6 @@ border-radius: 16px; overflow: hidden;}
     display: block;
     position: static;
     margin: 0 0 12px 18px;
-    color: #2f6e23;
-    font-size: 20px;
-    line-height: 1.4;
-    font-weight: 700;
     letter-spacing: 0;
 }
 
