@@ -8,7 +8,54 @@
     <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
     <!-- Pretendard Variable 폰트 -->
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
-    <link rel="stylesheet" href="css/main.css?v=20261104-rightfood-heading">
+    <link rel="stylesheet" href="css/main.css?v=20261104-rightfood-heading-final">
+    <style>
+        /* 바른먹거리 제목 영역을 요청한 2열 구성으로 고정 */
+        #right-food .right-food-section__inner {
+            display: grid !important;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+            grid-template-areas: "title subtitle" "cards cards" !important;
+            align-items: center !important;
+            column-gap: 48px !important;
+            row-gap: 34px !important;
+        }
+        #right-food .right-food-section__eyebrow,
+        #right-food .right-food-section__more { display: none !important; }
+        #right-food h2 {
+            grid-area: title !important;
+            margin: 0 !important;
+            color: #222 !important;
+            font-size: clamp(48px, 5.2vw, 72px) !important;
+            line-height: 1.08 !important;
+            letter-spacing: -.06em !important;
+            font-weight: 800 !important;
+            white-space: nowrap !important;
+        }
+        #right-food .right-food-section__subtitle {
+            grid-area: subtitle !important;
+            margin: 0 !important;
+            color: #222 !important;
+            font-size: clamp(24px, 2.65vw, 36px) !important;
+            line-height: 1.35 !important;
+            letter-spacing: -.045em !important;
+            font-weight: 750 !important;
+        }
+        #right-food .right-food-section__cards { grid-area: cards !important; }
+        @media (max-width: 700px) {
+            #right-food .right-food-section__inner {
+                grid-template-columns: 1fr !important;
+                grid-template-areas: "title" "subtitle" "cards" !important;
+                row-gap: 12px !important;
+            }
+            #right-food h2 {
+                white-space: normal !important;
+                font-size: clamp(40px, 10vw, 56px) !important;
+            }
+            #right-food .right-food-section__subtitle {
+                font-size: clamp(20px, 5vw, 26px) !important;
+            }
+        }
+    </style>
     <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
