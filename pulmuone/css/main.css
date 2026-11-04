@@ -2224,32 +2224,41 @@ border-radius: 16px; overflow: hidden;}
 }
 }
 
-/* NEWSROOM heading and CTA: keep the text grouped beside the button */
+/* NEWSROOM heading and CTA: align the button with the descriptive copy */
 #wrap .newsroom-section__inner {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
-        "heading cta"
-        "cards cards";
-    column-gap: 64px;
+        "heading"
+        "cards";
     row-gap: 0;
-    align-items: center;
 }
 
 #wrap .newsroom-section__heading {
     grid-area: heading;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+        "eyebrow eyebrow"
+        "title title"
+        "subtitle cta";
+    column-gap: 48px;
+    align-items: center;
     min-width: 0;
 }
 
 #wrap .newsroom-section__eyebrow {
+    grid-area: eyebrow;
     margin: 0 0 12px;
 }
 
 #wrap .newsroom-section h2 {
+    grid-area: title;
     margin: 0 0 14px;
 }
 
 #wrap .newsroom-section__subtitle {
+    grid-area: subtitle;
     margin: 0;
 }
 
@@ -2273,12 +2282,13 @@ border-radius: 16px; overflow: hidden;}
 }
 
 @media (max-width: 900px) {
-    #wrap .newsroom-section__inner {
+    #wrap .newsroom-section__heading {
         grid-template-columns: minmax(0, 1fr);
         grid-template-areas:
-            "heading"
-            "cta"
-            "cards";
+            "eyebrow"
+            "title"
+            "subtitle"
+            "cta";
         row-gap: 0;
     }
 
