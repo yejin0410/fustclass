@@ -2224,22 +2224,32 @@ border-radius: 16px; overflow: hidden;}
 }
 }
 
-
-/* NEWSROOM CTA: keep the button inside the newsroom section in normal document flow */
-#wrap main > .newsroom-section {
-    position: relative;
-    isolation: isolate;
+/* NEWSROOM CTA: place the link in the newsroom content flow */
+#wrap .newsroom-section__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
-#wrap main > .newsroom-section > .newsroom-section__inner > .newsroom-section__more {
-    position: relative;
+
+#wrap .newsroom-section__more {
+    position: static;
     inset: auto;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
     transform: none;
     float: none;
-    display: flex;
+    align-self: flex-end;
     width: fit-content;
-    margin: 0 0 32px auto;
+    margin: 0 0 32px;
+    z-index: auto;
+}
+
+#wrap .newsroom-section__grid {
+    position: relative;
+    clear: both;
+}
+
+@media (max-width: 900px) {
+    #wrap .newsroom-section__more {
+        align-self: flex-start;
+        margin-bottom: 32px;
+    }
 }
