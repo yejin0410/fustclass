@@ -2224,80 +2224,70 @@ border-radius: 16px; overflow: hidden;}
 }
 }
 
-/* NEWSROOM heading and CTA: align the button with the descriptive copy */
+/* NEWSROOM heading and CTA: keep the button directly beside the description */
 #wrap .newsroom-section__inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-        "heading"
-        "cards";
-    row-gap: 0;
+    display: block;
 }
 
 #wrap .newsroom-section__heading {
-    grid-area: heading;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-areas:
-        "eyebrow eyebrow"
-        "title title"
-        "subtitle cta";
-    column-gap: 48px;
-    align-items: center;
+    display: block;
     min-width: 0;
 }
 
 #wrap .newsroom-section__eyebrow {
-    grid-area: eyebrow;
     margin: 0 0 12px;
 }
 
 #wrap .newsroom-section h2 {
-    grid-area: title;
     margin: 0 0 14px;
 }
 
+#wrap .newsroom-section__description-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px 32px;
+}
+
 #wrap .newsroom-section__subtitle {
-    grid-area: subtitle;
     margin: 0;
 }
 
 #wrap .newsroom-section__more {
-    grid-area: cta;
     position: static;
     inset: auto;
     transform: none;
     float: none;
-    align-self: center;
-    justify-self: end;
+    display: inline-flex;
+    align-items: center;
+    justify-self: auto;
     width: fit-content;
     margin: 0;
+    flex: 0 0 auto;
 }
 
 #wrap .newsroom-section__grid {
-    grid-area: cards;
     margin-top: 64px;
     position: relative;
     clear: both;
 }
 
 @media (max-width: 900px) {
-    #wrap .newsroom-section__heading {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-areas:
-            "eyebrow"
-            "title"
-            "subtitle"
-            "cta";
-        row-gap: 0;
-    }
-
-    #wrap .newsroom-section__more {
-        justify-self: start;
-        margin-top: 24px;
+    #wrap .newsroom-section__description-row {
+        align-items: flex-start;
+        gap: 18px 24px;
     }
 
     #wrap .newsroom-section__grid {
         margin-top: 40px;
+    }
+}
+
+@media (max-width: 560px) {
+    #wrap .newsroom-section__description-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
     }
 }
