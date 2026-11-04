@@ -2426,3 +2426,20 @@ border-radius: 16px; overflow: hidden;}
         margin-top: 28px;
     }
 }
+
+/* RIGHT FOOD: title and cards only */
+#wrap .right-food-section__inner {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "title"
+        "cards";
+    align-items: start;
+}
+
+#wrap .right-food-section h2 {
+    grid-area: title;
+}
+
+#wrap .right-food-section__cards {
+    grid-area: cards;
+}
