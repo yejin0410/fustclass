@@ -2476,7 +2476,7 @@ border-radius: 16px; overflow: hidden;}
 }
 
 
-/* RIGHT FOOD: heading styled to match the campaign section */
+/* RIGHT FOOD: align eyebrow, title and description like CAMPAIGN */
 #wrap .right-food-section {
     background: #fff;
     color: #2d292a;
@@ -2494,36 +2494,49 @@ border-radius: 16px; overflow: hidden;}
 
 #wrap .right-food-section__heading {
     grid-area: heading;
-    display: block;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: stretch;
+    width: 100%;
 }
 
 #wrap .right-food-section__eyebrow {
     display: block !important;
-    margin: 0 0 12px 63px;
-    color: #2f6e23;
-    font-size: 20px;
+    position: static !important;
+    align-self: flex-start !important;
+    margin: 0 0 12px 18px !important;
+    color: #2f6e23 !important;
+    font-size: 20px !important;
     line-height: 1.4;
-    font-weight: 700;
+    font-weight: 700 !important;
     letter-spacing: 0;
 }
 
 #wrap .right-food-section h2 {
     display: block !important;
-    margin: 0 0 8px 66px;
-    color: #2d292a;
-    font-size: clamp(44px, 4.2vw, 75px);
+    position: static !important;
+    align-self: flex-start !important;
+    margin: 0 0 8px !important;
+    color: #2d292a !important;
+    font-size: clamp(44px, 4.2vw, 75px) !important;
     line-height: 1.2;
-    font-weight: 600;
-    letter-spacing: -.04em;
+    font-weight: 600 !important;
+    letter-spacing: -.04em !important;
+    white-space: normal !important;
 }
 
 #wrap .right-food-section__subtitle {
     display: block !important;
-    margin: 0 0 0 66px;
-    color: #a0a4a8;
-    font-size: 20px;
+    position: static !important;
+    align-self: flex-start !important;
+    justify-self: start !important;
+    margin: 0 0 0 16px !important;
+    color: #a0a4a8 !important;
+    font-size: 20px !important;
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
 }
 
 #wrap .right-food-section__more {
@@ -2541,8 +2554,8 @@ border-radius: 16px; overflow: hidden;}
 
 @media (max-width: 900px) {
     #wrap .right-food-section {
-        padding-top: 72px;
-        padding-bottom: 72px;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 
     #wrap .right-food-section__inner {
@@ -2550,21 +2563,20 @@ border-radius: 16px; overflow: hidden;}
     }
 
     #wrap .right-food-section__eyebrow,
-    #wrap .right-food-section h2,
     #wrap .right-food-section__subtitle {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 
     #wrap .right-food-section__eyebrow {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 
     #wrap .right-food-section h2 {
-        font-size: clamp(36px, 8vw, 54px);
+        font-size: clamp(36px, 8vw, 54px) !important;
     }
 
     #wrap .right-food-section__subtitle {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 
     #wrap .right-food-section__cards {
