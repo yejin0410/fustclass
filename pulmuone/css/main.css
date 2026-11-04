@@ -372,6 +372,9 @@ body,
     background: #fff;
     color: #2d292a;
     box-sizing: border-box;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .about-pulmuone__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -461,7 +464,10 @@ border-radius: 16px; overflow: hidden;}
     filter: blur(2px);
 }
 @media (max-width: 900px) {
-    #wrap .about-pulmuone { padding: 72px 20px; }
+    #wrap .about-pulmuone { padding: 72px 20px; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .about-pulmuone__inner {
     width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
@@ -583,6 +589,9 @@ border-radius: 16px; overflow: hidden;}
     padding-top: 0;
     padding-bottom: 0;
     position: relative;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .about-pulmuone__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -599,7 +608,10 @@ position: sticky;
 @media (max-width: 900px) {
     #wrap .about-pulmuone {
         min-height: 190vh;
-    }
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .about-pulmuone__inner {
     width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
@@ -631,6 +643,9 @@ top: 4vh;
     padding: 110px 20px 100px;
     background: #fff;
     color: #2d292a;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .right-food-section__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -663,6 +678,9 @@ position: relative;
     line-height: 1.15;
     letter-spacing: -.045em;
     font-weight: 600;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .right-food-section__subtitle {
     margin: 0 0 0 63px;
@@ -715,12 +733,21 @@ border-radius: 16px; overflow: hidden;}
     font-weight: 700;
 }
 @media (max-width: 900px) {
-    #wrap .right-food-section { padding: 72px 20px; }
+    #wrap .right-food-section { padding: 72px 20px; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     
     #wrap .right-food-section__eyebrow,
     #wrap .right-food-section h2,
-    #wrap .right-food-section__subtitle { margin-left: 0; }
-    #wrap .right-food-section h2 { font-size: clamp(42px, 8vw, 64px); }
+    #wrap .right-food-section__subtitle { margin-left: 0; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+    #wrap .right-food-section h2 { font-size: clamp(42px, 8vw, 64px); 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .right-food-section__subtitle { font-size: 17px; }
     #wrap .right-food-section__more {
         position: static;
@@ -738,7 +765,10 @@ border-radius: 16px; overflow: hidden;}
     #wrap .right-food-section__cards { gap: 20px; margin-right: 20px; margin-left: 20px; }
     #wrap .right-food-section__eyebrow,
     #wrap .right-food-section h2,
-    #wrap .right-food-section__subtitle { margin-left: 20px; }
+    #wrap .right-food-section__subtitle { margin-left: 20px; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 }
 
 
@@ -799,12 +829,18 @@ border-radius: 16px; overflow: hidden;}
 #wrap .about-pulmuone {
     min-height: calc(100vh + 80px) !important;
     padding-bottom: 80px !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 @media (max-width: 900px) {
     #wrap .about-pulmuone {
         min-height: calc(100vh + 80px) !important;
         padding-bottom: 80px !important;
-    }
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 }
 
 
@@ -813,6 +849,9 @@ border-radius: 16px; overflow: hidden;}
     min-height: 0 !important;
     height: auto !important;
     padding: 80px 20px !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .about-pulmuone__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -830,6 +869,9 @@ position: static !important;
 #wrap .right-food-section {
     margin-top: 0 !important;
     padding-top: 20px !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 
@@ -840,6 +882,9 @@ position: static !important;
     padding: 0 20px !important;
     position: relative !important;
     overflow: visible !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .about-pulmuone__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -871,7 +916,10 @@ position: sticky !important;
     #wrap .about-pulmuone {
         min-height: 90vh !important;
         padding: 0 20px !important;
-    }
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .about-pulmuone__inner {
     width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
@@ -926,6 +974,9 @@ top: 4vh !important;
     min-height: 0 !important;
     height: auto !important;
     padding: 0 20px !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .about-pulmuone__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -946,6 +997,9 @@ position: static !important;
 #wrap .right-food-section {
     margin-top: 0 !important;
     padding-top: 20px !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 @media (max-width: 900px) {
     #wrap .about-pulmuone__inner {
@@ -957,7 +1011,10 @@ padding-top: 4vh !important;
 }
     #wrap .right-food-section {
         padding-top: 20px !important;
-    }
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 }
 
 
@@ -1104,6 +1161,9 @@ border-radius: 16px; overflow: hidden;}
     background: #fff;
     padding: 110px 0;
     color: #2d292a;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .newsroom-section__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -1125,6 +1185,9 @@ position: relative;
     font-size: clamp(44px, 4.2vw, 80px);
     line-height: 1.15;
     font-weight: 600;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .newsroom-section__subtitle {
     margin: 0 0 54px;
@@ -1187,7 +1250,10 @@ border-radius: 16px; overflow: hidden;}
     color: #2f6e23;
 }
 @media (max-width: 900px) {
-    #wrap .newsroom-section { padding: 72px 0; }
+    #wrap .newsroom-section { padding: 72px 0; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .newsroom-section__inner {
     width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
@@ -1271,6 +1337,9 @@ border-radius: 16px; overflow: hidden;}
     box-sizing: border-box;
     padding-left: 20px !important;
     padding-right: 20px !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .about-pulmuone__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -1298,6 +1367,9 @@ border-radius: 16px; overflow: hidden;}
 }
 #wrap .right-food-section {
     padding: 110px 20px 100px !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 #wrap .right-food-section__cards {
@@ -1306,6 +1378,9 @@ border-radius: 16px; overflow: hidden;}
 #wrap .newsroom-section {
     padding: 110px 20px !important;
     box-sizing: border-box;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .newsroom-section__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -1324,7 +1399,10 @@ border-radius: 16px; overflow: hidden;}
 @media (max-width: 900px) {
     #wrap .right-food-section {
         padding: 72px 20px !important;
-    }
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .about-pulmuone__content{
         grid-template-columns: 1fr !important;
         column-gap: 0 !important;
@@ -1334,7 +1412,10 @@ border-radius: 16px; overflow: hidden;}
     }
     #wrap .newsroom-section {
         padding: 72px 20px !important;
-    }
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 }
 @media (max-width: 560px) {
     #wrap .about-pulmuone__text .about-pulmuone__eyebrow {
@@ -1356,6 +1437,9 @@ border-radius: 16px; overflow: hidden;}
     margin: 0 !important;
     min-height: 0 !important;
     height: auto !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .about-pulmuone__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -1414,6 +1498,9 @@ border-radius: 16px; overflow: hidden;}
     box-sizing: border-box !important;
     padding: 110px 20px 100px !important;
     margin: 0 !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 #wrap .right-food-section__cards {
@@ -1425,6 +1512,9 @@ border-radius: 16px; overflow: hidden;}
 #wrap .newsroom-section {
     box-sizing: border-box !important;
     padding: 110px 20px !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .newsroom-section__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -1450,7 +1540,10 @@ border-radius: 16px; overflow: hidden;}
 @media (max-width: 900px) {
     #wrap .about-pulmuone {
         padding: 72px 20px !important;
-    }
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .about-pulmuone__inner,
     #wrap .about-pulmuone__content{
     width: min(calc(100% - 40px), 1720px);
@@ -1471,19 +1564,28 @@ min-height: 0 !important;
     border-radius: 16px; overflow: hidden;}
     #wrap .right-food-section {
         padding: 72px 20px !important;
-    }
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .right-food-section__cards {
         margin: 36px 0 0 !important;
         gap: 20px !important;
     }
     #wrap .newsroom-section {
         padding: 72px 20px !important;
-    }
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 }
 @media (max-width: 560px) {
     #wrap .about-pulmuone {
         padding: 56px 20px !important;
-    }
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .right-food-section__cards {
         grid-template-columns: 1fr !important;
     }
@@ -1498,6 +1600,9 @@ min-height: 0 !important;
     background: #fff;
     color: #2d292a;
     overflow: hidden;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .campaign-section__inner {
     width: min(calc(100% - 40px), 1720px);
@@ -1519,6 +1624,9 @@ position: relative;
     line-height: 1.2;
     font-weight: 600;
     letter-spacing: -0.04em;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .campaign-section__subtitle {
     margin: 0 0 0 66px;
@@ -1603,10 +1711,16 @@ border-radius: 16px; overflow: hidden;}
     object-fit: contain;
 }
 @media (max-width: 900px) {
-    #wrap .campaign-section { padding: 72px 20px; }
+    #wrap .campaign-section { padding: 72px 20px; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .campaign-section__eyebrow,
     #wrap .campaign-section h2,
-    #wrap .campaign-section__subtitle { margin-left: 0; }
+    #wrap .campaign-section__subtitle { margin-left: 0; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .campaign-section__subtitle { font-size: 16px; }
     #wrap .campaign-section__gallery {
         width: 100%;
@@ -1620,8 +1734,14 @@ border-radius: 16px; overflow: hidden;}
     #wrap .campaign-section__feature h3 { font-size: clamp(32px, 5vw, 48px); }
 }
 @media (max-width: 560px) {
-    #wrap .campaign-section { padding: 56px 20px; }
-    #wrap .campaign-section h2 { font-size: 36px; }
+    #wrap .campaign-section { padding: 56px 20px; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+    #wrap .campaign-section h2 { font-size: 36px; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .campaign-section__gallery { width: calc(100% + 20px); margin-right: -20px; }
     #wrap .campaign-section__side { flex-basis: 90px; height: 140px;  border-radius: 16px; overflow: hidden;}
     #wrap .campaign-section__feature { flex-basis: 78%; height: 260px;  border-radius: 16px; overflow: hidden;}
@@ -1632,7 +1752,10 @@ border-radius: 16px; overflow: hidden;}
 
 
 /* Pulmuone lineup section inspired by Kia Vehicle */
-#wrap .pulmuone-lineup{width:100%;box-sizing:border-box;padding:110px 20px 100px;overflow:hidden;background:#f5f6f3;color:#242624}
+#wrap .pulmuone-lineup{width:100%;box-sizing:border-box;padding:110px 20px 100px;overflow:hidden;background:#f5f6f3;color:#242624
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 #wrap .pulmuone-lineup__inner{
     width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
@@ -1667,8 +1790,14 @@ margin:0 automax-width: 1720px;
 #wrap .pulmuone-lineup__arrows{display:flex;gap:10px}
 #wrap .pulmuone-lineup__arrows button{display:grid;place-items:center;width:48px;height:48px;border:1px solid #cbd1c7;border-radius:50%;background:transparent;color:#2d292a;font-size:22px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
 #wrap .pulmuone-lineup__arrows button:hover{background:#2f6e23;border-color:#2f6e23;color:#fff}
-@media(max-width:900px){#wrap .pulmuone-lineup{padding:72px 20px}#wrap .pulmuone-lineup__intro{font-size:16px}#wrap .pulmuone-lineup__tabs{gap:22px;margin-top:36px;overflow-x:auto}#wrap .pulmuone-lineup__tab{flex:0 0 auto;font-size:15px}#wrap .pulmuone-lineup__track{gap:18px}#wrap .pulmuone-lineup__card{flex-basis:82%border-radius: 16px; overflow: hidden;}#wrap .pulmuone-lineup__card-copy h3{font-size:25px}}
-@media(max-width:560px){#wrap .pulmuone-lineup{padding:56px 20px}#wrap .pulmuone-lineup__heading{align-items:flex-start;flex-direction:column;gap:24px}#wrap .pulmuone-lineup__heading h2{font-size:38px}#wrap .pulmuone-lineup__intro{font-size:14px}#wrap .pulmuone-lineup__tabs{gap:18px;margin:32px 0 20px}#wrap .pulmuone-lineup__track{gap:14px}#wrap .pulmuone-lineup__card{flex-basis:86%border-radius: 16px; overflow: hidden;}#wrap .pulmuone-lineup__card-copy{padding-top:16px}#wrap .pulmuone-lineup__card-copy h3{font-size:25px}#wrap .pulmuone-lineup__card-copy span{font-size:13px}#wrap .pulmuone-lineup__controls{margin-top:28px}#wrap .pulmuone-lineup__arrows button{width:42px;height:42px}}
+@media(max-width:900px){#wrap .pulmuone-lineup{padding:72px 20px
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}#wrap .pulmuone-lineup__intro{font-size:16px}#wrap .pulmuone-lineup__tabs{gap:22px;margin-top:36px;overflow-x:auto}#wrap .pulmuone-lineup__tab{flex:0 0 auto;font-size:15px}#wrap .pulmuone-lineup__track{gap:18px}#wrap .pulmuone-lineup__card{flex-basis:82%border-radius: 16px; overflow: hidden;}#wrap .pulmuone-lineup__card-copy h3{font-size:25px}}
+@media(max-width:560px){#wrap .pulmuone-lineup{padding:56px 20px
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}#wrap .pulmuone-lineup__heading{align-items:flex-start;flex-direction:column;gap:24px}#wrap .pulmuone-lineup__heading h2{font-size:38px}#wrap .pulmuone-lineup__intro{font-size:14px}#wrap .pulmuone-lineup__tabs{gap:18px;margin:32px 0 20px}#wrap .pulmuone-lineup__track{gap:14px}#wrap .pulmuone-lineup__card{flex-basis:86%border-radius: 16px; overflow: hidden;}#wrap .pulmuone-lineup__card-copy{padding-top:16px}#wrap .pulmuone-lineup__card-copy h3{font-size:25px}#wrap .pulmuone-lineup__card-copy span{font-size:13px}#wrap .pulmuone-lineup__controls{margin-top:28px}#wrap .pulmuone-lineup__arrows button{width:42px;height:42px}}
 
 
 /* Kia Vehicle-style campaign cards: large centered card with cropped side previews */
@@ -2032,6 +2161,9 @@ border-radius: 16px; overflow: hidden;}
     padding: 42px 4% 66px !important;
     background: var(--color-brand-green, #7bcc12) !important;
     color: #fff !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 #wrap .right-food-section__eyebrow { display: none !important; }
@@ -2043,6 +2175,9 @@ border-radius: 16px; overflow: hidden;}
     line-height: 1.1 !important;
     letter-spacing: -.055em !important;
     font-weight: 750 !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .right-food-section__subtitle {
     grid-area: subtitle !important;
@@ -2079,7 +2214,10 @@ border-radius: 16px; overflow: hidden;}
 #wrap .right-food-card:nth-child(3) img { object-position: center center !important; }
 #wrap .right-food-card p { display: none !important; }
 @media (max-width: 900px) {
-    #wrap .right-food-section { padding: 48px 24px !important; }
+    #wrap .right-food-section { padding: 48px 24px !important; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .right-food-section__inner {
     width: min(calc(100% - 40px), 1720px);
     max-width: 1720px;
@@ -2095,7 +2233,10 @@ grid-template-columns: 1fr;
 @media (max-width: 600px) {
     #wrap .right-food-section__cards { grid-template-columns: 1fr !important; gap: 20px !important; }
     #wrap .right-food-card { aspect-ratio: 1 / 1.12 !important; border-radius: 16px; overflow: hidden;}
-    #wrap .right-food-section h2 { font-size: 42px !important; }
+    #wrap .right-food-section h2 { font-size: 42px !important; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .right-food-section__subtitle { font-size: 20px !important; }
 }
 
@@ -2105,10 +2246,16 @@ grid-template-columns: 1fr;
 #wrap .right-food-section {
     background: #fff !important;
     color: #222 !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .right-food-section h2,
 #wrap .right-food-section__subtitle {
     color: #222 !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 
@@ -2126,6 +2273,9 @@ grid-template-columns: 1fr;
     letter-spacing: -.06em !important;
     font-weight: 800 !important;
     white-space: nowrap !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #wrap .right-food-section__subtitle {
     grid-area: subtitle !important;
@@ -2148,7 +2298,10 @@ grid-template-columns: 1fr;
     #wrap .right-food-section h2 {
         white-space: normal !important;
         font-size: clamp(40px, 10vw, 56px) !important;
-    }
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
     #wrap .right-food-section__subtitle {
         font-size: clamp(20px, 5vw, 26px) !important;
     }
