@@ -1968,3 +1968,58 @@ body,
 #wrap .right-food-section__subtitle {
     color: #222 !important;
 }
+
+
+/* RIGHT FOOD heading: large two-column title and statement */
+#wrap .right-food-section__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    grid-template-areas:
+        "title subtitle"
+        "cards cards" !important;
+    column-gap: 48px !important;
+    row-gap: 34px !important;
+    align-items: center !important;
+}
+#wrap .right-food-section__eyebrow {
+    display: none !important;
+}
+#wrap .right-food-section h2 {
+    grid-area: title !important;
+    margin: 0 !important;
+    color: #222 !important;
+    font-size: clamp(48px, 5.2vw, 72px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.06em !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+}
+#wrap .right-food-section__subtitle {
+    grid-area: subtitle !important;
+    margin: 0 !important;
+    color: #222 !important;
+    font-size: clamp(24px, 2.65vw, 36px) !important;
+    line-height: 1.35 !important;
+    letter-spacing: -.045em !important;
+    font-weight: 750 !important;
+}
+#wrap .right-food-section__more {
+    display: none !important;
+}
+#wrap .right-food-section__cards {
+    grid-area: cards !important;
+    margin-top: 0 !important;
+}
+@media (max-width: 700px) {
+    #wrap .right-food-section__inner {
+        grid-template-columns: 1fr !important;
+        grid-template-areas: "title" "subtitle" "cards" !important;
+        row-gap: 12px !important;
+    }
+    #wrap .right-food-section h2 {
+        white-space: normal !important;
+        font-size: clamp(40px, 10vw, 56px) !important;
+    }
+    #wrap .right-food-section__subtitle {
+        font-size: clamp(20px, 5vw, 26px) !important;
+    }
+}
