@@ -2474,3 +2474,100 @@ border-radius: 16px; overflow: hidden;}
         grid-template-columns: 1fr;
     }
 }
+
+
+/* RIGHT FOOD: heading and cards */
+#wrap .right-food-section {
+    background: var(--color-brand-green, #7bcc12);
+    color: #fff;
+}
+
+#wrap .right-food-section__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "heading"
+        "cards";
+    align-items: start;
+    gap: 40px;
+}
+
+#wrap .right-food-section__heading {
+    grid-area: heading;
+    display: block;
+}
+
+#wrap .right-food-section__eyebrow {
+    display: block !important;
+    margin: 0 0 12px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+#wrap .right-food-section h2 {
+    display: block !important;
+    margin: 0 0 8px;
+    color: #fff;
+    font-size: clamp(44px, 4.2vw, 75px);
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -.04em;
+}
+
+#wrap .right-food-section__subtitle {
+    display: block !important;
+    margin: 0;
+    color: rgba(255, 255, 255, .82);
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+#wrap .right-food-section__more {
+    display: none !important;
+}
+
+#wrap .right-food-section__cards {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    margin: 0;
+    gap: 20px;
+}
+
+@media (max-width: 900px) {
+    #wrap .right-food-section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    #wrap .right-food-section__inner {
+        gap: 28px;
+    }
+
+    #wrap .right-food-section__eyebrow {
+        font-size: 16px;
+    }
+
+    #wrap .right-food-section h2 {
+        font-size: clamp(36px, 8vw, 54px);
+    }
+
+    #wrap .right-food-section__subtitle {
+        font-size: 16px;
+    }
+
+    #wrap .right-food-section__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    #wrap .right-food-section__cards {
+        grid-template-columns: 1fr;
+    }
+}
