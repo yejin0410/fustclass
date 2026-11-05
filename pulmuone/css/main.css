@@ -2250,3 +2250,35 @@ border-radius: 16px; overflow: hidden;}
         transform: scale(1);
     }
 }
+
+
+/* Campaign carousel scale: target the actual article slides */
+#wrap .campaign-section.campaign-vehicle-style .campaign-vehicle-style__viewport.swiper .swiper-wrapper > article.swiper-slide {
+    transform: scale(0.85);
+    transform-origin: center center;
+    transition: transform 0.35s ease;
+}
+
+#wrap .campaign-section.campaign-vehicle-style .campaign-vehicle-style__viewport.swiper .swiper-wrapper > article.swiper-slide.swiper-slide-active {
+    transform: scale(1);
+}
+
+@media (max-width: 900px) {
+    #wrap .campaign-section.campaign-vehicle-style .campaign-vehicle-style__viewport.swiper .swiper-wrapper > article.swiper-slide {
+        transform: scale(0.9);
+    }
+
+    #wrap .campaign-section.campaign-vehicle-style .campaign-vehicle-style__viewport.swiper .swiper-wrapper > article.swiper-slide.swiper-slide-active {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 560px) {
+    #wrap .campaign-section.campaign-vehicle-style .campaign-vehicle-style__viewport.swiper .swiper-wrapper > article.swiper-slide {
+        transform: scale(0.95);
+    }
+
+    #wrap .campaign-section.campaign-vehicle-style .campaign-vehicle-style__viewport.swiper .swiper-wrapper > article.swiper-slide.swiper-slide-active {
+        transform: scale(1);
+    }
+}
