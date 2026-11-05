@@ -2414,3 +2414,14 @@ border-radius: 16px; overflow: hidden;}
         transition: none;
     }
 }
+
+
+/* Newsroom card border and title spacing - final override */
+#wrap .newsroom-section .newsroom-section__grid > article.newsroom-card {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#wrap .newsroom-section .newsroom-section__grid > article.newsroom-card > a > h3 {
+    padding: 0 16px 16px 16px;
+}
