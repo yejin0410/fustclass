@@ -2024,6 +2024,7 @@ border-radius: 16px; overflow: hidden;}
         font-size: 14px;
     }
     #wrap .campaign-vehicle-style__viewport.swiper {
+    width: 90%;
         height: 360px;
         padding: 14px 0 18px;
     }
@@ -2277,4 +2278,15 @@ border-radius: 16px; overflow: hidden;}
 #wrap .campaign-vehicle-style__detail a span {
     display: none !important;
     content: none !important;
+}
+
+
+/* Mobile campaign viewport: full width with safe side gutters */
+@media (max-width: 560px) {
+    #wrap .campaign-vehicle-style__viewport.swiper {
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
