@@ -2266,3 +2266,15 @@ border-radius: 16px; overflow: hidden;}
         aspect-ratio: 1 / 1.12;
     }
 }
+
+/* Remove arrow graphics and generated arrow marks from the two CTA buttons */
+#wrap .newsroom-section__more img,
+#wrap .newsroom-section__more::before,
+#wrap .newsroom-section__more::after,
+#wrap .campaign-vehicle-style__detail a img,
+#wrap .campaign-vehicle-style__detail a::before,
+#wrap .campaign-vehicle-style__detail a::after,
+#wrap .campaign-vehicle-style__detail a span {
+    display: none !important;
+    content: none !important;
+}
