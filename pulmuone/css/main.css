@@ -1199,7 +1199,10 @@ border-radius: 16px; overflow: hidden;}
 }
 #wrap .newsroom-card {
     min-width: 0;
-border-radius: 16px; overflow: hidden;}
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+}
 #wrap .newsroom-card a {
     display: block;
     color: inherit;
@@ -1214,6 +1217,7 @@ border-radius: 16px; overflow: hidden;}
 }
 #wrap .newsroom-card h3 {
     margin: 0;
+    padding: 0 16px 16px 16px;
     font-size: clamp(18px, 1.25vw, 24px);
     line-height: 1.5;
     font-weight: 600;
