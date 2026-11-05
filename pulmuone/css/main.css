@@ -1907,7 +1907,7 @@ border-radius: 16px; overflow: hidden;}
 #wrap .campaign-vehicle-style__viewport.swiper {
     box-sizing: border-box;
 }
-#wrap .campaign-vehicle-style__card.swiper-slide {
+#wrap .campaign-vehicle-style .swiper-slide {
     border-radius: 16px;
     overflow: hidden;
     height: 450px;
