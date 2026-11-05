@@ -2206,6 +2206,7 @@ border-radius: 16px; overflow: hidden;}
 #wrap .campaign-vehicle-style .swiper-slide>a>img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 
