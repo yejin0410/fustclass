@@ -1903,9 +1903,14 @@ border-radius: 16px; overflow: hidden;}
     width: 100%;
 }
 #wrap .campaign-vehicle-style .swiper-slide {
+    overflow: hidden;
+}
+
+#wrap .campaign-vehicle-style article.swiper-slide > a {
+    display: block;
+    height: 450px;
     border-radius: 16px;
     overflow: hidden;
-    height: 450px;
 }
 #wrap .campaign-vehicle-style__card.swiper-slide {
     border-radius: 16px;
