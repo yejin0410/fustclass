@@ -1839,7 +1839,7 @@ border-radius: 16px; overflow: hidden;}
 
 /* FINAL: campaign uses native Swiper sizing and centered slide layout */
 #wrap .campaign-vehicle-style__viewport.swiper {
-    width: 90%;
+    width: 100%;
     overflow:hidden;
     touch-action:pan-y;
     cursor:grab;
@@ -1887,8 +1887,20 @@ border-radius: 16px; overflow: hidden;}
     font-size: 16px;
     line-height: 1.5;
 }
+#wrap .campaign-section__inner.section-inner {
+    width: 100%;
+    max-width: 100%;
+}
+#wrap .campaign-section__heading-inner {
+    width: 100%;
+    max-width: 1720px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
 #wrap .campaign-vehicle-style__viewport.swiper {
     box-sizing: border-box;
+    width: 100%;
 }
 #wrap .campaign-vehicle-style .swiper-slide {
     border-radius: 16px;
@@ -1918,11 +1930,9 @@ border-radius: 16px; overflow: hidden;}
     #wrap .campaign-vehicle-style {
         padding: 56px 0 60px;
     }
-    #wrap .campaign-vehicle-style__eyebrow,
-    #wrap .campaign-vehicle-style h2,
-    #wrap .campaign-vehicle-style__subtitle {
-        margin-left: 24px;
-        margin-right: 24px;
+    #wrap .campaign-section__heading-inner {
+        padding-left: 24px;
+        padding-right: 24px;
     }
     #wrap .campaign-vehicle-style__viewport.swiper {
         height: 430px;
@@ -1941,7 +1951,7 @@ border-radius: 16px; overflow: hidden;}
         font-size: 14px;
     }
     #wrap .campaign-vehicle-style__viewport.swiper {
-    width: 100%;
+        width: 100%;
         height: 360px;
         padding: 14px 0 18px;
     }
