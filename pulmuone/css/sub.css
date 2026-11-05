@@ -1,0 +1,182 @@
+/* 서브페이지 공통 스타일 (바른먹거리 · 뉴스룸 · 회사소개) */
+/* 헤더 · 푸터 · 색상 변수는 main.css를 그대로 사용하고, 서브페이지 본문만 여기서 꾸민다. */
+
+/* 서브페이지 기본 배경 */
+body {
+    background: var(--color-brand-white);
+}
+
+/* 현재 보고 있는 페이지의 메뉴 표시 */
+#wrap .site-header .main-nav > a[aria-current="page"] {
+    color: var(--color-brand-dark-green);
+}
+
+/* 공통 안쪽 폭 */
+.sub-inner {
+    width: min(1700px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+/* 페이지 제목 영역 */
+.sub-visual {
+    padding: 110px 0 56px;
+}
+.sub-visual__eyebrow,
+.sub-section__eyebrow {
+    margin: 0 0 16px;
+    color: var(--color-brand-dark-green);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.sub-visual h1 {
+    margin: 0;
+    color: var(--color-brand-dark-gray);
+    font-size: clamp(48px, 5vw, 80px);
+    font-weight: 600;
+    line-height: 1.15;
+    word-break: keep-all;
+}
+.sub-visual__desc {
+    margin: 24px 0 0;
+    color: var(--color-brand-gray);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* 페이지 안 바로가기 메뉴 */
+.sub-tabs {
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+}
+.sub-tabs ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 40px;
+    padding: 20px 0;
+}
+.sub-tabs a {
+    color: var(--color-brand-dark-gray);
+    font-size: 18px;
+    font-weight: 600;
+    transition: color .25s ease;
+}
+.sub-tabs a:hover,
+.sub-tabs a:focus-visible {
+    color: var(--color-brand-dark-green);
+}
+
+/* 내용 섹션 */
+.sub-section {
+    padding: 110px 0;
+}
+.sub-section + .sub-section {
+    border-top: 1px solid #f1f1f1;
+}
+.sub-section h2 {
+    margin: 0;
+    color: var(--color-brand-dark-gray);
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 600;
+    line-height: 1.25;
+    word-break: keep-all;
+}
+.sub-section__desc {
+    margin: 20px 0 0;
+    color: var(--color-brand-dark-gray);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+/* 글과 이미지를 나란히 놓는 섹션 */
+.sub-section--split .sub-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+.sub-section__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 508 / 358;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* 아직 내용이 없는 섹션 안내 */
+.sub-section__notice {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 8px 16px;
+    border: 1px solid #e5e8e2;
+    border-radius: 999px;
+    color: var(--color-brand-gray);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* 카드 목록 */
+.sub-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 56px;
+}
+.sub-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 508 / 358;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.sub-card__label {
+    margin: 20px 0 8px;
+    color: var(--color-brand-dark-green);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+.sub-card h3 {
+    margin: 0;
+    color: var(--color-brand-dark-gray);
+    font-size: clamp(18px, 1.25vw, 20px);
+    font-weight: 600;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+/* CI 로고 */
+.sub-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 508 / 358;
+    border: 1px solid #f1f1f1;
+    border-radius: 16px;
+}
+.sub-logo img {
+    width: 60%;
+}
+
+@media (max-width: 1024px) {
+    .sub-cards { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+}
+@media (max-width: 900px) {
+    .sub-inner { width: calc(100% - 40px); }
+    .sub-visual { padding: 72px 0 40px; }
+    .sub-section { padding: 72px 0; }
+    .sub-section--split .sub-inner { grid-template-columns: 1fr; gap: 40px; }
+    .sub-visual__desc,
+    .sub-section__desc { font-size: 18px; }
+}
+@media (max-width: 600px) {
+    .sub-visual { padding: 56px 0 32px; }
+    .sub-section { padding: 56px 0; }
+    .sub-tabs ul { gap: 8px 24px; padding: 16px 0; }
+    .sub-tabs a { font-size: 16px; }
+    .sub-cards { grid-template-columns: 1fr; margin-top: 40px; }
+}
