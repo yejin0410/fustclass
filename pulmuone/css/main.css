@@ -1912,6 +1912,11 @@ border-radius: 16px; overflow: hidden;}
     overflow: hidden;
     height: 450px;
 }
+#wrap .campaign-vehicle-style__card.swiper-slide {
+    border-radius: 16px;
+    overflow: hidden;
+    height: 450px;
+}
 #wrap .campaign-vehicle-style__copy {
     padding: 28px 30px;
 }
