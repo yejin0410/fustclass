@@ -1876,11 +1876,7 @@ border-radius: 16px; overflow: hidden;}
 
 /* FINAL: campaign uses native Swiper sizing and centered slide layout */
 #wrap .campaign-vehicle-style__viewport.swiper {
-    display:block !important;
     width:100% !important;
-    height:570px !important;
-    margin:0 auto !important;
-    padding:20px 0 !important;
     overflow:hidden !important;
     touch-action:pan-y !important;
     cursor:grab !important;
@@ -1966,9 +1962,6 @@ border-radius: 16px; overflow: hidden;}
     line-height: 1.5;
 }
 #wrap .campaign-vehicle-style__viewport.swiper {
-    height: 500px !important;
-    margin-top: 12px !important;
-    padding: 24px 0 26px !important;
     box-sizing: border-box;
 }
 #wrap .campaign-vehicle-style__card.swiper-slide {
