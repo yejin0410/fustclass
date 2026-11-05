@@ -1905,10 +1905,6 @@ border-radius: 16px; overflow: hidden;}
 #wrap .campaign-vehicle-style .swiper-slide {
     border-radius: 16px;
     overflow: hidden;
-}
-
-#wrap .campaign-vehicle-style article.swiper-slide > a {
-    display: block;
     height: 450px;
 }
 #wrap .campaign-vehicle-style__card.swiper-slide {
