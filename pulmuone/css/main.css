@@ -2352,8 +2352,8 @@ border-radius: 16px; overflow: hidden;}
 }
 
 
-/* 바른먹거리 카드: 누르면 초록 덮개 위에 제목과 설명 표시 */
-#wrap .right-food-card__button {
+/* 바른먹거리 카드: 마우스를 올리면(키보드 이동 포함) 초록 덮개 위에 제목과 설명 표시 */
+#wrap .right-food-card__overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -2363,18 +2363,15 @@ border-radius: 16px; overflow: hidden;}
     justify-content: center;
     gap: 20px;
     padding: 24px;
-    border: 0;
     background: transparent;
     color: var(--color-brand-white);
-    font: inherit;
     text-align: center;
     word-break: keep-all;
-    cursor: pointer;
     transition: background-color .35s ease;
 }
-#wrap .right-food-card__button:focus-visible {
+#wrap .right-food-card:focus-visible {
     outline: 2px solid var(--color-brand-green);
-    outline-offset: -6px;
+    outline-offset: 3px;
 }
 #wrap .right-food-card__title,
 #wrap .right-food-card__desc {
@@ -2395,16 +2392,19 @@ border-radius: 16px; overflow: hidden;}
     font-weight: 600;
     line-height: 1.5;
 }
-#wrap .right-food-card__button[aria-expanded="true"] {
+#wrap .right-food-card:hover .right-food-card__overlay,
+#wrap .right-food-card:focus-visible .right-food-card__overlay {
     background: rgba(47, 110, 35, .88);
 }
-#wrap .right-food-card__button[aria-expanded="true"] .right-food-card__title,
-#wrap .right-food-card__button[aria-expanded="true"] .right-food-card__desc {
+#wrap .right-food-card:hover .right-food-card__title,
+#wrap .right-food-card:hover .right-food-card__desc,
+#wrap .right-food-card:focus-visible .right-food-card__title,
+#wrap .right-food-card:focus-visible .right-food-card__desc {
     opacity: 1;
     transform: translateY(0);
 }
 @media (prefers-reduced-motion: reduce) {
-    #wrap .right-food-card__button,
+    #wrap .right-food-card__overlay,
     #wrap .right-food-card__title,
     #wrap .right-food-card__desc {
         transition: none;
