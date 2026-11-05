@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
     <!-- Pretendard Variable 폰트 -->
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
-    <link rel="stylesheet" href="css/main.css?v=20261105-gnb-submenu">
+    <link rel="stylesheet" href="css/main.css?v=20261105-food-cards">
 
     <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
@@ -90,14 +90,26 @@
                         <article class="right-food-card">
                             <img src="/fustclass/pulmuone/img/pulmuone_img2_01.png?v=20261105-2" alt="바른먹거리의 원칙을 보여주는 이미지">
                             <p>01 · 바른먹거리의 원칙</p>
+                            <button type="button" class="right-food-card__button" aria-expanded="false">
+                                <span class="right-food-card__title">바른먹거리</span>
+                                <span class="right-food-card__desc">내 가족의 건강과 행복을 위한<br>바른 먹거리는 무엇일까요?</span>
+                            </button>
                         </article>
                         <article class="right-food-card">
                             <img src="/fustclass/pulmuone/img/pulmuone_img2_02.png?v=20261105-2" alt="지속가능한 식생활을 보여주는 이미지">
                             <p>02 · 지속가능한 식생활</p>
+                            <button type="button" class="right-food-card__button" aria-expanded="false">
+                                <span class="right-food-card__title">지속가능 식생활</span>
+                                <span class="right-food-card__desc">여러분도 지속가능 식생활을<br>시작해보세요</span>
+                            </button>
                         </article>
                         <article class="right-food-card">
                             <img src="/fustclass/pulmuone/img/pulmuone_img2_03.png?v=20261105-2" alt="엄마와 아이가 옥수수를 먹는 모습">
                             <p>03 · 식품안전 · 품질</p>
+                            <button type="button" class="right-food-card__button" aria-expanded="false">
+                                <span class="right-food-card__title">바른먹거리 캠페인</span>
+                                <span class="right-food-card__desc">어렸을 때 입맛이 평생 건강</span>
+                            </button>
                         </article>
                     </div>
                 </div>
@@ -223,6 +235,18 @@
                     const selected = item === button;
                     item.classList.toggle('current', selected);
                     item.setAttribute('aria-pressed', String(selected));
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // 바른먹거리 카드: 누르면 초록 글씨 덮개가 열리고, 다시 누르면 닫힘 (한 번에 하나만 열림)
+        document.querySelectorAll('.right-food-card__button').forEach((button) => {
+            button.addEventListener('click', () => {
+                const open = button.getAttribute('aria-expanded') !== 'true';
+                document.querySelectorAll('.right-food-card__button').forEach((item) => {
+                    item.setAttribute('aria-expanded', String(item === button && open));
                 });
             });
         });
