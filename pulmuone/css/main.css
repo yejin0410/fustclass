@@ -1834,11 +1834,6 @@ border-radius: 16px; overflow: hidden;}
     height:auto;
     transition-timing-function:cubic-bezier(.22,.61,.36,1);
 }
-#wrap .campaign-vehicle-style__card.swiper-slide>a {
-    display:block;
-    width:100%;
-    height:100%;
-}
 @media(max-width:900px) {
     #wrap .hero-sec .swiper { height:100dvh; }
 }
@@ -1866,17 +1861,6 @@ border-radius: 16px; overflow: hidden;}
     height:100%;
     gap:0;
     padding:0;
-}
-#wrap .campaign-vehicle-style__card.swiper-slide>a {
-    display:block;
-    width:100%;
-    height:100%;
-}
-#wrap .campaign-vehicle-style__card.swiper-slide>a>img {
-    display:block;
-    width:100%;
-    height:100%;
-    object-fit:cover;
 }
 @media(max-width:900px) {
     #wrap .hero-sec > .swiper { height:100dvh !important; }
