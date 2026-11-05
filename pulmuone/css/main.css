@@ -2163,7 +2163,7 @@ border-radius: 16px; overflow: hidden;}
 #wrap .right-food-section__eyebrow {
     display: block;
     position: static;
-    margin: 0 0 12px 18px;
+    margin: 0 0 12px 0;
     letter-spacing: 0;
 }
 
@@ -2182,7 +2182,7 @@ border-radius: 16px; overflow: hidden;}
 #wrap .right-food-section__subtitle {
     display: block;
     position: static;
-    margin: 0 0 0 16px;
+    margin: 0;
     color: #a0a4a8;
     font-size: 20px;
     line-height: 1.5;
@@ -2198,8 +2198,8 @@ border-radius: 16px; overflow: hidden;}
     grid-area: cards;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: 100%;
-    margin: 0;
+    width: 90%;
+    margin: 0 auto;
     gap: 20px;
 }
 
@@ -2256,6 +2256,7 @@ border-radius: 16px; overflow: hidden;}
     }
 
     #wrap .right-food-section__cards {
+        width: 90%;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
     }
@@ -2263,6 +2264,7 @@ border-radius: 16px; overflow: hidden;}
 
 @media (max-width: 600px) {
     #wrap .right-food-section__cards {
+        width: 90%;
         grid-template-columns: 1fr;
         gap: 20px;
     }
