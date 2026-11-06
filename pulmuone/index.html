@@ -305,7 +305,8 @@
                 '.newsroom-card'
             ];
 
-            const targets = document.querySelectorAll(revealGroups.join(', '));
+            const targets = Array.from(document.querySelectorAll(revealGroups.join(', ')))
+                .filter((element) => !element.closest('.pulmuone-footer'));
             if (!targets.length) return;
 
             targets.forEach((element) => element.classList.add('scroll-reveal'));
