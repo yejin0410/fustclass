@@ -20,6 +20,37 @@ document.addEventListener("DOMContentLoaded", () => {
         sections.forEach((section) => sectionObserver.observe(section));
     }
 
+
+    // 메인 페이지와 동일한 스크롤 페이드업 효과
+    const revealTargets = document.querySelectorAll([
+        ".sustainable-visual .sub-inner",
+        ".sustainable-section .sustainable-heading",
+        ".sustainable-benefit",
+        ".sustainable-habits-section .sustainable-heading",
+        ".sustainable-habit",
+        ".sustainable-guidelines-section .sustainable-heading",
+        ".sustainable-guide-image"
+    ].join(", "));
+
+    revealTargets.forEach((element) => element.classList.add("scroll-reveal"));
+
+    if (!("IntersectionObserver" in window)) {
+        revealTargets.forEach((element) => element.classList.add("is-visible"));
+    } else {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: "0px 0px -48px 0px"
+        });
+
+        revealTargets.forEach((element) => revealObserver.observe(element));
+    }
+
     const languageButtons = document.querySelectorAll(".language-button");
     languageButtons.forEach((button) => {
         button.addEventListener("click", () => {
