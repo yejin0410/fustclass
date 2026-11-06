@@ -2425,3 +2425,25 @@ border-radius: 16px; overflow: hidden;}
 #wrap .newsroom-section .newsroom-section__grid > article.newsroom-card > a > h3 {
     padding: 0 16px 16px 16px;
 }
+
+
+/* Scroll reveal: fade-up */
+#wrap .scroll-reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .75s ease, transform .75s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
+}
+#wrap .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+    #wrap .scroll-reveal,
+    #wrap .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        will-change: auto;
+    }
+}
