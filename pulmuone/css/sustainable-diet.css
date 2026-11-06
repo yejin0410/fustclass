@@ -5,22 +5,6 @@
 #wrap .sustainable-visual .sub-inner {
     position: relative;
 }
-#wrap .sustainable-visual__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 18px;
-    margin-top: 36px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--color-brand-dark-green);
-    color: var(--color-brand-dark-green);
-    font-size: 16px;
-    font-weight: 600;
-    transition: gap .25s ease, color .25s ease;
-}
-#wrap .sustainable-visual__link:hover,
-#wrap .sustainable-visual__link:focus-visible {
-    gap: 26px;
-}
 #wrap .sustainable-tabs ul {
     gap: 8px 48px;
 }
@@ -212,7 +196,6 @@
 @media (max-width: 600px) {
     #wrap .sustainable-visual { padding-bottom: 40px; }
     #wrap .desktop-break { display: none; }
-    #wrap .sustainable-visual__link { margin-top: 28px; font-size: 14px; }
     #wrap .sustainable-tabs ul { flex-direction: column; gap: 12px; }
     #wrap .sustainable-tabs a.is-active::after { bottom: -3px; }
     #wrap .sustainable-section { padding-top: 56px; }
@@ -233,5 +216,4 @@
     #wrap .sustainable-bottom-cta h3 { font-size: 24px; }
 }
 @media (prefers-reduced-motion: reduce) {
-    #wrap .sustainable-visual__link { transition: none; }
 }
