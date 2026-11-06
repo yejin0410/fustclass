@@ -397,3 +397,86 @@
     #wrap .sustainable-guide-item--meal .sustainable-guide-item__details,
     #wrap .sustainable-guide-item--rest .sustainable-guide-item__details { order: 2; }
 }
+
+
+/* 인포그래픽 배치 보정: 원형 노드가 중앙에서 겹치지 않도록 각 영역의 중앙에 고정 */
+#wrap .sustainable-guide-diagram {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 300px 300px;
+    min-height: 600px;
+}
+#wrap .sustainable-guide-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#wrap .sustainable-guide-item::before {
+    top: 50%;
+    left: 50%;
+    width: calc(100% + 80px);
+    height: 210px;
+    transform: translate(-50%, -50%);
+}
+#wrap .sustainable-guide-item--meal::before,
+#wrap .sustainable-guide-item--rest::before { right: auto; }
+#wrap .sustainable-guide-item--water::before,
+#wrap .sustainable-guide-item--activity::before { left: 50%; }
+#wrap .sustainable-guide-item__circle {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    width: 220px;
+    height: 220px;
+    transform: translate(-50%, -50%);
+}
+#wrap .sustainable-guide-item__details {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 39%;
+    transform: translateY(-50%);
+}
+#wrap .sustainable-guide-item--meal .sustainable-guide-item__details,
+#wrap .sustainable-guide-item--rest .sustainable-guide-item__details { left: 0; }
+#wrap .sustainable-guide-item--water .sustainable-guide-item__details,
+#wrap .sustainable-guide-item--activity .sustainable-guide-item__details { right: 0; }
+#wrap .sustainable-guide-item__circle svg {
+    width: 72px;
+    height: 72px;
+}
+#wrap .sustainable-guide-item__circle h3 { font-size: 20px; }
+@media (max-width: 900px) {
+    #wrap .sustainable-guide-diagram {
+        grid-template-rows: 240px 240px;
+        min-height: 480px;
+    }
+    #wrap .sustainable-guide-item__circle {
+        width: 170px;
+        height: 170px;
+    }
+    #wrap .sustainable-guide-item__details { width: 36%; }
+}
+@media (max-width: 600px) {
+    #wrap .sustainable-guide-diagram {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        min-height: 0;
+    }
+    #wrap .sustainable-guide-item {
+        position: relative;
+        display: flex;
+        height: auto;
+    }
+    #wrap .sustainable-guide-item__circle {
+        position: static;
+        transform: none;
+    }
+    #wrap .sustainable-guide-item__details {
+        position: static;
+        width: auto;
+        transform: none;
+    }
+}
