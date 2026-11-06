@@ -2430,13 +2430,13 @@ border-radius: 16px; overflow: hidden;}
 /* Scroll reveal: fade-up */
 #wrap .scroll-reveal {
     opacity: 0;
-    transform: translateY(32px);
-    transition: opacity .75s ease, transform .75s cubic-bezier(.22, .61, .36, 1);
+    transform: translate3d(0, 36px, 0);
+    transition: opacity 700ms ease-out, transform 700ms cubic-bezier(.22, .61, .36, 1);
     will-change: opacity, transform;
 }
 #wrap .scroll-reveal.is-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
 }
 @media (prefers-reduced-motion: reduce) {
     #wrap .scroll-reveal,
