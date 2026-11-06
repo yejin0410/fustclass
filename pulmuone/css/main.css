@@ -2447,3 +2447,17 @@ border-radius: 16px; overflow: hidden;}
         will-change: auto;
     }
 }
+
+
+/* Footer is intentionally excluded from all scroll reveal motion */
+#wrap .pulmuone-footer,
+#wrap .pulmuone-footer * {
+    animation: none;
+}
+#wrap .pulmuone-footer .scroll-reveal,
+#wrap .pulmuone-footer .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+}
