@@ -2322,8 +2322,7 @@ border-radius: 16px; overflow: hidden;}
         opacity: 0;
         transition: opacity .25s ease, visibility .25s ease;
     }
-    #wrap .site-header .main-nav:hover .gnb-panel,
-    #wrap .site-header .main-nav:focus-within .gnb-panel {
+    #wrap .site-header .main-nav:hover .gnb-panel {
         visibility: visible;
         opacity: 1;
     }
