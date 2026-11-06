@@ -4,6 +4,7 @@
 }
 #wrap .sustainable-visual .sub-inner {
     position: relative;
+    text-align: center;
 }
 #wrap .sustainable-tabs ul {
     gap: 8px 48px;
