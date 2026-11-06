@@ -249,13 +249,12 @@
             centeredSlides: true,
             loop: true,
             speed: 700,
-            autoplay: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-                ? false
-                : {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true
-                }
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+                waitForTransition: true
+            }
         });
     </script><script>
         (() => {
