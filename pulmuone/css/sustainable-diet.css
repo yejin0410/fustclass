@@ -79,14 +79,6 @@
 }
 #wrap .sustainable-benefit > p:last-child,
 #wrap .sustainable-habit__content > p:last-child,
-#wrap .sustainable-guideline p {
-    margin: 14px 0 0;
-    color: var(--color-brand-gray);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.7;
-    word-break: keep-all;
-}
 #wrap .sustainable-habits-section {
     background: #f5f6f3;
 }
@@ -116,28 +108,6 @@
 }
 #wrap .sustainable-guidelines-section {
     padding-bottom: 120px;
-}
-#wrap .sustainable-guideline-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 64px;
-    border-top: 1px solid #e5e8e2;
-}
-#wrap .sustainable-guideline {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-    padding: 30px 0;
-    border-bottom: 1px solid #e5e8e2;
-}
-#wrap .sustainable-guideline > span {
-    flex: 0 0 34px;
-    color: var(--color-brand-dark-green);
-    font-size: 16px;
-    font-weight: 700;
-}
-#wrap .sustainable-guideline p {
-    margin-top: 8px;
 }
 #wrap .sustainable-bottom-cta {
     margin-top: 100px;
@@ -179,7 +149,6 @@
         grid-template-columns: 56px minmax(0, 1fr) minmax(180px, 30%);
         gap: 28px;
     }
-    #wrap .sustainable-guideline-grid { column-gap: 36px; }
 }
 @media (max-width: 900px) {
     #wrap .sustainable-visual { padding-bottom: 56px; }
@@ -210,8 +179,6 @@
     }
     #wrap .sustainable-habit__number { font-size: 22px; }
     #wrap .sustainable-habit .sustainable-image-placeholder { grid-column: 2; width: 100%; }
-    #wrap .sustainable-guideline-grid { grid-template-columns: 1fr; }
-    #wrap .sustainable-guideline { gap: 16px; padding: 24px 0; }
     #wrap .sustainable-bottom-cta { margin-top: 56px; padding: 32px 24px; }
     #wrap .sustainable-bottom-cta h3 { font-size: 24px; }
 }
@@ -219,8 +186,9 @@
 }
 
 
-/* 건강생활 실천 지침 이미지 */
+/* 건강생활 실천 지침: 사용자가 업로드한 이미지 */
 #wrap .sustainable-guide-image {
+    display: block;
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;
