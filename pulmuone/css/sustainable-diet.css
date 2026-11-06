@@ -6,6 +6,13 @@
     position: relative;
     text-align: center;
 }
+#wrap main .sub-visual.sustainable-visual > .sub-inner > #page-title,
+#wrap main .sub-visual.sustainable-visual > .sub-inner > .sub-visual__desc {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
 #wrap .sustainable-tabs ul {
     gap: 8px 48px;
 }
