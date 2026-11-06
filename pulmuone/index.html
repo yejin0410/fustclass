@@ -242,12 +242,20 @@
 
 
     <script>
-        // 캠페인 카드 Swiper: 한 화면에 2.8개 카드 표시
+        // 캠페인 카드 Swiper: 5초마다 다음 카드로 자동 이동
         const campaignSwiper = new Swiper('.campaign-vehicle-style__viewport', {
             slidesPerView: 2.3,
             spaceBetween: 0,
             centeredSlides: true,
-            loop: true
+            loop: true,
+            speed: 700,
+            autoplay: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                ? false
+                : {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                }
         });
     </script><script>
         (() => {
