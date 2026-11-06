@@ -68,8 +68,7 @@
     letter-spacing: .08em;
 }
 #wrap .sustainable-benefit h3,
-#wrap .sustainable-habit h3,
-#wrap .sustainable-guideline h3 {
+#wrap .sustainable-habit h3 {
     margin: 0;
     color: var(--color-brand-dark-gray);
     font-size: clamp(20px, 1.5vw, 24px);
