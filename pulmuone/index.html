@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
     <!-- Pretendard Variable 폰트 -->
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
-    <link rel="stylesheet" href="css/main.css?v=20261105-newsroom-final-override">
+    <link rel="stylesheet" href="css/main.css?v=20261106-fade-up">
 
     <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
@@ -287,6 +287,51 @@
             section.querySelector('.pulmuone-lineup__next').addEventListener('click', () => show(active + 1));
             window.addEventListener('resize', () => show(active));
             show(0);
+        })();
+    </script>
+
+
+    <script>
+        // 스크롤 시 콘텐츠가 아래에서 위로 부드럽게 나타나는 페이드업 효과
+        (() => {
+            const revealTargets = document.querySelectorAll([
+                '.right-food-section__heading',
+                '.right-food-card',
+                '.campaign-section__heading-inner',
+                '.campaign-vehicle-style__viewport',
+                '.campaign-vehicle-style__detail',
+                '.newsroom-section__heading',
+                '.newsroom-card'
+            ].join(', '));
+
+            if (!revealTargets.length) return;
+
+            revealTargets.forEach((element, index) => {
+                element.classList.add('scroll-reveal');
+
+                // 같은 카드 묶음은 순서대로 살짝 시간차를 두고 나타나게 설정
+                if (element.matches('.right-food-card, .newsroom-card')) {
+                    element.style.transitionDelay = (index % 6) * 100 + 'ms';
+                }
+            });
+
+            if (!('IntersectionObserver' in window)) {
+                revealTargets.forEach(element => element.classList.add('is-visible'));
+                return;
+            }
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealTargets.forEach(element => revealObserver.observe(element));
         })();
     </script>
 
