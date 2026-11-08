@@ -2466,6 +2466,16 @@ border-radius: 16px; overflow: hidden;}
 }
 
 
+/* 뉴스룸·회사소개에 마우스를 올려도 바른먹거리와 같은 하위 메뉴가 열리도록 처리 */
+#wrap .site-header .main-nav:has(> .main-nav__static:hover) .gnb-panel,
+#wrap .site-header .main-nav:has(> .main-nav__static:focus-visible) .gnb-panel {
+    visibility: visible;
+    opacity: 1;
+}
+#wrap .site-header .main-nav > .main-nav__static {
+    cursor: pointer;
+}
+
 /* 뉴스룸·회사소개 상위 메뉴는 화면 이동 없이 표시하는 버튼 */
 #wrap .site-header .main-nav > .main-nav__static {
     appearance: none;
