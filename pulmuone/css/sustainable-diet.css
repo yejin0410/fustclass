@@ -86,6 +86,7 @@
 }
 #wrap .sustainable-benefit > p:last-child,
 #wrap .sustainable-habit__content > p:last-child {
+    padding-top: 2.5rem;
     background: transparent;
 }
 #wrap .sustainable-habits-section {
