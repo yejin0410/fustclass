@@ -94,7 +94,7 @@
 }
 #wrap .sustainable-habit {
     display: grid;
-    grid-template-columns: 72px minmax(0, 1fr) minmax(220px, 31%);
+    grid-template-columns: 72px minmax(0, 1fr);
     align-items: center;
     gap: 40px;
     padding: 36px 0;
@@ -124,7 +124,7 @@
 @media (max-width: 1024px) {
     #wrap .sustainable-benefit-grid { gap: 28px; }
     #wrap .sustainable-habit {
-        grid-template-columns: 56px minmax(0, 1fr) minmax(180px, 30%);
+        grid-template-columns: 56px minmax(0, 1fr);
         gap: 28px;
     }
 }
@@ -134,7 +134,7 @@
     #wrap .sustainable-heading { margin-bottom: 40px; }
     #wrap .sustainable-benefit-grid { grid-template-columns: 1fr 1fr; }
     #wrap .sustainable-habit {
-        grid-template-columns: 48px minmax(0, 1fr) 220px;
+        grid-template-columns: 48px minmax(0, 1fr);
         gap: 20px;
     }
     #wrap .sustainable-guidelines-section { padding-bottom: 80px; }
@@ -155,7 +155,6 @@
         padding: 28px 0;
     }
     #wrap .sustainable-habit__number { font-size: 22px; }
-    #wrap .sustainable-habit .sustainable-image-placeholder { grid-column: 2; width: 100%; }
     }
 @media (prefers-reduced-motion: reduce) {
 }
