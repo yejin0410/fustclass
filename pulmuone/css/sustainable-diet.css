@@ -84,8 +84,8 @@
     line-height: 1.4;
     word-break: keep-all;
 }
-#wrap .sustainable-benefit > p:last-child,
-#wrap .sustainable-habit__content > p:last-child {
+#wrap .sustainable-benefit h3 + p,
+#wrap .sustainable-habit__content h3 + p {
     padding-top: 20px;
     background: transparent;
 }
