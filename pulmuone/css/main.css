@@ -2462,6 +2462,36 @@ border-radius: 16px; overflow: hidden;}
 }
 
 
+/* 뉴스룸·회사소개 상위 메뉴는 화면 이동 없이 표시하는 버튼 */
+#wrap .site-header .main-nav > .main-nav__static {
+    appearance: none;
+    border: 0;
+    padding: 10px;
+    margin: 0;
+    background: transparent;
+    color: var(--color-brand-dark-gray);
+    font: inherit;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: default;
+}
+#wrap .site-header .main-nav > .main-nav__static:hover {
+    color: var(--color-brand-dark-gray);
+}
+@media (max-width: 1024px) {
+    #wrap .site-header .main-nav > .main-nav__static {
+        font-size: clamp(12px, 1.8vw, 16px);
+    }
+}
+@media (max-width: 600px) {
+    #wrap .site-header .main-nav > .main-nav__static {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
+
 /* 바른먹거리 상위 메뉴는 페이지 이동 대신 하위 메뉴를 여는 버튼 */
 #wrap .site-header .main-nav > .main-nav__trigger {
     appearance: none;
