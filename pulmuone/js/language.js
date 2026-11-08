@@ -39,8 +39,7 @@
     if (el.hasAttribute(name)) originalAttrs.push([el,name,el.getAttribute(name)]);
   }));
   const originalTitle = document.title;
-  const koButton = document.querySelector('.language-button[lang="ko"]');
-  const enButton = document.querySelector('.language-button[lang="en"]');
+
   function translate(value) {
     let result = value;
     Object.keys(translations).sort((a,b)=>b.length-a.length).forEach(ko => {
@@ -54,9 +53,20 @@
     originalAttrs.forEach(([el,name,value]) => el.setAttribute(name, english ? translate(value) : value));
     document.title = english ? translate(originalTitle) : originalTitle;
     document.documentElement.lang = lang;
-    if (koButton) { koButton.classList.toggle("current",!english); koButton.setAttribute("aria-pressed",String(!english)); }
-    if (enButton) { enButton.classList.toggle("current",english); enButton.setAttribute("aria-pressed",String(english)); }
+    document.querySelectorAll(".language-button").forEach(button => {
+      const selected = button.getAttribute("lang") === lang;
+      button.classList.toggle("current", selected);
+      button.setAttribute("aria-pressed", String(selected));
+    });
+    try { localStorage.setItem("pulmuone-language", lang); } catch (error) {}
   }
-  koButton?.addEventListener("click",()=>setLanguage("ko"));
-  enButton?.addEventListener("click",()=>setLanguage("en"));
+  document.addEventListener("click", event => {
+    const button = event.target.closest(".language-button");
+    if (!button) return;
+    event.preventDefault();
+    setLanguage(button.getAttribute("lang") === "en" ? "en" : "ko");
+  });
+  let savedLanguage = "ko";
+  try { savedLanguage = localStorage.getItem("pulmuone-language") || "ko"; } catch (error) {}
+  if (savedLanguage === "en") setLanguage("en");
 })();
