@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="풀무원 웹사이트의 일부 메뉴는 현재 점검 중입니다.">
+    <title>서비스 점검 안내 | 풀무원</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../font/css/pretendardvariable.css">
+    <link rel="stylesheet" href="css/main.css?v=20261106-footer-motion-off">
+    <link rel="stylesheet" href="css/sub.css?v=20261108-maintenance">
+    <style>
+        #wrap .maintenance-main { min-height: 620px; display:flex; align-items:center; justify-content:center; padding:100px 24px; text-align:center; }
+        #wrap .maintenance-card { width:min(760px,100%); margin:0 auto; }
+        #wrap .maintenance-symbol { width:76px; height:76px; display:grid; place-items:center; margin:0 auto 32px; border-radius:50%; background:#f1f5ed; color:#47734d; }
+        #wrap .maintenance-symbol svg { width:34px; height:34px; }
+        #wrap .maintenance-eyebrow { margin:0 0 18px; color:#47734d; font-size:14px; font-weight:700; letter-spacing:.16em; }
+        #wrap .maintenance-card h1 { margin:0; color:#303632; font-size:clamp(34px,5vw,56px); font-weight:700; line-height:1.25; word-break:keep-all; }
+        #wrap .maintenance-description { margin:24px 0 0; color:#666d68; font-size:18px; line-height:1.8; word-break:keep-all; }
+        #wrap .maintenance-divider { width:48px; height:2px; margin:36px auto; background:#47734d; }
+        #wrap .maintenance-caption { margin:0; color:#8a908b; font-size:14px; line-height:1.7; }
+        #wrap .maintenance-home { display:inline-flex; align-items:center; justify-content:center; min-width:180px; min-height:54px; margin-top:38px; padding:0 28px; border-radius:999px; background:#245b36; color:#fff; font-size:15px; font-weight:600; transition:background .2s ease; }
+        #wrap .maintenance-home:hover { background:#174629; }
+        @media(max-width:600px) { #wrap .maintenance-main { min-height:520px; padding:72px 20px; } #wrap .maintenance-description { font-size:16px; } }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="utility-nav" aria-label="보조 메뉴">
+                <a href="#login">로그인</a>
+                <a href="#customer">고객센터</a>
+                <a href="#notice">공지사항</a>
+            </div>
+            <div class="header-main">
+                <a class="brand-logo" href="index.html" aria-label="풀무원 홈"><img src="img/Pulmuone_ci.svg" alt="Pulmuone 풀무원 로고"></a>
+                <nav class="main-nav" aria-label="주요 메뉴">
+                    <button class="main-nav__trigger" type="button" aria-expanded="false" aria-controls="gnb-panel">바른먹거리</button>
+                    <a href="news.html">뉴스룸</a>
+                    <a href="company.html">회사소개</a>
+                    <div class="gnb-panel" id="gnb-panel">
+                        <ul class="gnb-panel__list" aria-label="바른먹거리 하위 메뉴">
+                            <li><a href="sustainable-diet.html">지속가능 식생활</a></li>
+                            <li><a href="maintenance.html?section=sustainable-food">지속가능식품</a></li>
+                            <li><a href="maintenance.html?section=principles">바른먹거리 원칙</a></li>
+                            <li><a href="maintenance.html?section=campaign">바른먹거리 캠페인</a></li>
+                            <li><a href="maintenance.html?section=food-safety">식품안전 및 품질정책</a></li>
+                        </ul>
+                        <ul class="gnb-panel__list" aria-label="뉴스룸 하위 메뉴">
+                            <li><a href="maintenance.html?section=pulmuone-news">풀무원뉴스</a></li>
+                            <li><a href="maintenance.html?section=esg">ESG경영</a></li>
+                            <li><a href="maintenance.html?section=multimedia">멀티미디어</a></li>
+                            <li><a href="maintenance.html?section=notice">자료&amp;공지</a></li>
+                        </ul>
+                        <ul class="gnb-panel__list" aria-label="회사소개 하위 메뉴">
+                            <li><a href="maintenance.html?section=ceo">총괄CEO인사말</a></li>
+                            <li><a href="maintenance.html?section=ci">CI소개</a></li>
+                            <li><a href="maintenance.html?section=history">연혁</a></li>
+                            <li><a href="maintenance.html?section=values">가치체계</a></li>
+                            <li><a href="maintenance.html?section=business">사업소개</a></li>
+                            <li><a href="maintenance.html?section=partnership">동반성장</a></li>
+                            <li><a href="maintenance.html?section=governance">기업지배구조</a></li>
+                            <li><a href="maintenance.html?section=investor">투자정보</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="language-switch" aria-label="언어 선택">
+                    <button type="button" class="language-button current" lang="ko" aria-pressed="true">KR</button><span class="slash">/</span><button type="button" class="language-button" lang="en" aria-pressed="false">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="maintenance-main">
+        <section class="maintenance-card" aria-labelledby="maintenance-title">
+            <div class="maintenance-symbol" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            </div>
+            <p class="maintenance-eyebrow">PULMUONE SERVICE</p>
+            <h1 id="maintenance-title">서비스 점검 중입니다.</h1>
+            <p class="maintenance-description">보다 안정적인 서비스 제공을 위해 페이지를 점검하고 있습니다.<br>이용에 불편을 드려 죄송합니다.</p>
+            <div class="maintenance-divider"></div>
+            <p class="maintenance-caption">점검이 완료된 후 더 나은 모습으로 찾아뵙겠습니다.<br>잠시 후 다시 방문해 주세요.</p>
+            <a class="maintenance-home" href="index.html">풀무원 메인으로</a>
+        </section>
+    </main>
+    <footer class="pulmuone-footer">
+        <div class="pulmuone-footer__inner">
+            <a class="pulmuone-footer__brand" href="index.html" aria-label="풀무원 맨 위로"><img src="img/Pulmuone_ci.svg" alt="Pulmuone 풀무원 로고"></a>
+            <div class="pulmuone-footer__links">
+                <a href="company.html">회사소개</a><a href="news.html">뉴스룸</a><a href="maintenance.html?section=food-safety">바른먹거리</a>
+                <a class="is-emphasis" href="#privacy">개인정보처리방침</a><a href="#terms">이용약관</a>
+            </div>
+            <p>바른먹거리로 사람과 지구의 건강한 내일을 만드는 풀무원</p>
+            <small>© PULMUONE. All Rights Reserved.</small>
+        </div>
+    </footer>
+</div>
+<script>
+(() => {
+    const names = {
+        "sustainable-food":"지속가능식품", "principles":"바른먹거리 원칙", "campaign":"바른먹거리 캠페인", "food-safety":"식품안전 및 품질정책",
+        "pulmuone-news":"풀무원뉴스", "esg":"ESG경영", "multimedia":"멀티미디어", "notice":"자료&공지",
+        "ceo":"총괄CEO인사말", "ci":"CI소개", "history":"연혁", "values":"가치체계", "business":"사업소개",
+        "partnership":"동반성장", "governance":"기업지배구조", "investor":"투자정보"
+    };
+    const section = new URLSearchParams(window.location.search).get("section");
+    if (names[section]) document.title = names[section] + " | 서비스 점검 안내";
+})();
+</script>
+</body>
+</html>
